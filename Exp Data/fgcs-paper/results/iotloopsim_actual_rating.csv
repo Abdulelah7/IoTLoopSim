@@ -1,0 +1,28 @@
+paper_code,review_code,criterion,iotloopsim_actual,in_paper,evidence_or_reason
+A1,A1,Sensors / data sources,2,yes,"Sensor, IoTDevice: typed sensors, payloads, energy, sampling distributions"
+A2,A2,Actuators,2,yes,Actuator; AppRuntime.actuatorFor: commands sent to the device's or nearest actuator
+A3,A3,"Network fidelity (packet = ●, flow/trace = ◐)",1,yes,flow/queue level; packet level only through an adapter interface
+A4,A4,Access technologies & IoT protocols (Wi-Fi/LTE/BLE; MQTT/CoAP),2,yes,"AccessTechnology (18 presets: Wi-Fi, BLE, Zigbee/802.15.4, LoRaWAN SF/DR, NB-IoT, LTE, 5G, Ethernet); Protocol (MQTT 0/1/2, CoAP NON/CON, HTTP, AMQP)"
+A5,A5,Processing tiers (≥2 of edge/fog/cloud = ●),2,yes,ComputeNode with edge/fog/cloud tiers; Network multi-hop routing
+A6,A6,Closed application loop (sense→process→act),2,yes,"AppRuntime loop accounting: loop.latency_ms, deadline misses, actuation"
+B1,B1,Deployment / placement policies,2,yes,"BuiltinPolicies: edge-first, fog-first, cloud-only, latency-aware placement"
+B2,B2,Scaling / orchestration,2,yes,ThresholdScaling; keep-alive scale-to-zero (AppRuntime)
+B3,B3,Migration / handover,2,yes,follow-me migration with PREWARM and COLD models; handover
+B4,B4,Failure & recovery,2,yes,FaultInjector independent faults; replace recovery policy; route recomputation
+B5,B5,Software/firmware update (OTA) & retirement,2,yes,"UpdateManager OTA campaigns (all-at-once, batch, canary, rollback, abort); rolling service updates; decommission and retireAt"
+C1,C1,Mobility,2,yes,random-waypoint and trace mobility; handover with hysteresis
+C2,C2,Energy model (any layer),2,yes,"EnergyLedger with device, radio, gateway (IDS), network, edge, fog and cloud layers"
+C3,C3,End-to-end energy & carbon,1,yes,"operational device, network and compute energy and carbon; gateway idle/forwarding power, RAN and embodied carbon not modelled"
+C4,C4,Containers / microservices,2,yes,"container images, registry pulls, cold starts, module trees (ServiceInstance, AppModule)"
+C5,C5,Security with service-level overhead,2,yes,"DTLS/TLS overheads and handshakes; flood, blackhole and IDS models with service-level metrics (CS2)"
+C6,C6,Correlated failures,2,yes,"correlated faults by zone, backhaul, tier or firmware version (FaultInjector selectors); CS1, CS2"
+C7,C7,Joint compute–network decisions,1,yes,policies can query network latency; radio and battery state are not used by built-in policies
+,C8,Multi-fidelity / co-simulation,1,no,"rated in the review data but not reported in the paper; L0/L1 with reported difference; L2 adapter interface, no ns-3 adapter ships"
+C8,C9,Cost model,2,yes,"CostLedger: core-hours per tier, $/GB on priced links, $/kWh"
+,C10,ML / RL interface,2,no,rated in the review data but not reported in the paper; Gym-style bridge (iotloopsim-bridge) with a Python client
+D1,D1,"Reproducibility (scenario files, seeds, repeated runs)",2,yes,"named RNG streams, replications with CIs, provenance.json, per-run result hashes (iotloopsim-core, iotloopsim-experiment)"
+D2,D2,Validation against a real testbed,0,yes,compared with a published measurement-based model only; no testbed (same rule as for the other tools)
+D3,D3,Benchmarks / built-in reference policies,2,yes,built-in reference policies (Section 4.7) and bundled reference scenarios
+D4,D4,GUI + scriptable,1,yes,"scriptable (YAML, CLI, Java API); no GUI"
+D5,D5,Scalability evaluated,2,yes,"scalability study up to 50,000 devices (Exp Data/fgcs-paper/results/scalability*)"
+D6,D6,Open source & actively maintained (commit in last 12 months),0,yes,"Apache-2.0, but the repository is private until publication, so it does not meet the criterion yet"

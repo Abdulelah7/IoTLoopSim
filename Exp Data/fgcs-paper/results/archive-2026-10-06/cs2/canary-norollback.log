@@ -1,0 +1,17 @@
+Picked up JAVA_TOOL_OPTIONS: 
+SimTool 0.1.0 | scenario 'lorawan-ota' | 10 replications from seed 7 | 2 threads
+metric                                   mean     95% CI +/-     n
+loop.success_ratio                     0.9496      0.0007497    10
+loop.latency_ms.mean                     3316          50.50    10
+loop.latency_ms.p95                      7651          555.5    10
+loop.deadline_miss_ratio                0.000          0.000    10
+net.pdr                                0.9827      0.0002660    10
+energy.total_J                      1.950e+07          626.1    10
+energy.device_J                     5.569e+04          609.2    10
+carbon.total_g                           2294        0.07697    10
+cost.total                              1.702      0.0001349    10
+availability.nodes                      1.000          0.000    10
+instance.cold_starts                    2.000          0.000    10
+update.succeeded                        193.4          2.267    10
+update.failed                           6.600          2.267    10
+results written to Exp Data/fgcs-paper/results/cs2/canary-norollback

@@ -1,0 +1,18 @@
+queueing & M/M/1 mean waiting time Wq [rho=0.3,0.5,0.7,0.8] & 20000 s & 10 & none deleted; devices start at 5 s (empty-and-idle start), Wq averaged over all requests\\
+queueing & M/M/1 mean waiting time Wq [rho=0.9] & 60000 s & 10 & none deleted; devices start at 5 s, Wq averaged over all requests\\
+queueing & M/M/4 mean waiting time (Erlang C) [rho=0.5,0.8,0.9] & 20000 s & 10 & none deleted; devices start at 5 s\\
+queueing & M/D/1 mean waiting time (P-K) [rho=0.5,0.8] & 20000 s & 10 & none deleted; devices start at 5 s\\
+network & L1 link M/D/1 queueing delay [rho=0.3,0.6,0.9] & 3000 s & 10 & none deleted; devices start at 5 s; delay = mean sojourn - min sojourn\\
+compute & Utilisation law U = lambda*S [rho=0.6] & 20000 s & 10 & none deleted; the 5 s before device start is modelled in the expected value (factor (T-5)/T)\\
+energy & Node energy, linear power model [rho=0.6] & 20000 s & 10 & none deleted; the 5 s before device start is modelled in the expected value\\
+protocol & coap-non / coap-con end-to-end delivery ratio [p\_loss=0.1,0.3,0.5] & 20000 s & 10 & none deleted (ratio of counts); devices start at 5 s\\
+protocol & coap-con transmissions per message [p\_loss=0.3] & 20000 s & 10 & none deleted (ratio of counts); devices start at 5 s\\
+faults & Steady-state availability MTBF/(MTBF+MTTR) [MTBF=1000,MTTR=100] & 400000 s (400 x MTBF) & 10 & none deleted; all nodes start up (availability over [0,T]); 50 nodes per rep\\
+faults & Steady-state availability MTBF/(MTBF+MTTR) [MTBF=3600,MTTR=600] & 1440000 s (400 x MTBF) & 10 & none deleted; all nodes start up; 50 nodes per rep\\
+faults & Steady-state availability MTBF/(MTBF+MTTR) [MTBF=500,MTTR=5] & 200000 s (400 x MTBF) & 10 & none deleted; all nodes start up; 50 nodes per rep\\
+energy & Battery lifetime, baseline only [E=100J,P=10mW] & until depletion ($\sim$10000 s; horizon cap 20000 s) & 10 & n/a (time to an event from t=0)\\
+energy & Battery lifetime, LoRa sensing every 60 s [E=1000J] & until depletion ($\sim$810762 s; horizon cap 2e7 s) & 10 & n/a (time to an event from t=0)\\
+radio & LoRa time on air vs Semtech formula [7 cases] & no simulation (direct airtimeNs call) & 1 & n/a\\
+radio & LoRa duty-cycle-limited throughput [SF7,51B,d=1\%] & 36000 s & 10 & none deleted; device starts at 5 s, modelled in the expected value (horizon - 5 s)\\
+energy & Energy conservation (layers = categories = total) & 2000 s & 10 & n/a (identity checked at the end of the run)\\
+flow & Request conservation (in flight at end / generated) & 2000 s & 10 & n/a (identity checked at the end of the run)\\

@@ -1,0 +1,50 @@
+# Battery-lifetime study of LoRaWAN class-A sensors with a measured radio energy profile.
+# Each data rate group sends one unconfirmed 51-byte uplink every 15 min from a MultiConnect mDot
+# (currents and timings from Casals et al., "Modeling the Energy Performance of LoRaWAN", Sensors 2017, Table 5).
+# The battery is scaled down (24 mAh instead of 2400 mAh) so that depletion happens within the simulated 30 days;
+# lifetime scales linearly with capacity: multiply devices.<group>.lifetime_h.mean by 100 for a 2400 mAh battery.
+name: lorawan-battery
+seed: 3
+duration: 30d
+fidelity: {links: analytical, radio: analytical}
+
+gateways:
+  - {name: gw, techs: [lorawan-dr0, lorawan-dr3, lorawan-dr5], position: [0, 0], range: 15000}
+
+nodes:
+  - {name: ns, tier: edge, cores: 4, mips: 2000, ram: 4096, position: [0, 0], registry: true}
+
+links:
+  - {between: [gw, ns], bandwidth: 10Mbps, latency: 20ms}
+
+devices:
+  - group: sf12
+    count: 5
+    tech: {base: lorawan-dr0, profile: mdot-classa, loss: 0}
+    protocol: none                     # payload = LoRaWAN FRMPayload
+    area: {x0: 100, y0: 100, x1: 2000, y1: 2000}
+    battery: {mAh: 24, volts: 3.6}
+    baselinePower: 0.000162            # 45 uA sleep current x 3.6 V
+    sensors: [{type: reading, interval: const(900), bytes: 51, energy: 0}]
+  - group: sf9
+    count: 5
+    tech: {base: lorawan-dr3, profile: mdot-classa, loss: 0}
+    protocol: none
+    area: {x0: 100, y0: 100, x1: 2000, y1: 2000}
+    battery: {mAh: 24, volts: 3.6}
+    baselinePower: 0.000162
+    sensors: [{type: reading, interval: const(900), bytes: 51, energy: 0}]
+  - group: sf7
+    count: 5
+    tech: {base: lorawan-dr5, profile: mdot-classa, loss: 0}
+    protocol: none
+    area: {x0: 100, y0: 100, x1: 2000, y1: 2000}
+    battery: {mAh: 24, volts: 3.6}
+    baselinePower: 0.000162
+    sensors: [{type: reading, interval: const(900), bytes: 51, energy: 0}]
+
+applications:
+  - name: telemetry
+    trigger: reading
+    modules:
+      - {name: store, mi: 1, image: {name: "store:1", size: 50MB}}

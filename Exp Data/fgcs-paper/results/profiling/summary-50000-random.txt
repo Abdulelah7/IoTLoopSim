@@ -1,0 +1,19 @@
+samples with a simulation worker: 20
+
+on the worker's stack:
+    6  selector (InstanceSelector.select)
+    5  energy ledger
+    2  event list (PriorityQueue)
+    1  metrics
+
+top frame:
+    5  org.iotloopsim.model.AppRuntime.accepting
+    4  java.util.HashMap.hash
+    2  org.iotloopsim.core.RngStreams.stream
+    2  java.util.HashMap$TreeNode.find
+    2  org.iotloopsim.model.EnergyLedger.charge
+    1  java.util.PriorityQueue.poll
+    1  java.util.ArrayList.grow
+    1  org.iotloopsim.core.MetricsRegistry.record
+    1  org.iotloopsim.model.Network.hop
+    1  java.util.PriorityQueue.siftUpComparable

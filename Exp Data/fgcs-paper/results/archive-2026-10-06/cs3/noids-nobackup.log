@@ -1,0 +1,18 @@
+Picked up JAVA_TOOL_OPTIONS: 
+SimTool 0.1.0 | scenario 'smart-city-noids-nobackup' | 10 replications from seed 42 | 1 threads
+metric                                   mean     95% CI +/-     n
+loop.success_ratio                     0.9756        0.01350    10
+loop.latency_ms.mean                    684.9          134.7    10
+loop.latency_ms.p95                      2050           1258    10
+loop.deadline_miss_ratio               0.2607       0.006903    10
+net.pdr                                0.9951       0.002084    10
+energy.total_J                      2.818e+06      1.112e+04    10
+energy.device_J                     4.399e+05          613.3    10
+carbon.total_g                          219.9          1.384    10
+cost.total                             0.6512        0.01314    10
+availability.nodes                     0.9698        0.01148    10
+instance.cold_starts                    61.70          3.569    10
+migration.completed                      2553          108.3    10
+update.succeeded                        34.40          1.553    10
+update.failed                           2.000          1.216    10
+results written to Exp Data/fgcs-paper/results/cs3/noids-nobackup

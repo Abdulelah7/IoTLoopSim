@@ -1,0 +1,11 @@
+Picked up JAVA_TOOL_OPTIONS: 
+SimTool vs paper model: max |error| = 0.002 % over 70 cases
+DR0 T=   5 min: SimTool 0.260 y, paper text 0.26 y (+0.1 %)
+DR5 T=   5 min: SimTool 0.719 y, paper text 0.83 y (-13.4 %)
+DR0 T=  60 min: SimTool 2.125 y, paper text 2.13 y (-0.3 %)
+DR5 T=  60 min: SimTool 3.752 y, paper text 3.76 y (-0.2 %)
+DR0 T= 360 min: SimTool 4.644 y, paper text 4.55 y (+2.1 %)
+DR5 T= 360 min: SimTool 5.516 y, paper text 5.52 y (-0.1 %)
+DR6 T=1440 min: SimTool 5.959 y, paper text 5.96 y (-0.0 %)
+I(DR0)/I(DR5) at 5 min: SimTool 2.760, paper 2.76
+written /tmp/reval/v3_lorawan_energy.csv

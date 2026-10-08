@@ -1,0 +1,16 @@
+metric,analytical_mean,queue_mean,relative_difference
+loop.success_ratio,0.995983,0.995983,-5.52323e-07
+loop.latency_ms.mean,198.439,202.309,0.0195017
+loop.latency_ms.p95,184.692,185.794,0.00596483
+loop.deadline_miss_ratio,0.223218,0.227526,0.0193007
+net.pdr,0.999760,0.999759,-2.90696e-07
+energy.total_J,2.79968e+06,2.79968e+06,4.59490e-07
+energy.device_J,440976,440978,4.27036e-06
+carbon.total_g,217.549,217.549,7.61918e-07
+cost.total,0.625268,0.624151,-0.00178709
+availability.nodes,0.969850,0.969850,0.00000
+instance.cold_starts,59.7000,59.9000,0.00335008
+migration.completed,2635.80,2638.20,0.000910539
+update.succeeded,31.6000,31.6000,0.00000
+update.failed,2.10000,2.10000,0.00000
+security.detections,8.20000,8.20000,0.00000

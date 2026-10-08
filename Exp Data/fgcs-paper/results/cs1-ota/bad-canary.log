@@ -1,0 +1,17 @@
+Picked up JAVA_TOOL_OPTIONS: 
+IoTLoopSim 0.1.0 | scenario 'lorawan-ota' | 30 replications from seed 7 | 2 threads
+metric                                   mean     95% CI +/-     n
+loop.success_ratio                     0.9498      0.0005022    30
+loop.latency_ms.mean                     3375          40.35    30
+loop.latency_ms.p95                      8332          389.0    30
+loop.deadline_miss_ratio            1.220e-06      2.495e-06    30
+net.pdr                                0.9827      0.0001781    30
+energy.total_J                      1.950e+07          152.8    30
+energy.device_J                     5.804e+04          148.8    30
+carbon.total_g                           2294        0.01759    30
+cost.total                              1.701      8.776e-05    30
+availability.nodes                      1.000          0.000    30
+instance.cold_starts                    2.000          0.000    30
+update.succeeded                        15.93          7.375    30
+update.failed                           11.40          4.248    30
+results written to Exp Data/fgcs-paper/results/cs1-ota/bad-canary

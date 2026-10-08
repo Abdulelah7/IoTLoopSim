@@ -1,0 +1,38 @@
+group,test,rel_error_pct,ci_rel_halfwidth_pct,tolerance_pct,equivalent
+queueing,M/M/1 mean waiting time Wq [rho=0.3],0.508,1.6193,3.000,yes
+queueing,M/M/1 mean waiting time Wq [rho=0.5],0.631,1.3300,3.000,yes
+queueing,M/M/1 mean waiting time Wq [rho=0.7],-0.164,1.8729,3.000,yes
+queueing,M/M/1 mean waiting time Wq [rho=0.8],-1.449,2.2850,3.000,no
+queueing,M/M/1 mean waiting time Wq [rho=0.9],0.313,2.0778,3.000,yes
+queueing,M/M/4 mean waiting time (Erlang C) [rho=0.5],-0.488,1.1960,3.000,yes
+queueing,M/M/4 mean waiting time (Erlang C) [rho=0.8],0.129,1.3950,3.000,yes
+queueing,M/M/4 mean waiting time (Erlang C) [rho=0.9],0.157,2.0006,3.000,yes
+queueing,M/D/1 mean waiting time (P-K) [rho=0.5],-0.350,0.9860,3.000,yes
+queueing,M/D/1 mean waiting time (P-K) [rho=0.8],-0.350,1.1650,3.000,yes
+network,L1 link M/D/1 queueing delay [rho=0.3],0.061,0.1769,3.000,yes
+network,L1 link M/D/1 queueing delay [rho=0.6],0.074,0.2027,3.000,yes
+network,L1 link M/D/1 queueing delay [rho=0.9],-0.088,0.5867,3.000,yes
+compute,Utilisation law U = lambda*S [rho=0.6],-0.244,0.3668,1.000,yes
+energy,"Node energy, linear power model [rho=0.6]",-0.133,0.2000,1.000,yes
+protocol,coap-non end-to-end delivery ratio [p_loss=0.1],-0.027,0.0874,0.500,yes
+protocol,coap-non end-to-end delivery ratio [p_loss=0.3],-0.098,0.1929,0.500,yes
+protocol,coap-non end-to-end delivery ratio [p_loss=0.5],-0.021,0.3000,0.500,yes
+protocol,coap-con end-to-end delivery ratio [p_loss=0.1],-0.002,0.0011,0.500,yes
+protocol,coap-con end-to-end delivery ratio [p_loss=0.3],-0.010,0.0162,0.500,yes
+protocol,coap-con end-to-end delivery ratio [p_loss=0.5],0.013,0.0447,0.500,yes
+protocol,coap-con transmissions per message [p_loss=0.3],0.083,0.1558,0.500,yes
+faults,"Steady-state availability MTBF/(MTBF+MTTR) [MTBF=1000,MTTR=100]",-0.006,0.0500,0.500,yes
+faults,"Steady-state availability MTBF/(MTBF+MTTR) [MTBF=3600,MTTR=600]",0.005,0.0836,0.500,yes
+faults,"Steady-state availability MTBF/(MTBF+MTTR) [MTBF=500,MTTR=5]",-0.000,0.0045,0.500,yes
+energy,"Battery lifetime, baseline only [E=100J,P=10mW]",0.000,0.0000,0.100,yes
+energy,"Battery lifetime, LoRa sensing every 60 s [E=1000J]",-0.002,0.0015,1.000,yes
+radio,"LoRa time on air vs Semtech formula [SF7,app=10B]",0.000,0.0000,0.100,yes
+radio,"LoRa time on air vs Semtech formula [SF7,app=51B]",0.000,0.0000,0.100,yes
+radio,"LoRa time on air vs Semtech formula [SF7,app=222B]",0.000,0.0000,0.100,yes
+radio,"LoRa time on air vs Semtech formula [SF9,app=51B]",0.000,0.0000,0.100,yes
+radio,"LoRa time on air vs Semtech formula [SF9,app=115B]",0.000,0.0000,0.100,yes
+radio,"LoRa time on air vs Semtech formula [SF12,app=10B]",0.000,0.0000,0.100,yes
+radio,"LoRa time on air vs Semtech formula [SF12,app=51B]",0.000,0.0000,0.100,yes
+radio,"LoRa duty-cycle-limited throughput [SF7,51B,d=1%]",0.036,0.0000,0.200,yes
+energy,Energy conservation (layers = categories = total),0.000,0.0000,0.000,yes
+flow,Request conservation (in flight at end / generated),0.006,0.0069,0.100,yes

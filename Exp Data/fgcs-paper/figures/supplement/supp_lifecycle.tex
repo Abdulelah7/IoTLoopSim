@@ -1,0 +1,19 @@
+OTA campaign duration, all at once & verification; LoRa SF7, k=1, 64 KiB, I=30 s, gw duty=0.1 (default), registry 1 Gbit/s 1 ms & 1156 & 1156 & 0 & s & 0.000 & 1 & PASS & yes\\
+OTA campaign duration, all at once & verification; LoRa SF7, k=10, 64 KiB, I=30 s, gw duty=0.1 (default), registry 1 Gbit/s 1 ms & 11156.8 & 11156.8 & 0 & s & 0.000 & 1 & PASS & yes\\
+OTA campaign duration, all at once & verification; LoRa SF7, k=10, 16 KiB, I=30 s, gw duty=0.01 (explicit), registry 1 Gbit/s 1 ms & 27834.3 & 27834.3 & 0 & s & 0.000 & 1 & PASS & yes\\
+OTA batch campaign duration b*Dm+(b-1)*P & verification; LoRa SF7, b=4 batches x m=5, 16 KiB, I=30 s, P=600 s, gw duty=0.1 (default) & 7494.92 & 7494.92 & 0 & s & 0.000 & 1 & PASS & yes\\
+Keep-alive cold-start fraction & lambda*K=0.5, K=20 s, S=0.2 s, reaper 1 s; exact f=q/(1+lambda(S-delta)q) (naive e\textasciicircum{}-lambdaK=0.60653); run 1600000 s/rep, warm-up 1000 s deleted & 0.597242 & 0.597259 & 0.00136 & - & 0.003 & 10 & PASS & yes\\
+Keep-alive cold-start fraction & lambda*K=1.0, K=20 s, S=0.2 s, reaper 1 s; exact f=q/(1+lambda(S-delta)q) (naive e\textasciicircum{}-lambdaK=0.36788); run 800000 s/rep, warm-up 1000 s deleted & 0.357564 & 0.356753 & 0.00232 & - & -0.227 & 10 & PASS & yes\\
+Keep-alive cold-start fraction & lambda*K=2.0, K=20 s, S=0.2 s, reaper 1 s; exact f=q/(1+lambda(S-delta)q) (naive e\textasciicircum{}-lambdaK=0.13534); run 400000 s/rep, warm-up 1000 s deleted & 0.128461 & 0.129013 & 0.00118 & - & 0.430 & 10 & PASS & yes\\
+COLD migration downtime C+8S/B+L+Ts & verification; S=1 MiB, B=100 Mbit/s, L=5 ms, C=0.5 s, Ts=1 s, link L0, image cached & 1588.89 & 1588.89 & 0 & ms & 0.000 & 1 & PASS & yes\\
+COLD migration downtime C+8S/B+L+Ts & verification; S=1 MiB, B=100 Mbit/s, L=5 ms, C=0.5 s, Ts=1 s, link L1, image cached & 1588.89 & 1588.89 & 0 & ms & 0.000 & 1 & PASS & yes\\
+COLD migration downtime with image pull & verification; as above + 50 MiB image pulled over the same link (L0) after the state & 5788.19 & 5788.19 & 0 & ms & 0.000 & 1 & PASS & yes\\
+PREWARM migration downtime max(Ts, 8S/B+L) & verification; S=1 MiB, B=100 Mbit/s, L=5 ms, Ts=1 s (start-up dominated), L0 & 1000 & 1000 & 0 & ms & 0.000 & 1 & PASS & yes\\
+PREWARM migration downtime max(Ts, 8S/B+L) & verification; S=64 MiB, B=100 Mbit/s, L=5 ms, Ts=1 s (transfer dominated), L0 & 5373.71 & 5373.71 & 0 & ms & 0.000 & 1 & PASS & yes\\
+Correlated-fault availability 1/(1+pR/T) & T=100 s, p=0.5, R=20 s, 50 members; run 1100000 s/rep ($\sim$5000 up/down cycles per member), no warm-up deletion (start up) & 0.909091 & 0.909221 & 0.000402 & - & 0.014 & 10 & PASS & yes\\
+Correlated-fault availability 1/(1+pR/T) & T=50 s, p=0.2, R=100 s, 50 members; run 1750000 s/rep ($\sim$5000 up/down cycles per member), no warm-up deletion (start up) & 0.714286 & 0.714432 & 0.000539 & - & 0.020 & 10 & PASS & yes\\
+Correlated-fault availability 1/(1+pR/T) & T=1000 s, p=1.0, R=100 s, 50 members; run 5500000 s/rep ($\sim$5000 up/down cycles per member), no warm-up deletion (start up) & 0.909091 & 0.909102 & 0.00082 & - & 0.001 & 10 & PASS & yes\\
+Carbon, hourly profile, lazily charged load & verification; constant 50 W over 24.0 h, one charge at the end (time-weighted intensity) & 385.5 & 385.5 & 0 & g & 0.000 & 1 & PASS & yes\\
+Carbon, hourly profile, lazily charged load & verification; constant 50 W over 36.5 h, one charge at the end (time-weighted intensity) & 580.75 & 580.75 & 0 & g & 0.000 & 1 & PASS & yes\\
+Carbon, hourly profile, incrementally charged & verification; constant 50 W (idle=max) over 24 h, charged at every busy/idle change of Poisson traffic & 385.5 & 385.5 & 0 & g & 0.000 & 1 & PASS & yes\\
+Carbon, per-layer profile, device baseline & verification; device baseline 1 W over 24 h, layer override (default 999 g/kWh unused) & 3.855 & 3.855 & 0 & g & 0.000 & 1 & PASS & yes\\

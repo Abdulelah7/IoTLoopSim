@@ -1,0 +1,5 @@
+     14 java.util.HashMap$TreeNode.find(java.base@21.0.12.1/HashMap.java:2040)
+      3 org.simtool.model.AppRuntime.meanMi(AppRuntime.java:66)
+      1 org.simtool.model.Network.estimateLatency(Network.java:106)
+      1 org.simtool.model.AppRuntime.accepting(AppRuntime.java:53)
+      1 java.util.HashMap.getNode(java.base@21.0.12.1/HashMap.java:582)

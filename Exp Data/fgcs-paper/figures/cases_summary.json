@@ -1,0 +1,970 @@
+{
+ "cs1": {
+  "means": {
+   "latent-all-at-once": {
+    "update.succeeded": [
+     193.667,
+     0.8340000000000032
+    ],
+    "update.failed": [
+     6.33333,
+     0.8339099999999995
+    ],
+    "update.campaign_duration_s.mean": [
+     6681.16,
+     398.8600000000006
+    ],
+    "faults.correlated_targets": [
+     335.467,
+     34.56600000000003
+    ],
+    "availability.devices": [
+     0.989138,
+     0.0010890000000000066
+    ],
+    "energy.category.ota_J": [
+     55.5807,
+     0.0
+    ],
+    "update.download_s.mean": [
+     2947.0,
+     208.92999999999984
+    ],
+    "update.download_s.max": [
+     6665.94,
+     398.9500000000007
+    ]
+   },
+   "latent-batch": {
+    "update.succeeded": [
+     193.467,
+     0.8179999999999836
+    ],
+    "update.failed": [
+     6.53333,
+     0.8187899999999999
+    ],
+    "update.campaign_duration_s.mean": [
+     14684.3,
+     418.0
+    ],
+    "faults.correlated_targets": [
+     298.9,
+     42.86600000000004
+    ],
+    "availability.devices": [
+     0.990285,
+     0.0013520000000000199
+    ],
+    "energy.category.ota_J": [
+     55.5807,
+     0.0
+    ],
+    "update.download_s.mean": [
+     700.983,
+     43.057000000000016
+    ],
+    "update.download_s.max": [
+     1879.1,
+     138.35000000000014
+    ]
+   },
+   "latent-canary": {
+    "update.succeeded": [
+     193.4,
+     0.7819999999999823
+    ],
+    "update.failed": [
+     6.6,
+     0.7819500000000001
+    ],
+    "update.campaign_duration_s.mean": [
+     16682.7,
+     442.3999999999978
+    ],
+    "faults.correlated_targets": [
+     289.1,
+     34.39799999999997
+    ],
+    "availability.devices": [
+     0.990594,
+     0.0010780000000000234
+    ],
+    "energy.category.ota_J": [
+     55.5807,
+     0.0
+    ],
+    "update.download_s.mean": [
+     655.87,
+     40.912000000000035
+    ],
+    "update.download_s.max": [
+     1814.25,
+     128.77999999999997
+    ]
+   },
+   "bad-all-at-once": {
+    "update.succeeded": [
+     122.1,
+     2.1310000000000002
+    ],
+    "update.failed": [
+     77.9,
+     2.1310000000000002
+    ],
+    "update.campaign_duration_s.mean": [
+     6681.16,
+     398.8600000000006
+    ],
+    "faults.correlated_targets": [
+     179.533,
+     22.53200000000001
+    ],
+    "availability.devices": [
+     0.990673,
+     0.0006800000000000139
+    ],
+    "energy.category.ota_J": [
+     55.5807,
+     0.0
+    ],
+    "update.download_s.mean": [
+     2947.0,
+     208.92999999999984
+    ],
+    "update.download_s.max": [
+     6665.94,
+     398.9500000000007
+    ]
+   },
+   "bad-batch": {
+    "update.succeeded": [
+     24.7333,
+     2.6309000000000005
+    ],
+    "update.failed": [
+     17.9333,
+     1.7317999999999998
+    ],
+    "update.campaign_duration_s.mean": [
+     1628.77,
+     301.04999999999995
+    ],
+    "faults.correlated_targets": [
+     35.5,
+     5.561900000000001
+    ],
+    "availability.devices": [
+     0.99803,
+     0.00020700000000006824
+    ],
+    "energy.category.ota_J": [
+     11.8572,
+     1.052999999999999
+    ],
+    "update.download_s.mean": [
+     660.994,
+     42.59299999999996
+    ],
+    "update.download_s.max": [
+     1411.3,
+     112.99000000000001
+    ]
+   },
+   "bad-canary": {
+    "update.succeeded": [
+     15.9333,
+     7.375299999999999
+    ],
+    "update.failed": [
+     11.4,
+     4.2475000000000005
+    ],
+    "update.campaign_duration_s.mean": [
+     1747.42,
+     899.81
+    ],
+    "faults.correlated_targets": [
+     24.2667,
+     11.3183
+    ],
+    "availability.devices": [
+     0.998696,
+     0.0005349999999999522
+    ],
+    "energy.category.ota_J": [
+     7.59603,
+     3.2117700000000005
+    ],
+    "update.download_s.mean": [
+     315.806,
+     62.608000000000004
+    ],
+    "update.download_s.max": [
+     677.176,
+     185.42499999999995
+    ]
+   }
+  },
+  "norollback_availability": [
+   0.966405,
+   0.0029609999999999914
+  ],
+  "paired": {
+   "latent: all-at-once - batch: faults.correlated_targets": [
+    36.56666666666667,
+    53.73052192419286,
+    30
+   ],
+   "latent: all-at-once - batch: availability.devices": [
+    -0.11473333333333484,
+    0.16849342989565977,
+    30
+   ],
+   "latent: all-at-once - canary: faults.correlated_targets": [
+    46.36666666666667,
+    51.03771760532705,
+    30
+   ],
+   "latent: all-at-once - canary: availability.devices": [
+    -0.14557000000000045,
+    0.16112459228488826,
+    30
+   ],
+   "bad: all-at-once - batch: faults.correlated_targets": [
+    144.03333333333333,
+    22.47030184549771,
+    30
+   ],
+   "bad: all-at-once - batch: availability.devices": [
+    -0.7357633333333328,
+    0.0684536657612809,
+    30
+   ],
+   "bad: all-at-once - canary: faults.correlated_targets": [
+    155.26666666666668,
+    23.405670389362466,
+    30
+   ],
+   "bad: all-at-once - canary: availability.devices": [
+    -0.8023066666666675,
+    0.0833828352618036,
+    30
+   ],
+   "latent: canary - canary-norollback: availability.devices": [
+    2.4189099999999994,
+    0.2898914313177824,
+    30
+   ],
+   "uncorrelated: all-at-once - canary: crashes": [
+    9.166666666666666,
+    41.366872424685326,
+    30
+   ],
+   "crash 0.05: all-at-once - canary: crashes": [
+    13.5,
+    15.369121808289698,
+    30
+   ],
+   "crash 0.30: all-at-once - canary: crashes": [
+    50.5,
+    93.99657976284068,
+    30
+   ]
+  },
+  "sensitivity": [
+   [
+    "gateway duty cycle 0.01, all-at-once",
+    {
+     "update.campaign_duration_s.mean": [
+      64174.4,
+      3676.5999999999985
+     ],
+     "faults.correlated_targets": [
+      203.533,
+      30.237000000000023
+     ],
+     "availability.devices": [
+      0.993276,
+      0.0009629999999999361
+     ]
+    }
+   ],
+   [
+    "gateway duty cycle 0.01, batch",
+    {
+     "update.campaign_duration_s.mean": [
+      77227.3,
+      6986.199999999997
+     ],
+     "faults.correlated_targets": [
+      159.667,
+      21.542
+     ],
+     "availability.devices": [
+      0.994756,
+      0.0006700000000000594
+     ]
+    }
+   ],
+   [
+    "gateway duty cycle 1.0, all-at-once",
+    {
+     "update.campaign_duration_s.mean": [
+      682.371,
+      39.50400000000002
+     ],
+     "faults.correlated_targets": [
+      296.133,
+      36.73000000000002
+     ],
+     "availability.devices": [
+      0.990407,
+      0.0011679999999999469
+     ]
+    }
+   ],
+   [
+    "gateway duty cycle 1.0, batch",
+    {
+     "update.campaign_duration_s.mean": [
+      7994.66,
+      36.960000000000036
+     ],
+     "faults.correlated_targets": [
+      318.467,
+      38.13300000000004
+     ],
+     "availability.devices": [
+      0.989678,
+      0.0011990000000000611
+     ]
+    }
+   ],
+   [
+    "bug crash probability 0.05, all-at-once",
+    {
+     "update.campaign_duration_s.mean": [
+      6681.16,
+      398.8600000000006
+     ],
+     "faults.correlated_targets": [
+      106.133,
+      9.027000000000001
+     ],
+     "availability.devices": [
+      0.996363,
+      0.0002790000000000292
+     ]
+    }
+   ],
+   [
+    "bug crash probability 0.05, canary",
+    {
+     "update.campaign_duration_s.mean": [
+      16682.7,
+      442.3999999999978
+     ],
+     "faults.correlated_targets": [
+      92.6333,
+      12.204699999999988
+     ],
+     "availability.devices": [
+      0.996765,
+      0.0003769999999999607
+     ]
+    }
+   ],
+   [
+    "bug crash probability 0.30, all-at-once",
+    {
+     "update.campaign_duration_s.mean": [
+      6681.16,
+      398.8600000000006
+     ],
+     "faults.correlated_targets": [
+      620.033,
+      54.710000000000036
+     ],
+     "availability.devices": [
+      0.980189,
+      0.0017010000000000636
+     ]
+    }
+   ],
+   [
+    "bug crash probability 0.30, canary",
+    {
+     "update.campaign_duration_s.mean": [
+      16682.7,
+      442.3999999999978
+     ],
+     "faults.correlated_targets": [
+      569.533,
+      66.42999999999995
+     ],
+     "availability.devices": [
+      0.981721,
+      0.0020970000000000155
+     ]
+    }
+   ],
+   [
+    "rollback after 5min, canary",
+    {
+     "update.campaign_duration_s.mean": [
+      16682.7,
+      442.3999999999978
+     ],
+     "faults.correlated_targets": [
+      289.1,
+      34.39799999999997
+     ],
+     "availability.devices": [
+      0.990802,
+      0.0010820000000000274
+     ]
+    }
+   ],
+   [
+    "rollback after 60min, canary",
+    {
+     "update.campaign_duration_s.mean": [
+      16682.7,
+      442.3999999999978
+     ],
+     "faults.correlated_targets": [
+      289.1,
+      34.39799999999997
+     ],
+     "availability.devices": [
+      0.989656,
+      0.0010700000000000154
+     ]
+    }
+   ],
+   [
+    "bug not tied to firmware, all-at-once",
+    {
+     "update.campaign_duration_s.mean": [
+      6651.87,
+      385.21000000000004
+     ],
+     "faults.correlated_targets": [
+      371.467,
+      41.624000000000024
+     ],
+     "availability.devices": [
+      0.987968,
+      0.0013160000000000949
+     ]
+    }
+   ],
+   [
+    "bug not tied to firmware, canary",
+    {
+     "update.campaign_duration_s.mean": [
+      16384.5,
+      402.2000000000007
+     ],
+     "faults.correlated_targets": [
+      362.3,
+      40.656000000000006
+     ],
+     "availability.devices": [
+      0.98827,
+      0.0012910000000000421
+     ]
+    }
+   ]
+  ]
+ },
+ "cs2": {
+  "means": {
+   "ids-backup": {
+    "loop.success_ratio": [
+     0.995869,
+     0.00040600000000001746
+    ],
+    "app.traffic.latency_ms.mean": [
+     278.78,
+     22.29600000000005
+    ],
+    "app.traffic.latency_ms.p95": [
+     245.165,
+     92.119
+    ],
+    "app.traffic.latency_ms.max": [
+     23034.0,
+     1776.9000000000015
+    ],
+    "loop.dropped": [
+     736.5,
+     72.96600000000001
+    ],
+    "loop.dropped.blackhole": [
+     72.1667,
+     77.03329999999998
+    ],
+    "loop.dropped.no-coverage": [
+     609.333,
+     69.22900000000004
+    ],
+    "loop.dropped.no-route": [
+     0.533333,
+     0.37635700000000005
+    ],
+    "security.attack_processed": [
+     4569.27,
+     1160.0999999999995
+    ],
+    "energy.category.security_J": [
+     113.334,
+     1.0259999999999962
+    ],
+    "availability.gateways": [
+     0.938889,
+     0.0028400000000000647
+    ],
+    "carbon.total_g": [
+     217.597,
+     0.5060000000000002
+    ],
+    "cost.total": [
+     0.620711,
+     0.003722000000000003
+    ],
+    "energy.total_kWh": [
+     0.777794,
+     0.0011250000000000426
+    ]
+   },
+   "noids-backup": {
+    "loop.success_ratio": [
+     0.992914,
+     0.00017000000000000348
+    ],
+    "app.traffic.latency_ms.mean": [
+     673.354,
+     49.05499999999995
+    ],
+    "app.traffic.latency_ms.p95": [
+     3363.64,
+     497.22000000000025
+    ],
+    "app.traffic.latency_ms.max": [
+     30538.3,
+     661.7999999999993
+    ],
+    "loop.dropped": [
+     1268.23,
+     30.84999999999991
+    ],
+    "loop.dropped.blackhole": [
+     1106.1,
+     25.960000000000036
+    ],
+    "loop.dropped.no-coverage": [
+     87.2333,
+     3.480000000000004
+    ],
+    "loop.dropped.no-route": [
+     1.83333,
+     1.85801
+    ],
+    "security.attack_processed": [
+     35914.8,
+     27.89999999999418
+    ],
+    "energy.category.security_J": [
+     68.8049,
+     1.1159999999999997
+    ],
+    "availability.gateways": [
+     0.979167,
+     0.0
+    ],
+    "carbon.total_g": [
+     220.491,
+     0.4949999999999761
+    ],
+    "cost.total": [
+     0.650822,
+     0.004529000000000005
+    ],
+    "energy.total_kWh": [
+     0.784221,
+     0.001100000000000101
+    ]
+   },
+   "ids-nobackup": {
+    "loop.success_ratio": [
+     0.977515,
+     0.008689999999999976
+    ],
+    "app.traffic.latency_ms.mean": [
+     272.852,
+     24.58000000000004
+    ],
+    "app.traffic.latency_ms.p95": [
+     236.801,
+     91.62299999999999
+    ],
+    "app.traffic.latency_ms.max": [
+     23900.9,
+     1945.7999999999993
+    ],
+    "loop.dropped": [
+     4023.03,
+     1550.4099999999994
+    ],
+    "loop.dropped.blackhole": [
+     72.0667,
+     77.08930000000001
+    ],
+    "loop.dropped.no-coverage": [
+     610.567,
+     68.96399999999994
+    ],
+    "loop.dropped.no-route": [
+     3285.43,
+     1573.8200000000002
+    ],
+    "security.attack_processed": [
+     4307.83,
+     1196.8500000000004
+    ],
+    "energy.category.security_J": [
+     112.855,
+     1.0959999999999894
+    ],
+    "availability.gateways": [
+     0.938889,
+     0.0028400000000000647
+    ],
+    "carbon.total_g": [
+     217.307,
+     0.63900000000001
+    ],
+    "cost.total": [
+     0.619684,
+     0.0038920000000000066
+    ],
+    "energy.total_kWh": [
+     0.777128,
+     0.0014319999999999888
+    ]
+   },
+   "noids-nobackup": {
+    "loop.success_ratio": [
+     0.975352,
+     0.007820999999999967
+    ],
+    "app.traffic.latency_ms.mean": [
+     659.531,
+     33.200000000000045
+    ],
+    "app.traffic.latency_ms.p95": [
+     3213.49,
+     323.7600000000002
+    ],
+    "app.traffic.latency_ms.max": [
+     30543.1,
+     662.5
+    ],
+    "loop.dropped": [
+     4413.73,
+     1395.0400000000009
+    ],
+    "loop.dropped.blackhole": [
+     1118.73,
+     24.61999999999989
+    ],
+    "loop.dropped.no-coverage": [
+     88.6333,
+     3.2851
+    ],
+    "loop.dropped.no-route": [
+     3126.43,
+     1395.3300000000004
+    ],
+    "security.attack_processed": [
+     33952.6,
+     1923.800000000003
+    ],
+    "energy.category.security_J": [
+     68.397,
+     1.149499999999989
+    ],
+    "availability.gateways": [
+     0.979167,
+     0.0
+    ],
+    "carbon.total_g": [
+     220.057,
+     0.7130000000000223
+    ],
+    "cost.total": [
+     0.648472,
+     0.005112999999999923
+    ],
+    "energy.total_kWh": [
+     0.783236,
+     0.0015939999999999843
+    ]
+   }
+  },
+  "paired": {
+   "IDS on - off (backup): loop success %": [
+    0.2954900000000001,
+    0.038561545101725346,
+    30
+   ],
+   "IDS on - off (backup): loops lost": [
+    -531.7333333333333,
+    69.53054846526976,
+    30
+   ],
+   "IDS on - off (backup): traffic latency mean ms": [
+    -394.5742333333333,
+    47.46514337211106,
+    30
+   ],
+   "IDS on - off (backup): gateway availability %": [
+    -4.027810000000001,
+    0.28403005000000003,
+    30
+   ],
+   "IDS on - off (backup): total energy Wh": [
+    -6.426233333333334,
+    0.24219205825327522,
+    30
+   ],
+   "IDS on - off (backup): carbon g": [
+    -2.893900000000002,
+    0.10904352647661845,
+    30
+   ],
+   "IDS on - off (backup): cost units": [
+    -0.03011136666666666,
+    0.005834991525078169,
+    30
+   ],
+   "backup yes - no (IDS on): loop success %": [
+    1.8354133333333322,
+    0.8823195480889873,
+    30
+   ],
+   "interaction (on,yes - off,yes - on,no + off,no): loop success %": [
+    0.07921666666666605,
+    0.21721517837022142,
+    30
+   ]
+  },
+  "sensitivity": [
+   [
+    "detection probability 0.5",
+    {
+     "loop.success_ratio": [
+      0.99468,
+      0.0006880000000000219
+     ],
+     "loop.dropped": [
+      950.533,
+      124.0970000000001
+     ],
+     "loop.dropped.blackhole": [
+      501.9,
+      203.336
+     ],
+     "loop.dropped.no-coverage": [
+      384.333,
+      111.58399999999995
+     ],
+     "app.traffic.latency_ms.mean": [
+      463.385,
+      77.721
+     ],
+     "availability.gateways": [
+      0.955556,
+      0.00784000000000007
+     ]
+    }
+   ],
+   [
+    "detection probability 1.0",
+    {
+     "loop.success_ratio": [
+      0.995993,
+      0.00034000000000000696
+     ],
+     "loop.dropped": [
+      714.033,
+      61.11699999999996
+     ],
+     "loop.dropped.blackhole": [
+      34.0333,
+      14.696600000000004
+     ],
+     "loop.dropped.no-coverage": [
+      625.6,
+      58.452
+     ],
+     "app.traffic.latency_ms.mean": [
+      265.945,
+      15.02800000000002
+     ],
+     "availability.gateways": [
+      0.9375,
+      0.0
+     ]
+    }
+   ],
+   [
+    "mean detection time 300 s",
+    {
+     "loop.success_ratio": [
+      0.994665,
+      0.0006559999999999899
+     ],
+     "loop.dropped": [
+      953.367,
+      118.20299999999997
+     ],
+     "loop.dropped.blackhole": [
+      286.8,
+      105.007
+     ],
+     "loop.dropped.no-coverage": [
+      606.8,
+      68.28100000000006
+     ],
+     "app.traffic.latency_ms.mean": [
+      441.669,
+      42.884000000000015
+     ],
+     "availability.gateways": [
+      0.938889,
+      0.0028400000000000647
+     ]
+    }
+   ],
+   [
+    "attacks only, IDS on",
+    {
+     "loop.success_ratio": [
+      0.995894,
+      0.00040400000000007097
+     ],
+     "loop.dropped": [
+      731.9,
+      72.61400000000003
+     ],
+     "loop.dropped.blackhole": [
+      72.6667,
+      77.81429999999999
+     ],
+     "loop.dropped.no-coverage": [
+      606.033,
+      68.61400000000003
+     ],
+     "app.traffic.latency_ms.mean": [
+      274.357,
+      21.46799999999996
+     ],
+     "availability.gateways": [
+      0.959722,
+      0.0028400000000000647
+     ]
+    }
+   ],
+   [
+    "attacks only, IDS off",
+    {
+     "loop.success_ratio": [
+      0.992961,
+      0.00014999999999998348
+     ],
+     "loop.dropped": [
+      1259.87,
+      27.12000000000012
+     ],
+     "loop.dropped.blackhole": [
+      1112.97,
+      25.399999999999864
+     ],
+     "loop.dropped.no-coverage": [
+      84.0667,
+      3.7206000000000046
+     ],
+     "app.traffic.latency_ms.mean": [
+      640.701,
+      4.826999999999998
+     ],
+     "availability.gateways": [
+      1.0,
+      0.0
+     ]
+    }
+   ],
+   [
+    "faults only, IDS on",
+    {
+     "loop.success_ratio": [
+      0.99918,
+      2.6999999999999247e-05
+     ],
+     "loop.dropped": [
+      140.6,
+      4.9620000000000175
+     ],
+     "loop.dropped.blackhole": [
+      0.0,
+      0.0
+     ],
+     "loop.dropped.no-coverage": [
+      86.3333,
+      3.457400000000007
+     ],
+     "app.traffic.latency_ms.mean": [
+      147.941,
+      2.076999999999998
+     ],
+     "availability.gateways": [
+      0.979167,
+      0.0
+     ]
+    }
+   ],
+   [
+    "faults only, IDS off",
+    {
+     "loop.success_ratio": [
+      0.999182,
+      2.8000000000028002e-05
+     ],
+     "loop.dropped": [
+      140.433,
+      5.046000000000021
+     ],
+     "loop.dropped.blackhole": [
+      0.0,
+      0.0
+     ],
+     "loop.dropped.no-coverage": [
+      86.3333,
+      3.457400000000007
+     ],
+     "app.traffic.latency_ms.mean": [
+      147.553,
+      2.0800000000000125
+     ],
+     "availability.gateways": [
+      0.979167,
+      0.0
+     ]
+    }
+   ]
+  ]
+ }
+}

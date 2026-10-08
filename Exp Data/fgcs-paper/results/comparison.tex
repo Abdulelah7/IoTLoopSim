@@ -1,0 +1,38 @@
+\begin{tabular}{@{}l l *{9}{c}@{}}
+\toprule
+ & Criterion & \rotatebox{75}{iFogSim2~\cite{mahmud2022ifogsim2}} & \rotatebox{75}{MobFogSim~\cite{puliafito2020mobfogsim}} & \rotatebox{75}{YAFS~\cite{lera2019yafs}} & \rotatebox{75}{IoTSim-Edge~\cite{jha2020_105}} & \rotatebox{75}{FogNetSim++~\cite{qayyum2018fognetsim}} & \rotatebox{75}{ECSNeT++~\cite{amarasinghe2020ecsnet}} & \rotatebox{75}{IoTSim-Osmosis~\cite{alwasel2021osmosis}} & \rotatebox{75}{IoTNetSim~\cite{salama2019iotnetsim}} & \rotatebox{75}{\textbf{\iotloopsim{}}}\\
+\midrule
+\multicolumn{11}{@{}l}{\textbf{A Full-stack layers}}\\
+A1 & Sensors / data sources & \full & \full & \full & \full & \full & \full & \full & \full & \full\\
+A2 & Actuators & \full & \full & \full & \full & \half & \half & \none & \half & \full\\
+A3 & Network fidelity (packet = full) & \half & \half & \half & \half & \full & \full & \half & \half & \half\\
+A4 & Access technologies \& IoT protocols & \none & \none & \none & \full & \full & \half & \half & \half & \full\\
+A5 & Processing tiers ($\geq$2 tiers) & \full & \full & \full & \half & \half & \full & \full & \full & \full\\
+A6 & Complete application loop (sense$\to$process$\to$act) & \full & \full & \full & \full & \half & \half & \none & \half & \full\\
+\addlinespace[2pt]
+\multicolumn{11}{@{}l}{\textbf{B Lifecycle}}\\
+B1 & Deployment / placement policies & \full & \full & \full & \full & \half & \full & \full & \half & \full\\
+B2 & Scaling / orchestration & \half & \none & \half & \none & \none & \none & \half & \half & \full\\
+B3 & Migration / handover & \full & \full & \half & \half & \half & \none & \half & \none & \full\\
+B4 & Failure \& recovery & \none & \none & \full & \half & \half & \none & \none & \half & \full\\
+B5 & Software/firmware update (OTA) \& retirement & \none & \none & \none & \none & \none & \none & \none & \none & \full\\
+\addlinespace[2pt]
+\multicolumn{11}{@{}l}{\textbf{C Simulation features}}\\
+C1 & Mobility & \full & \full & \half & \full & \full & \half & \none & \full & \full\\
+C2 & Energy model (any layer) & \half & \none & \half & \full & \full & \full & \full & \full & \full\\
+C3 & End-to-end energy \& carbon & \none & \none & \none & \none & \none & \none & \half & \half & \half\\
+C4 & Containers / microservices & \full & \full & \none & \half & \none & \none & \none & \none & \full\\
+C5 & Security with service-level overhead & \none & \none & \none & \half & \none & \none & \none & \none & \full\\
+C6 & Correlated failures & \none & \none & \none & \none & \none & \none & \none & \none & \full\\
+C7 & Joint compute--network decisions & \none & \half & \none & \none & \half & \none & \half & \none & \half\\
+C8 & Cost model & \half & \half & \none & \half & \full & \none & \half & \half & \full\\
+\addlinespace[2pt]
+\multicolumn{11}{@{}l}{\textbf{D Methodology \& usability}}\\
+D1 & Reproducibility & \none & \half & \half & \half & \none & \half & \none & \half & \full\\
+D2 & Validation against a real testbed & \none & \full & \none & \none & \none & \full & \none & \none & \none\\
+D3 & Benchmarks / built-in reference policies & \half & \none & \half & \none & \none & \none & \none & \none & \full\\
+D4 & GUI + scriptable & \none & \none & \half & \full & \full & \none & \none & \none & \half\\
+D5 & Scalability evaluated & \half & \half & \half & \none & \full & \none & \none & \full & \full\\
+D6 & Open source \& actively maintained & \full & \full & \full & \half & \half & \half & \half & \half & \none\\
+\bottomrule
+\end{tabular}

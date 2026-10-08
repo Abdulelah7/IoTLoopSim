@@ -1,0 +1,8 @@
+{
+  "note": "Versions used for the V2 cross-simulator runs (crosssim_runs.csv, crosssim_summary.csv), as recorded when the runs were made.",
+  "IoTLoopSim": "0.1.0 with the validation update (named SimTool at the time)",
+  "YAFS": {"commit": "d98c005", "commit_date": "2026-04-22"},
+  "iFogSim2": {"commit": "5f68d39", "commit_date": "2025-10-03"},
+  "OpenJDK": "21.0.12", "Python": "3.13", "SimPy": "4.1.2", "NetworkX": "3.6.1",
+  "runs_per_point": 5
+}

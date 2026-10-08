@@ -1,0 +1,8 @@
+tool,sense,transmit,process,actuate,deploy_place,scale,migrate_handover,fail_recover,update_OTA
+iFogSim2,●,◐,●,●,●,◐,●,○,○
+MobFogSim,●,◐,●,●,●,○,●,○,○
+YAFS,●,◐,●,●,●,◐,◐,●,○
+IoTSim-Edge,●,◐,●,●,●,○,◐,◐,○
+FogNetSim++,●,●,●,◐,◐,○,◐,◐,○
+ECSNeT++,●,●,●,◐,●,○,○,○,○
+IoTSim-Osmosis,●,◐,●,○,●,◐,◐,○,○

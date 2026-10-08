@@ -1,0 +1,8 @@
+tool,in_corpus,sensors,connectivity_model,processing_tiers,actuators,mobility,energy,failures,security,containers,ml_rl,gui,open_code,real_validation,repeats_CI,language,base_framework,citations_2026-10-04,github_repo,github_stars,github_forks,last_commit,evidence_actuators
+iFogSim2,yes (004),2,A/T,Edge+Fog+Cloud,2,2,1,0,0,2,0,0,2,0,0,Java,iFogSim/CloudSim,251,Cloudslab/iFogSim,195,128,2025-10-03,Controller holds Sensor and Actuator classes; actuation_signal in app model
+MobFogSim,yes (007),2,A/T,Fog+Cloud,2,2,0,0,0,2,0,0,2,2,2,Java,iFogSim/CloudSim,134,diogomg/MobFogSim,20,16,2026-09-26,MobileSensor and MobileActuator classes
+YAFS,yes (028),2,A,Fog+Cloud,2,1,1,2,0,0,0,1,2,0,1,Python,SimPy + NetworkX,232,acsicuib/YAFS,121,86,2026-04-22,messages generated in sensors and received in actuators
+IoTSim-Edge,yes (105),2,A,Edge,2,2,2,1,1,1,0,2,1,0,0,Java,CloudSim,128,DNJha/IoTSim-Edge,15,22,2023-04-11,sensing and actuator nodes; processed data returned to device which actuates
+IoTSim-Osmosis,yes (001),2,A (SD-WAN),Edge+Cloud,0,0,2,0,0,0,0,0,2,0,0,Java,CloudSim,73,kalwasel/IoTSim-Osmosis,8,8,2021-07-14,actuators only in architecture description; devices are data sources
+FogNetSim++,yes (042),2,P,Fog,1,2,2,1,0,0,0,2,2,0,0,C++,OMNeT++ (+INET),182,rtqayyum/fognetsimpp,20,9,2019-01-06,pub/sub: results disseminated to subscriber devices; no actuator entity
+ECSNeT++,yes (002),2,P,Edge+Cloud,1,1,2,0,0,0,0,0,2,2,1,C++,OMNeT++/INET,23,sedgecloud/ECSNeTpp,14,9,2019-06-10,source-operator-sink graph; sinks not actuators

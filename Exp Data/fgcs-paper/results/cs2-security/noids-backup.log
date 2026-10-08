@@ -1,0 +1,18 @@
+Picked up JAVA_TOOL_OPTIONS: 
+IoTLoopSim 0.1.0 | scenario 'smart-city-noids' | 30 replications from seed 42 | 2 threads
+metric                                   mean     95% CI +/-     n
+loop.success_ratio                     0.9929      0.0001699    30
+loop.latency_ms.mean                    552.7          21.84    30
+loop.latency_ms.p95                      1262          229.2    30
+loop.deadline_miss_ratio               0.2597       0.003714    30
+net.pdr                                0.9974      6.646e-05    30
+energy.total_J                      2.823e+06           3963    30
+energy.device_J                     4.407e+05          45.51    30
+carbon.total_g                          220.5         0.4953    30
+cost.total                             0.6508       0.004529    30
+availability.nodes                     0.9718       0.006123    30
+instance.cold_starts                    58.00          2.146    30
+migration.completed                      2643          47.82    30
+update.succeeded                        56.77         0.7382    30
+update.failed                           2.933         0.6788    30
+results written to Exp Data/fgcs-paper/results/cs2-security/noids-backup

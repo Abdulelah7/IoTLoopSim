@@ -1,0 +1,13 @@
+samples with a simulation worker: 20
+
+on the worker's stack:
+   17  selector (InstanceSelector.select)
+    1  event list (PriorityQueue)
+
+top frame:
+   10  java.util.HashMap$TreeNode.find
+    5  java.util.HashMap.getNode
+    2  java.util.HashMap.put
+    1  sun.reflect.generics.reflectiveObjects.ParameterizedTypeImpl.getActualTypeArguments
+    1  org.iotloopsim.model.AppRuntime.meanMi
+    1  java.util.PriorityQueue.poll

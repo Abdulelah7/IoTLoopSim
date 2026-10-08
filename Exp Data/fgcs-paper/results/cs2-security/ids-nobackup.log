@@ -1,0 +1,19 @@
+Picked up JAVA_TOOL_OPTIONS: 
+IoTLoopSim 0.1.0 | scenario 'smart-city-nobackup' | 30 replications from seed 42 | 2 threads
+metric                                   mean     95% CI +/-     n
+loop.success_ratio                     0.9775       0.008690    30
+loop.latency_ms.mean                    316.6          59.30    30
+loop.latency_ms.p95                     225.1          63.74    30
+loop.deadline_miss_ratio               0.2256       0.004444    30
+net.pdr                                0.9973       0.001159    30
+energy.total_J                      2.798e+06           5155    30
+energy.device_J                     4.401e+05          512.7    30
+carbon.total_g                          217.3         0.6395    30
+cost.total                             0.6197       0.003892    30
+availability.nodes                     0.9718       0.006123    30
+instance.cold_starts                    58.57          2.105    30
+migration.completed                      2536          43.88    30
+update.succeeded                        49.93         0.7527    30
+update.failed                           2.600         0.6621    30
+security.detections                     8.400         0.2703    30
+results written to Exp Data/fgcs-paper/results/cs2-security/ids-nobackup

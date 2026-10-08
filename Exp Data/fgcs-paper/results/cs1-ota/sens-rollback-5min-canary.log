@@ -1,0 +1,17 @@
+Picked up JAVA_TOOL_OPTIONS: 
+IoTLoopSim 0.1.0 | scenario 'lorawan-ota' | 30 replications from seed 7 | 2 threads
+metric                                   mean     95% CI +/-     n
+loop.success_ratio                     0.9499      0.0004962    30
+loop.latency_ms.mean                     3332          31.13    30
+loop.latency_ms.p95                      7870          343.3    30
+loop.deadline_miss_ratio            1.242e-06      2.541e-06    30
+net.pdr                                0.9828      0.0001762    30
+energy.total_J                      1.950e+07          156.5    30
+energy.device_J                     5.725e+04          152.4    30
+carbon.total_g                           2294        0.01840    30
+cost.total                              1.703      3.307e-05    30
+availability.nodes                      1.000          0.000    30
+instance.cold_starts                    2.000          0.000    30
+update.succeeded                        193.4         0.7819    30
+update.failed                           6.600         0.7819    30
+results written to Exp Data/fgcs-paper/results/cs1-ota/sens-rollback-5min-canary

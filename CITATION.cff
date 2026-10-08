@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use IoTLoopSim in your research, please cite it as below."
+title: "IoTLoopSim: a full-stack, lifecycle-aware simulator for IoT systems"
+version: 0.1.0
+date-released: 2026-10-04
+license: Apache-2.0
+authors:
+  - family-names: Alwabel
+    given-names: Abdulelah
+    affiliation: "Prince Sattam bin Abdulaziz University"
+    email: a.alwabel@psau.edu.sa
+    orcid: "https://orcid.org/0000-0003-4718-5578"

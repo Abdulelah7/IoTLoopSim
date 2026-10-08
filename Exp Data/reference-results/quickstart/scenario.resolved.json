@@ -1,0 +1,138 @@
+{
+  "name": "quickstart",
+  "seed": 1,
+  "duration": "10min",
+  "deviceStart": "10s",
+  "fidelity": {
+    "links": "queue",
+    "radio": "queue"
+  },
+  "policies": {
+    "placement": "edge-first",
+    "selector": "nearest-least-loaded"
+  },
+  "gateways": [
+    {
+      "name": "gw",
+      "count": 2,
+      "techs": [
+        "wifi"
+      ],
+      "grid": {
+        "x0": 0,
+        "y0": 0,
+        "dx": 150
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "name": "edge",
+      "count": 2,
+      "tier": "edge",
+      "cores": 4,
+      "mips": 2000,
+      "ram": 8192,
+      "grid": {
+        "x0": 0,
+        "y0": 0,
+        "dx": 150
+      }
+    },
+    {
+      "name": "cloud",
+      "tier": "cloud",
+      "cores": 64,
+      "mips": 4000,
+      "ram": 262144,
+      "registry": true
+    }
+  ],
+  "links": [
+    {
+      "between": [
+        "gw-*",
+        "edge-*"
+      ],
+      "bandwidth": "1Gbps",
+      "latency": "1ms"
+    },
+    {
+      "between": [
+        "edge-*",
+        "cloud"
+      ],
+      "bandwidth": "100Mbps",
+      "latency": "20ms",
+      "joulesPerByte": 5.0E-8,
+      "costPerGB": 0.09
+    }
+  ],
+  "devices": [
+    {
+      "group": "room",
+      "count": 20,
+      "tech": "wifi",
+      "protocol": "mqtt-qos1",
+      "area": {
+        "x0": 0,
+        "y0": 0,
+        "x1": 150,
+        "y1": 20
+      },
+      "battery": {
+        "mAh": 2000,
+        "volts": 3.7
+      },
+      "sensors": [
+        {
+          "type": "temp",
+          "interval": "exp(5)",
+          "bytes": 32,
+          "energy": 0.001
+        }
+      ],
+      "actuators": [
+        {
+          "type": "valve",
+          "time": "const(20)",
+          "energy": 0.05
+        }
+      ]
+    }
+  ],
+  "applications": [
+    {
+      "name": "hvac",
+      "trigger": "temp",
+      "actuator": "valve",
+      "deadline": "200ms",
+      "modules": [
+        {
+          "name": "control",
+          "mi": 50,
+          "out": 64,
+          "image": {
+            "name": "ctl:1",
+            "size": "80MB"
+          },
+          "startup": "const(1)",
+          "actuate": true,
+          "next": [
+            "store"
+          ]
+        },
+        {
+          "name": "store",
+          "mi": 20,
+          "tier": "cloud",
+          "image": {
+            "name": "db:1",
+            "size": "200MB"
+          },
+          "startup": "const(2)"
+        }
+      ]
+    }
+  ]
+}

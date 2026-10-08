@@ -1,0 +1,35 @@
+group,id,tool,focus,foundation,tiers,net_model,mobility,energy,failures,security,containers_microservices,ml_rl_hooks,gui_nocode,open_source_code,real_validation,repeats_CI,multi_fidelity_cosim,explicit,partial,correlated_failures,carbon,security_service_impact
+IoT-to-cloud continuum (fog/edge with IoT devices),001,IoTSim-Osmosis,Edge-cloud IoT,CloudSim/Java,D N E C,A,0,2,0,0,0,0,0,2,0,0,0,2,0,0,0,0
+IoT-to-cloud continuum (fog/edge with IoT devices),002,ECSNeT++,Edge stream proc.,OMNeT++/INET,D N E C,P,1,2,0,0,0,0,0,2,2,1,0,3,2,0,0,0
+IoT-to-cloud continuum (fog/edge with IoT devices),004,iFogSim2,Fog/edge,iFogSim/Java,D E C,A/T,2,1,0,0,2,0,0,2,0,0,0,3,1,0,0,0
+IoT-to-cloud continuum (fog/edge with IoT devices),007,MobFogSim,Mobile fog,iFogSim/Java,D E C,A/T,2,0,0,0,2,0,0,2,2,2,0,5,0,0,0,0
+IoT-to-cloud continuum (fog/edge with IoT devices),105,IoTSim-Edge,IoT-edge,CloudSim/Java,D N E,A,2,2,1,1,1,0,2,1,0,0,0,3,4,0,0,0
+IoT-to-cloud continuum (fog/edge with IoT devices),106,PureEdgeSim,Cloud/fog/pure edge,CloudSim Plus/Java,D N E C,A,2,2,1,0,0,1,0,2,0,0,0,3,2,0,0,0
+IoT-to-cloud continuum (fog/edge with IoT devices),023,EdgeCloudSim,Edge,CloudSim/Java,D N E C,A,2,0,1,0,0,0,0,2,0,0,0,2,1,0,0,0
+IoT-to-cloud continuum (fog/edge with IoT devices),028,YAFS,Fog/IoT,Python,D N E C,A,1,1,2,0,0,0,1,2,0,1,0,2,4,0,0,0
+IoT-to-cloud continuum (fog/edge with IoT devices),032,FogZoneSim,Fog/IoT,Python,D E C,A,1,2,0,0,0,1,0,2,0,0,0,2,2,0,0,0
+IoT-to-cloud continuum (fog/edge with IoT devices),042,FogNetSim++,Fog,OMNeT++/C++,D N E,P,2,2,1,0,0,0,2,2,0,0,0,4,1,0,0,0
+IoT-to-cloud continuum (fog/edge with IoT devices),041,Middleware+Fog,Fog/Edge,OMNeT++/INET,D N E,P,1,0,0,1,0,0,1,0,0,0,0,0,3,0,0,0
+IoT-to-cloud continuum (fog/edge with IoT devices),019,EdgeSim++,Edge,ns-3/C++,D N E,P,2,0,0,1,0,2,2,2,0,0,0,4,1,0,0,0
+IoT-to-cloud continuum (fog/edge with IoT devices),011,EdgeSimPy,Edge,Python,D E,A,2,2,1,0,2,0,0,2,0,0,0,4,1,0,0,0
+"Vehicular, satellite and space-air-ground IoT",013,VecSim,VEC,Simu5G/OMNeT++,D N E,P/T,2,0,0,0,0,0,1,0,0,0,0,1,1,0,0,0
+"Vehicular, satellite and space-air-ground IoT",018,VEC-RL Sim,VEC,SimPy+SUMO,D N E,A/T,2,0,0,0,0,2,0,2,0,0,0,3,0,0,0,0
+"Vehicular, satellite and space-air-ground IoT",015,3D Driving VEC,VEC,SUMO+OpenC2X,D N E,E,2,0,0,0,0,0,2,0,0,0,0,2,0,0,0,0
+"Vehicular, satellite and space-air-ground IoT",022,Coop. LB Sim,VEC,MATLAB+VTD,D N E,A,2,1,0,0,0,0,1,0,0,0,0,1,2,0,0,0
+"Vehicular, satellite and space-air-ground IoT",031,VFogSim,Vehicular fog,Python+SUMO/Veins,D N E,T,2,1,1,0,1,0,0,2,0,0,0,2,3,0,0,0
+"Vehicular, satellite and space-air-ground IoT",020,SatEdgeSim,Satellite edge,PureEdgeSim/Java,D N E C,A,2,2,1,0,0,0,0,0,0,0,0,2,1,0,0,0
+"Vehicular, satellite and space-air-ground IoT",024,Stardust,Space-air-ground,Standalone,D N E,A,2,1,1,0,1,0,0,2,0,0,0,2,3,0,0,0
+IoT network and wireless (device + access network),056,Cooja-auto,IoT/RPL,Cooja/Python,D N,P,0,1,0,1,0,1,1,2,0,0,0,1,4,0,0,0
+IoT network and wireless (device + access network),063,ns-3--Cooja,IoT co-sim,ns-3+Cooja,D N,P,0,0,0,0,0,0,0,1,0,2,2,2,1,0,0,0
+IoT network and wireless (device + access network),070,RPL-Attacks,IoT security,Contiki-NG/Cooja,D N,P,0,0,1,2,0,0,0,2,0,0,0,2,1,0,0,0
+IoT network and wireless (device + access network),073,ns-3 IoT,IoT network,ns-3,D N,P,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+IoT network and wireless (device + access network),075,NC-LoRaSim,LoRaWAN,ns-3/Web,D N,P,0,1,0,0,0,0,2,2,0,0,0,2,1,0,0,0
+IoT network and wireless (device + access network),045,LoRaSim ext.,LoRaWAN,LoRaSim/Python,D N,A,0,1,0,1,0,0,0,1,0,0,0,0,3,0,0,0
+IoT network and wireless (device + access network),087,NB-IoT PSM/eDRX,NB-IoT,ns-3,D N,P,0,2,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+IoT network and wireless (device + access network),081,C-UNB,LPWAN,ns-3,D N,P,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+IoT network and wireless (device + access network),044,UW-Acoustic,Underwater IoT,JiST/SWANS,D N,P,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+IoT network and wireless (device + access network),046,Link-level Ch.,IoT PHY,Custom,N,P,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0
+IoT network and wireless (device + access network),051,Analytical WSN,IoT WSN,MATLAB,D N,A,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+IoT network and wireless (device + access network),086,WTTool,5G,ns-3/Web,N,P,0,0,0,0,0,0,2,1,0,0,0,1,1,0,0,0
+IoT + cloud / live platform,101,SimBlockLink,IoT-blockchain,IoTSim-Osmosis+Fabric,D C,E,0,0,1,2,0,0,1,2,0,0,1,2,3,0,0,0
+IoT + cloud / live platform,090,PCS-IoT,Cloud/IoT,Python,D C,A,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0

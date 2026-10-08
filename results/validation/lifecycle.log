@@ -1,0 +1,24 @@
+Picked up JAVA_TOOL_OPTIONS: 
+
+group      test                                               expected    simulated       CI95     err% verdict/equiv
+lifecycle  OTA campaign duration, all at once                  1156.00      1156.00       0.00    0.000 PASS/yes
+lifecycle  OTA campaign duration, all at once                  11156.8      11156.8       0.00    0.000 PASS/yes
+lifecycle  OTA campaign duration, all at once                  27834.3      27834.3       0.00    0.000 PASS/yes
+lifecycle  OTA batch campaign duration b*Dm+(b-1)*P            7494.92      7494.92       0.00    0.000 PASS/yes
+lifecycle  Keep-alive cold-start fraction                     0.597242     0.597259    0.00136    0.003 PASS/yes
+lifecycle  Keep-alive cold-start fraction                     0.357564     0.356753    0.00232   -0.227 PASS/yes
+lifecycle  Keep-alive cold-start fraction                     0.128461     0.129013    0.00118    0.430 PASS/yes
+lifecycle  COLD migration downtime C+8S/B+L+Ts                 1588.89      1588.89       0.00    0.000 PASS/yes
+lifecycle  COLD migration downtime C+8S/B+L+Ts                 1588.89      1588.89       0.00    0.000 PASS/yes
+lifecycle  COLD migration downtime with image pull             5788.19      5788.19       0.00    0.000 PASS/yes
+lifecycle  PREWARM migration downtime max(Ts, 8S/B+L)          1000.00      1000.00       0.00    0.000 PASS/yes
+lifecycle  PREWARM migration downtime max(Ts, 8S/B+L)          5373.71      5373.71       0.00    0.000 PASS/yes
+lifecycle  Correlated-fault availability 1/(1+pR/T)           0.909091     0.909221   0.000402    0.014 PASS/yes
+lifecycle  Correlated-fault availability 1/(1+pR/T)           0.714286     0.714432   0.000539    0.020 PASS/yes
+lifecycle  Correlated-fault availability 1/(1+pR/T)           0.909091     0.909102   0.000820    0.001 PASS/yes
+lifecycle  Carbon, hourly profile, lazily charged load         385.500      385.500       0.00    0.000 PASS/yes
+lifecycle  Carbon, hourly profile, lazily charged load         580.750      580.750       0.00    0.000 PASS/yes
+lifecycle  Carbon, hourly profile, incrementally charged       385.500      385.500       0.00    0.000 PASS/yes
+lifecycle  Carbon, per-layer profile, device baseline          3.85500      3.85500       0.00    0.000 PASS/yes
+
+19/19 checks passed, 19/19 equivalent; written results/validation/v1_lifecycle.csv

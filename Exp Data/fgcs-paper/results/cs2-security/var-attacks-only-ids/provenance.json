@@ -1,0 +1,233 @@
+{
+  "tool": "IoTLoopSim",
+  "version": "0.1.0",
+  "startedAt": "2026-10-08T08:52:08.156458614Z",
+  "finishedAt": "2026-10-08T08:52:57.294133538Z",
+  "java": "21.0.12.1 (Ubuntu)",
+  "os": "Linux 6.18.44-fc-v80 amd64",
+  "gitCommit": "f58673a353b29d43db0326c57a76350df8c8df1c",
+  "scenarioFile": "Exp Data/fgcs-paper/configs/smart-city.yaml",
+  "scenarioSha256": "ffda6838c5e6e186f22854a5bbda104c22e342fdf103ac5cd00407273d692d7f",
+  "overrides": [
+    "faults={}"
+  ],
+  "resolvedScenarioSha256": "2f54c9c3866cc3c5089dd7fd18897052da100464a725ffce680a4ad2ea33b3a5",
+  "baseSeed": 42,
+  "replications": 30,
+  "runs": [
+    {
+      "rep": 0,
+      "seed": 42,
+      "resultHash": "069db7897ae5e823",
+      "wallSeconds": 9.215542711
+    },
+    {
+      "rep": 1,
+      "seed": 43,
+      "resultHash": "b262fbce01a705ac",
+      "wallSeconds": 9.199652777
+    },
+    {
+      "rep": 2,
+      "seed": 44,
+      "resultHash": "887caf059d07bde0",
+      "wallSeconds": 4.016766772
+    },
+    {
+      "rep": 3,
+      "seed": 45,
+      "resultHash": "58f38246dccee882",
+      "wallSeconds": 4.297928737
+    },
+    {
+      "rep": 4,
+      "seed": 46,
+      "resultHash": "eb66b24bb8e6f91b",
+      "wallSeconds": 3.102986275
+    },
+    {
+      "rep": 5,
+      "seed": 47,
+      "resultHash": "a0a535691a4f3719",
+      "wallSeconds": 2.885199793
+    },
+    {
+      "rep": 6,
+      "seed": 48,
+      "resultHash": "bfab6e5d9e07270c",
+      "wallSeconds": 3.730229646
+    },
+    {
+      "rep": 7,
+      "seed": 49,
+      "resultHash": "1085fa766872843b",
+      "wallSeconds": 3.247322909
+    },
+    {
+      "rep": 8,
+      "seed": 50,
+      "resultHash": "f7860aab0261faf6",
+      "wallSeconds": 2.885978939
+    },
+    {
+      "rep": 9,
+      "seed": 51,
+      "resultHash": "13e77daa1bd5c647",
+      "wallSeconds": 2.868528414
+    },
+    {
+      "rep": 10,
+      "seed": 52,
+      "resultHash": "e87dbde74d19a83a",
+      "wallSeconds": 2.753198468
+    },
+    {
+      "rep": 11,
+      "seed": 53,
+      "resultHash": "b0134ad7a0a76502",
+      "wallSeconds": 2.65598015
+    },
+    {
+      "rep": 12,
+      "seed": 54,
+      "resultHash": "1d8dec556c5d41f8",
+      "wallSeconds": 2.7395082
+    },
+    {
+      "rep": 13,
+      "seed": 55,
+      "resultHash": "f262138fc53bf000",
+      "wallSeconds": 2.450430219
+    },
+    {
+      "rep": 14,
+      "seed": 56,
+      "resultHash": "8673af2b19db8c09",
+      "wallSeconds": 2.667033818
+    },
+    {
+      "rep": 15,
+      "seed": 57,
+      "resultHash": "0f573ae1a159d6ef",
+      "wallSeconds": 2.403980444
+    },
+    {
+      "rep": 16,
+      "seed": 58,
+      "resultHash": "ddea6e2809d843e0",
+      "wallSeconds": 2.499284823
+    },
+    {
+      "rep": 17,
+      "seed": 59,
+      "resultHash": "cde8a30ae50b99eb",
+      "wallSeconds": 2.431189879
+    },
+    {
+      "rep": 18,
+      "seed": 60,
+      "resultHash": "7c0e02966182b26c",
+      "wallSeconds": 2.660647545
+    },
+    {
+      "rep": 19,
+      "seed": 61,
+      "resultHash": "32f46e1d1b200605",
+      "wallSeconds": 2.523739881
+    },
+    {
+      "rep": 20,
+      "seed": 62,
+      "resultHash": "a46b5d14a1cc43b2",
+      "wallSeconds": 3.02482331
+    },
+    {
+      "rep": 21,
+      "seed": 63,
+      "resultHash": "e2e94d89f979a532",
+      "wallSeconds": 3.031498617
+    },
+    {
+      "rep": 22,
+      "seed": 64,
+      "resultHash": "0191d798d4cd1172",
+      "wallSeconds": 2.773629711
+    },
+    {
+      "rep": 23,
+      "seed": 65,
+      "resultHash": "5dc7515bba1977a5",
+      "wallSeconds": 2.323597433
+    },
+    {
+      "rep": 24,
+      "seed": 66,
+      "resultHash": "8f3c450f54b3fe4b",
+      "wallSeconds": 2.033860308
+    },
+    {
+      "rep": 25,
+      "seed": 67,
+      "resultHash": "8a34b38563a6eac3",
+      "wallSeconds": 2.478840217
+    },
+    {
+      "rep": 26,
+      "seed": 68,
+      "resultHash": "fcc1d9a4b13cd793",
+      "wallSeconds": 2.251249803
+    },
+    {
+      "rep": 27,
+      "seed": 69,
+      "resultHash": "f23319a24973155c",
+      "wallSeconds": 2.191361383
+    },
+    {
+      "rep": 28,
+      "seed": 70,
+      "resultHash": "535d07ab3f220447",
+      "wallSeconds": 2.684036561
+    },
+    {
+      "rep": 29,
+      "seed": 71,
+      "resultHash": "74995e3014fb31d2",
+      "wallSeconds": 2.418642375
+    }
+  ],
+  "notes": [],
+  "metricDefinitions": {
+    "loop.generated": "sensor readings that triggered an application",
+    "loop.completed": "loops whose counting branches all finished: every actuation branch (apps with an actuator) or every sink (apps without)",
+    "loop.latency_ms": "time from sensing until the last counting branch finished (control-loop latency), milliseconds",
+    "loop.success_ratio": "loop.completed / loop.generated",
+    "loop.dropped": "loops lost on a counting branch (counted once per loop, with the first cause in loop.dropped.<reason>)",
+    "app.<name>.branch_dropped": "requests lost on branches that do not count for the loop (e.g. archiving in an actuation app)",
+    "update.interrupted": "devices that were depleted, failed or retired while an OTA update was running",
+    "update.download_failed": "OTA images that never reached the device's gateway (device stays on the old firmware)",
+    "energy.category.radio-overhead_J": "measured radio profile: wake-up, preparation, receive windows and post-processing (above baseline)",
+    "loop.deadline_miss_ratio": "completed loops slower than the application deadline / loop.completed",
+    "loop.dropped.<reason>": "requests lost, by cause (radio-loss, no-coverage, node-failure, queue-full, blackhole, ...)",
+    "app.<name>.*": "the loop metrics per application; sink_* for non-actuating branches",
+    "net.pdr": "end-to-end messages delivered / sent (after protocol retransmissions)",
+    "net.retransmissions": "protocol-level retransmissions (MQTT QoS1/2, CoAP CON, TCP)",
+    "instance.cold_starts": "service instances that went through a cold start",
+    "instance.startup_s": "time from instance creation (incl. image pull) to READY, seconds",
+    "instance.wait_ms": "queueing time of requests at service instances, milliseconds",
+    "scaling.out / scaling.in": "autoscaling actions",
+    "migration.downtime_ms": "session migration time during which requests are buffered, milliseconds",
+    "update.*": "OTA firmware campaign outcomes, per-device and campaign durations",
+    "energy.<layer>_J": "energy per layer (device, gateway, network, edge, fog, cloud), joules",
+    "energy.category.<c>_J": "energy per category (radio-tx, radio-rx, sensing, actuation, baseline, compute, network, security, ota)",
+    "carbon.<layer>_g": "operational carbon, gCO2e, from energy x carbon intensity at the time of use",
+    "cost.<item>": "monetary cost: compute core-hours per tier, network transfer, energy",
+    "availability.<class>": "mean fraction of time up (devices, gateways, nodes, links)",
+    "utilization.<tier>": "mean core utilisation per tier",
+    "battery.*_remaining": "remaining battery fraction at the end (mean, min)",
+    "security.*": "attack messages, blocked packets, detections and detection time",
+    "faults.*": "injected failures (independent, correlated events and targets)",
+    "lifecycle.<kind>.<state>": "number of lifecycle transitions into each state",
+    "sim.events / sim.time_s": "events processed and simulated time"
+  }
+}

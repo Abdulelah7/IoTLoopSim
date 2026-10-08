@@ -1,0 +1,5 @@
+case,condition,state_MB_definition,measured_s,measured_ci_s,simulated_no_overhead_s,overhead_calibrated_on,overhead_s,predicted_s,error_pct,within_measured_ci
+E1 cold migration,A,115 MiB,87.1,2.4,83.224,B,3.778,87.002,-0.11,true
+E1 cold migration,B,115 MiB,16.8,1.5,13.022,A,3.876,16.898,0.58,true
+E1 cold migration,A,115 MB (10^6),87.1,2.4,79.372,B,4.381,83.753,-3.84,false
+E1 cold migration,B,115 MB (10^6),16.8,1.5,12.419,A,7.728,20.147,19.92,false

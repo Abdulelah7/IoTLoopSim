@@ -1,0 +1,19 @@
+Picked up JAVA_TOOL_OPTIONS: 
+IoTLoopSim 0.1.0 | scenario 'smart-city' | 30 replications from seed 42 | 2 threads
+metric                                   mean     95% CI +/-     n
+loop.success_ratio                     0.9959      0.0004037    30
+loop.latency_ms.mean                    193.6          22.85    30
+loop.latency_ms.p95                     209.3          64.15    30
+loop.deadline_miss_ratio               0.2178       0.003845    30
+net.pdr                                0.9997      0.0001827    30
+energy.total_J                      2.818e+06          888.5    30
+energy.device_J                     4.410e+05          56.93    30
+carbon.total_g                          219.9         0.1109    30
+cost.total                             0.6215       0.001931    30
+availability.nodes                      1.000          0.000    30
+instance.cold_starts                    54.43          1.987    30
+migration.completed                      2511          40.22    30
+update.succeeded                        56.27         0.7716    30
+update.failed                           2.767         0.6480    30
+security.detections                     8.400         0.2703    30
+results written to Exp Data/fgcs-paper/results/cs2-security/abl-attacks-only-ids

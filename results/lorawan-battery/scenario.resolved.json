@@ -1,0 +1,153 @@
+{
+  "name": "lorawan-battery",
+  "seed": 3,
+  "duration": "30d",
+  "fidelity": {
+    "links": "analytical",
+    "radio": "analytical"
+  },
+  "gateways": [
+    {
+      "name": "gw",
+      "techs": [
+        "lorawan-dr0",
+        "lorawan-dr3",
+        "lorawan-dr5"
+      ],
+      "position": [
+        0,
+        0
+      ],
+      "range": 15000
+    }
+  ],
+  "nodes": [
+    {
+      "name": "ns",
+      "tier": "edge",
+      "cores": 4,
+      "mips": 2000,
+      "ram": 4096,
+      "position": [
+        0,
+        0
+      ],
+      "registry": true
+    }
+  ],
+  "links": [
+    {
+      "between": [
+        "gw",
+        "ns"
+      ],
+      "bandwidth": "10Mbps",
+      "latency": "20ms"
+    }
+  ],
+  "devices": [
+    {
+      "group": "sf12",
+      "count": 5,
+      "tech": {
+        "base": "lorawan-dr0",
+        "profile": "mdot-classa",
+        "loss": 0
+      },
+      "protocol": "none",
+      "area": {
+        "x0": 100,
+        "y0": 100,
+        "x1": 2000,
+        "y1": 2000
+      },
+      "battery": {
+        "mAh": 24,
+        "volts": 3.6
+      },
+      "baselinePower": 1.62E-4,
+      "sensors": [
+        {
+          "type": "reading",
+          "interval": "const(900)",
+          "bytes": 51,
+          "energy": 0
+        }
+      ]
+    },
+    {
+      "group": "sf9",
+      "count": 5,
+      "tech": {
+        "base": "lorawan-dr3",
+        "profile": "mdot-classa",
+        "loss": 0
+      },
+      "protocol": "none",
+      "area": {
+        "x0": 100,
+        "y0": 100,
+        "x1": 2000,
+        "y1": 2000
+      },
+      "battery": {
+        "mAh": 24,
+        "volts": 3.6
+      },
+      "baselinePower": 1.62E-4,
+      "sensors": [
+        {
+          "type": "reading",
+          "interval": "const(900)",
+          "bytes": 51,
+          "energy": 0
+        }
+      ]
+    },
+    {
+      "group": "sf7",
+      "count": 5,
+      "tech": {
+        "base": "lorawan-dr5",
+        "profile": "mdot-classa",
+        "loss": 0
+      },
+      "protocol": "none",
+      "area": {
+        "x0": 100,
+        "y0": 100,
+        "x1": 2000,
+        "y1": 2000
+      },
+      "battery": {
+        "mAh": 24,
+        "volts": 3.6
+      },
+      "baselinePower": 1.62E-4,
+      "sensors": [
+        {
+          "type": "reading",
+          "interval": "const(900)",
+          "bytes": 51,
+          "energy": 0
+        }
+      ]
+    }
+  ],
+  "applications": [
+    {
+      "name": "telemetry",
+      "trigger": "reading",
+      "modules": [
+        {
+          "name": "store",
+          "mi": 1,
+          "image": {
+            "name": "store:1",
+            "size": "50MB"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+Picked up JAVA_TOOL_OPTIONS: 
+metric (L0 vs L1)                  analytical          queue       diff
+loop.success_ratio                     0.9960         0.9960      -0.0%
+loop.latency_ms.mean                    198.4          202.3       2.0%
+loop.latency_ms.p95                     184.7          185.8       0.6%
+loop.deadline_miss_ratio               0.2232         0.2275       1.9%
+net.pdr                                0.9998         0.9998      -0.0%
+energy.total_J                      2.800e+06      2.800e+06       0.0%
+energy.device_J                     4.410e+05      4.410e+05       0.0%
+carbon.total_g                          217.5          217.5       0.0%
+cost.total                             0.6253         0.6242      -0.2%
+availability.nodes                     0.9698         0.9698       0.0%
+instance.cold_starts                    59.70          59.90       0.3%
+migration.completed                      2636           2638       0.1%
+update.succeeded                        31.60          31.60       0.0%
+update.failed                           2.100          2.100       0.0%
+security.detections                     8.200          8.200       0.0%
+written results/smart-city-fidelity/fidelity_comparison.csv

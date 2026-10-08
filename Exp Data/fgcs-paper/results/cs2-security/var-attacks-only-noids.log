@@ -1,0 +1,18 @@
+Picked up JAVA_TOOL_OPTIONS: 
+IoTLoopSim 0.1.0 | scenario 'smart-city-noids' | 30 replications from seed 42 | 2 threads
+metric                                   mean     95% CI +/-     n
+loop.success_ratio                     0.9930      0.0001503    30
+loop.latency_ms.mean                    536.4          7.737    30
+loop.latency_ms.p95                      1139          1.969    30
+loop.deadline_miss_ratio               0.2524       0.001688    30
+net.pdr                                0.9974      6.761e-05    30
+energy.total_J                      2.841e+06          94.67    30
+energy.device_J                     4.407e+05          48.88    30
+carbon.total_g                          222.8        0.01142    30
+cost.total                             0.6495      0.0007000    30
+availability.nodes                      1.000          0.000    30
+instance.cold_starts                    56.50          2.068    30
+migration.completed                      2531          28.31    30
+update.succeeded                        61.53         0.7187    30
+update.failed                           3.000         0.6354    30
+results written to Exp Data/fgcs-paper/results/cs2-security/abl-attacks-only-noids

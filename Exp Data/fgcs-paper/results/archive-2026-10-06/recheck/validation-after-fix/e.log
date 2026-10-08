@@ -1,0 +1,6 @@
+Picked up JAVA_TOOL_OPTIONS: 
+115 MiB        A: raw 83.22 s, overhead(B) 3.78 s -> predicted 87.00 s vs measured 87.1 ? 2.4 s
+115 MiB        B: raw 13.02 s, overhead(A) 3.88 s -> predicted 16.90 s vs measured 16.8 ? 1.5 s
+115 MB (10^6)  A: raw 79.37 s, overhead(B) 4.38 s -> predicted 83.75 s vs measured 87.1 ? 2.4 s
+115 MB (10^6)  B: raw 12.42 s, overhead(A) 7.73 s -> predicted 20.15 s vs measured 16.8 ? 1.5 s
+written /tmp/reval/v3_empirical_migration.csv

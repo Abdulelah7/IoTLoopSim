@@ -1,0 +1,2343 @@
+=== sample 1 13:13:28
+2026-10-08 13:13:29
+Full thread dump OpenJDK 64-Bit Server VM (21.0.12.1+1-1-24.04.4-Ubuntu mixed mode, sharing):
+
+Threads class SMR info:
+_java_thread_list=0x00007ff43c002500, length=12, elements={
+0x00007ff4c8019770, 0x00007ff4c8101ed0, 0x00007ff4c8103450, 0x00007ff4c8104d20,
+0x00007ff4c8106370, 0x00007ff4c8107920, 0x00007ff4c8109470, 0x00007ff4c810ab40,
+0x00007ff4c8116870, 0x00007ff4c8119730, 0x00007ff4c824f9d0, 0x00007ff43c000fe0
+}
+
+"main" #1 [7704] prio=5 os_prio=0 cpu=1013.85ms elapsed=40.44s tid=0x00007ff4c8019770 nid=7704 waiting on condition  [0x00007ff4ce5fe000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.12.1/Native Method)
+	- parking to wait for  <0x0000000684d9d8b0> (a java.util.concurrent.FutureTask)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.12.1/LockSupport.java:221)
+	at java.util.concurrent.FutureTask.awaitDone(java.base@21.0.12.1/FutureTask.java:500)
+	at java.util.concurrent.FutureTask.get(java.base@21.0.12.1/FutureTask.java:190)
+	at org.iotloopsim.experiment.Experiment.run(Experiment.java:126)
+	at org.iotloopsim.experiment.Main.run(Main.java:73)
+	at org.iotloopsim.experiment.Main.main(Main.java:31)
+	at org.iotloopsim.bridge.Launcher.main(Launcher.java:11)
+
+"Reference Handler" #9 [7712] daemon prio=10 os_prio=0 cpu=3.27ms elapsed=40.40s tid=0x00007ff4c8101ed0 nid=7712 waiting on condition  [0x00007ff4a84fb000]
+   java.lang.Thread.State: RUNNABLE
+	at java.lang.ref.Reference.waitForReferencePendingList(java.base@21.0.12.1/Native Method)
+	at java.lang.ref.Reference.processPendingReferences(java.base@21.0.12.1/Reference.java:246)
+	at java.lang.ref.Reference$ReferenceHandler.run(java.base@21.0.12.1/Reference.java:208)
+
+"Finalizer" #10 [7713] daemon prio=8 os_prio=0 cpu=0.42ms elapsed=40.40s tid=0x00007ff4c8103450 nid=7713 in Object.wait()  [0x00007ff4a83fb000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait0(java.base@21.0.12.1/Native Method)
+	- waiting on <0x0000000680000688> (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.Object.wait(java.base@21.0.12.1/Object.java:366)
+	at java.lang.Object.wait(java.base@21.0.12.1/Object.java:339)
+	at java.lang.ref.NativeReferenceQueue.await(java.base@21.0.12.1/NativeReferenceQueue.java:48)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.12.1/ReferenceQueue.java:158)
+	at java.lang.ref.NativeReferenceQueue.remove(java.base@21.0.12.1/NativeReferenceQueue.java:89)
+	- locked <0x0000000680000688> (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.ref.Finalizer$FinalizerThread.run(java.base@21.0.12.1/Finalizer.java:173)
+
+"Signal Dispatcher" #11 [7714] daemon prio=9 os_prio=0 cpu=0.78ms elapsed=40.40s tid=0x00007ff4c8104d20 nid=7714 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Service Thread" #12 [7715] daemon prio=9 os_prio=0 cpu=1.34ms elapsed=40.40s tid=0x00007ff4c8106370 nid=7715 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Monitor Deflation Thread" #13 [7716] daemon prio=9 os_prio=0 cpu=9.51ms elapsed=40.40s tid=0x00007ff4c8107920 nid=7716 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread0" #14 [7717] daemon prio=9 os_prio=0 cpu=4976.89ms elapsed=40.40s tid=0x00007ff4c8109470 nid=7717 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"C1 CompilerThread0" #15 [7718] daemon prio=9 os_prio=0 cpu=555.91ms elapsed=40.40s tid=0x00007ff4c810ab40 nid=7718 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"Notification Thread" #16 [7719] daemon prio=9 os_prio=0 cpu=0.22ms elapsed=40.39s tid=0x00007ff4c8116870 nid=7719 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Common-Cleaner" #17 [7720] daemon prio=8 os_prio=0 cpu=0.62ms elapsed=40.39s tid=0x00007ff4c8119730 nid=7720 waiting on condition  [0x00007ff452bfe000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.12.1/Native Method)
+	- parking to wait for  <0x0000000680000898> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@21.0.12.1/LockSupport.java:269)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.12.1/AbstractQueuedSynchronizer.java:1886)
+	at java.lang.ref.ReferenceQueue.await(java.base@21.0.12.1/ReferenceQueue.java:71)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.12.1/ReferenceQueue.java:143)
+	at java.lang.ref.ReferenceQueue.remove(java.base@21.0.12.1/ReferenceQueue.java:218)
+	at jdk.internal.ref.CleanerImpl.run(java.base@21.0.12.1/CleanerImpl.java:140)
+	at java.lang.Thread.runWith(java.base@21.0.12.1/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.12.1/Thread.java:1583)
+	at jdk.internal.misc.InnocuousThread.run(java.base@21.0.12.1/InnocuousThread.java:186)
+
+"pool-1-thread-1" #19 [7722] prio=5 os_prio=0 cpu=36761.28ms elapsed=39.10s tid=0x00007ff4c824f9d0 nid=7722 runnable  [0x00007ff4529fc000]
+   java.lang.Thread.State: RUNNABLE
+	at org.iotloopsim.core.RngStreams.stream(RngStreams.java:25)
+	at org.iotloopsim.core.Simulation.stream(Simulation.java:172)
+	at org.iotloopsim.model.Sensor.tick(Sensor.java:57)
+	at org.iotloopsim.model.Sensor$$Lambda/0x00007ff45402e4e8.run(Unknown Source)
+	at org.iotloopsim.core.Simulation.runUntilPaused(Simulation.java:143)
+	at org.iotloopsim.core.Simulation.run(Simulation.java:126)
+	at org.iotloopsim.model.IoTWorld.run(IoTWorld.java:252)
+	at org.iotloopsim.experiment.Experiment.runOne(Experiment.java:92)
+	at org.iotloopsim.experiment.Experiment.lambda$run$0(Experiment.java:123)
+	at org.iotloopsim.experiment.Experiment$$Lambda/0x00007ff454024700.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(java.base@21.0.12.1/FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.12.1/ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.12.1/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.12.1/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.12.1/Thread.java:1583)
+
+"Attach Listener" #20 [7746] daemon prio=9 os_prio=0 cpu=0.29ms elapsed=0.10s tid=0x00007ff43c000fe0 nid=7746 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"GC Thread#1" os_prio=0 cpu=1407.63ms elapsed=40.15s tid=0x00007ff440006300 nid=7721 runnable  
+
+"VM Thread" os_prio=0 cpu=44.65ms elapsed=40.41s tid=0x00007ff4c80f9610 nid=7711 runnable  
+
+"VM Periodic Task Thread" os_prio=0 cpu=60.82ms elapsed=40.42s tid=0x00007ff4c80e7ef0 nid=7710 waiting on condition  
+
+"G1 Service" os_prio=0 cpu=7.62ms elapsed=40.44s tid=0x00007ff4c80ce5c0 nid=7709 runnable  
+
+"G1 Refine#0" os_prio=0 cpu=106.28ms elapsed=40.44s tid=0x00007ff4c80cd5f0 nid=7708 runnable  
+
+"G1 Conc#0" os_prio=0 cpu=0.08ms elapsed=40.44s tid=0x00007ff4c80ae2a0 nid=7707 runnable  
+
+"G1 Main Marker" os_prio=0 cpu=0.17ms elapsed=40.44s tid=0x00007ff4c80ad2f0 nid=7706 runnable  
+
+"GC Thread#0" os_prio=0 cpu=1343.97ms elapsed=40.44s tid=0x00007ff4c809fd10 nid=7705 runnable  
+
+JNI global refs: 7, weak refs: 0
+
+=== sample 2 13:13:32
+2026-10-08 13:13:32
+Full thread dump OpenJDK 64-Bit Server VM (21.0.12.1+1-1-24.04.4-Ubuntu mixed mode, sharing):
+
+Threads class SMR info:
+_java_thread_list=0x00007ff43c002500, length=12, elements={
+0x00007ff4c8019770, 0x00007ff4c8101ed0, 0x00007ff4c8103450, 0x00007ff4c8104d20,
+0x00007ff4c8106370, 0x00007ff4c8107920, 0x00007ff4c8109470, 0x00007ff4c810ab40,
+0x00007ff4c8116870, 0x00007ff4c8119730, 0x00007ff4c824f9d0, 0x00007ff43c000fe0
+}
+
+"main" #1 [7704] prio=5 os_prio=0 cpu=1013.85ms elapsed=43.80s tid=0x00007ff4c8019770 nid=7704 waiting on condition  [0x00007ff4ce5fe000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.12.1/Native Method)
+	- parking to wait for  <0x0000000684d9d8b0> (a java.util.concurrent.FutureTask)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.12.1/LockSupport.java:221)
+	at java.util.concurrent.FutureTask.awaitDone(java.base@21.0.12.1/FutureTask.java:500)
+	at java.util.concurrent.FutureTask.get(java.base@21.0.12.1/FutureTask.java:190)
+	at org.iotloopsim.experiment.Experiment.run(Experiment.java:126)
+	at org.iotloopsim.experiment.Main.run(Main.java:73)
+	at org.iotloopsim.experiment.Main.main(Main.java:31)
+	at org.iotloopsim.bridge.Launcher.main(Launcher.java:11)
+
+"Reference Handler" #9 [7712] daemon prio=10 os_prio=0 cpu=3.27ms elapsed=43.77s tid=0x00007ff4c8101ed0 nid=7712 waiting on condition  [0x00007ff4a84fb000]
+   java.lang.Thread.State: RUNNABLE
+	at java.lang.ref.Reference.waitForReferencePendingList(java.base@21.0.12.1/Native Method)
+	at java.lang.ref.Reference.processPendingReferences(java.base@21.0.12.1/Reference.java:246)
+	at java.lang.ref.Reference$ReferenceHandler.run(java.base@21.0.12.1/Reference.java:208)
+
+"Finalizer" #10 [7713] daemon prio=8 os_prio=0 cpu=0.42ms elapsed=43.77s tid=0x00007ff4c8103450 nid=7713 in Object.wait()  [0x00007ff4a83fb000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait0(java.base@21.0.12.1/Native Method)
+	- waiting on <0x0000000680000688> (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.Object.wait(java.base@21.0.12.1/Object.java:366)
+	at java.lang.Object.wait(java.base@21.0.12.1/Object.java:339)
+	at java.lang.ref.NativeReferenceQueue.await(java.base@21.0.12.1/NativeReferenceQueue.java:48)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.12.1/ReferenceQueue.java:158)
+	at java.lang.ref.NativeReferenceQueue.remove(java.base@21.0.12.1/NativeReferenceQueue.java:89)
+	- locked <0x0000000680000688> (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.ref.Finalizer$FinalizerThread.run(java.base@21.0.12.1/Finalizer.java:173)
+
+"Signal Dispatcher" #11 [7714] daemon prio=9 os_prio=0 cpu=0.78ms elapsed=43.76s tid=0x00007ff4c8104d20 nid=7714 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Service Thread" #12 [7715] daemon prio=9 os_prio=0 cpu=1.34ms elapsed=43.76s tid=0x00007ff4c8106370 nid=7715 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Monitor Deflation Thread" #13 [7716] daemon prio=9 os_prio=0 cpu=10.13ms elapsed=43.76s tid=0x00007ff4c8107920 nid=7716 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread0" #14 [7717] daemon prio=9 os_prio=0 cpu=4976.94ms elapsed=43.76s tid=0x00007ff4c8109470 nid=7717 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"C1 CompilerThread0" #15 [7718] daemon prio=9 os_prio=0 cpu=555.98ms elapsed=43.76s tid=0x00007ff4c810ab40 nid=7718 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"Notification Thread" #16 [7719] daemon prio=9 os_prio=0 cpu=0.22ms elapsed=43.75s tid=0x00007ff4c8116870 nid=7719 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Common-Cleaner" #17 [7720] daemon prio=8 os_prio=0 cpu=0.62ms elapsed=43.75s tid=0x00007ff4c8119730 nid=7720 waiting on condition  [0x00007ff452bfe000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.12.1/Native Method)
+	- parking to wait for  <0x0000000680000898> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@21.0.12.1/LockSupport.java:269)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.12.1/AbstractQueuedSynchronizer.java:1886)
+	at java.lang.ref.ReferenceQueue.await(java.base@21.0.12.1/ReferenceQueue.java:71)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.12.1/ReferenceQueue.java:143)
+	at java.lang.ref.ReferenceQueue.remove(java.base@21.0.12.1/ReferenceQueue.java:218)
+	at jdk.internal.ref.CleanerImpl.run(java.base@21.0.12.1/CleanerImpl.java:140)
+	at java.lang.Thread.runWith(java.base@21.0.12.1/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.12.1/Thread.java:1583)
+	at jdk.internal.misc.InnocuousThread.run(java.base@21.0.12.1/InnocuousThread.java:186)
+
+"pool-1-thread-1" #19 [7722] prio=5 os_prio=0 cpu=39728.21ms elapsed=42.47s tid=0x00007ff4c824f9d0 nid=7722 runnable  [0x00007ff4529fc000]
+   java.lang.Thread.State: RUNNABLE
+	at java.util.PriorityQueue.poll(java.base@21.0.12.1/PriorityQueue.java:583)
+	at org.iotloopsim.core.Simulation.runUntilPaused(Simulation.java:139)
+	at org.iotloopsim.core.Simulation.run(Simulation.java:126)
+	at org.iotloopsim.model.IoTWorld.run(IoTWorld.java:252)
+	at org.iotloopsim.experiment.Experiment.runOne(Experiment.java:92)
+	at org.iotloopsim.experiment.Experiment.lambda$run$0(Experiment.java:123)
+	at org.iotloopsim.experiment.Experiment$$Lambda/0x00007ff454024700.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(java.base@21.0.12.1/FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.12.1/ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.12.1/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.12.1/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.12.1/Thread.java:1583)
+
+"Attach Listener" #20 [7746] daemon prio=9 os_prio=0 cpu=0.52ms elapsed=3.46s tid=0x00007ff43c000fe0 nid=7746 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"GC Thread#1" os_prio=0 cpu=1732.71ms elapsed=43.51s tid=0x00007ff440006300 nid=7721 runnable  
+
+"VM Thread" os_prio=0 cpu=46.89ms elapsed=43.77s tid=0x00007ff4c80f9610 nid=7711 runnable  
+
+"VM Periodic Task Thread" os_prio=0 cpu=64.83ms elapsed=43.78s tid=0x00007ff4c80e7ef0 nid=7710 waiting on condition  
+
+"G1 Service" os_prio=0 cpu=7.85ms elapsed=43.80s tid=0x00007ff4c80ce5c0 nid=7709 runnable  
+
+"G1 Refine#0" os_prio=0 cpu=124.45ms elapsed=43.80s tid=0x00007ff4c80cd5f0 nid=7708 runnable  
+
+"G1 Conc#0" os_prio=0 cpu=0.08ms elapsed=43.80s tid=0x00007ff4c80ae2a0 nid=7707 runnable  
+
+"G1 Main Marker" os_prio=0 cpu=0.17ms elapsed=43.80s tid=0x00007ff4c80ad2f0 nid=7706 runnable  
+
+"GC Thread#0" os_prio=0 cpu=1662.43ms elapsed=43.80s tid=0x00007ff4c809fd10 nid=7705 runnable  
+
+JNI global refs: 7, weak refs: 0
+
+=== sample 3 13:13:35
+2026-10-08 13:13:35
+Full thread dump OpenJDK 64-Bit Server VM (21.0.12.1+1-1-24.04.4-Ubuntu mixed mode, sharing):
+
+Threads class SMR info:
+_java_thread_list=0x00007ff43c002500, length=12, elements={
+0x00007ff4c8019770, 0x00007ff4c8101ed0, 0x00007ff4c8103450, 0x00007ff4c8104d20,
+0x00007ff4c8106370, 0x00007ff4c8107920, 0x00007ff4c8109470, 0x00007ff4c810ab40,
+0x00007ff4c8116870, 0x00007ff4c8119730, 0x00007ff4c824f9d0, 0x00007ff43c000fe0
+}
+
+"main" #1 [7704] prio=5 os_prio=0 cpu=1013.85ms elapsed=47.12s tid=0x00007ff4c8019770 nid=7704 waiting on condition  [0x00007ff4ce5fe000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.12.1/Native Method)
+	- parking to wait for  <0x0000000684d9d8b0> (a java.util.concurrent.FutureTask)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.12.1/LockSupport.java:221)
+	at java.util.concurrent.FutureTask.awaitDone(java.base@21.0.12.1/FutureTask.java:500)
+	at java.util.concurrent.FutureTask.get(java.base@21.0.12.1/FutureTask.java:190)
+	at org.iotloopsim.experiment.Experiment.run(Experiment.java:126)
+	at org.iotloopsim.experiment.Main.run(Main.java:73)
+	at org.iotloopsim.experiment.Main.main(Main.java:31)
+	at org.iotloopsim.bridge.Launcher.main(Launcher.java:11)
+
+"Reference Handler" #9 [7712] daemon prio=10 os_prio=0 cpu=3.27ms elapsed=47.08s tid=0x00007ff4c8101ed0 nid=7712 waiting on condition  [0x00007ff4a84fb000]
+   java.lang.Thread.State: RUNNABLE
+	at java.lang.ref.Reference.waitForReferencePendingList(java.base@21.0.12.1/Native Method)
+	at java.lang.ref.Reference.processPendingReferences(java.base@21.0.12.1/Reference.java:246)
+	at java.lang.ref.Reference$ReferenceHandler.run(java.base@21.0.12.1/Reference.java:208)
+
+"Finalizer" #10 [7713] daemon prio=8 os_prio=0 cpu=0.42ms elapsed=47.08s tid=0x00007ff4c8103450 nid=7713 in Object.wait()  [0x00007ff4a83fb000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait0(java.base@21.0.12.1/Native Method)
+	- waiting on <0x0000000680000688> (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.Object.wait(java.base@21.0.12.1/Object.java:366)
+	at java.lang.Object.wait(java.base@21.0.12.1/Object.java:339)
+	at java.lang.ref.NativeReferenceQueue.await(java.base@21.0.12.1/NativeReferenceQueue.java:48)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.12.1/ReferenceQueue.java:158)
+	at java.lang.ref.NativeReferenceQueue.remove(java.base@21.0.12.1/NativeReferenceQueue.java:89)
+	- locked <0x0000000680000688> (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.ref.Finalizer$FinalizerThread.run(java.base@21.0.12.1/Finalizer.java:173)
+
+"Signal Dispatcher" #11 [7714] daemon prio=9 os_prio=0 cpu=0.78ms elapsed=47.08s tid=0x00007ff4c8104d20 nid=7714 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Service Thread" #12 [7715] daemon prio=9 os_prio=0 cpu=1.34ms elapsed=47.08s tid=0x00007ff4c8106370 nid=7715 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Monitor Deflation Thread" #13 [7716] daemon prio=9 os_prio=0 cpu=10.90ms elapsed=47.08s tid=0x00007ff4c8107920 nid=7716 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread0" #14 [7717] daemon prio=9 os_prio=0 cpu=4977.01ms elapsed=47.08s tid=0x00007ff4c8109470 nid=7717 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"C1 CompilerThread0" #15 [7718] daemon prio=9 os_prio=0 cpu=556.04ms elapsed=47.08s tid=0x00007ff4c810ab40 nid=7718 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"Notification Thread" #16 [7719] daemon prio=9 os_prio=0 cpu=0.22ms elapsed=47.06s tid=0x00007ff4c8116870 nid=7719 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Common-Cleaner" #17 [7720] daemon prio=8 os_prio=0 cpu=0.62ms elapsed=47.06s tid=0x00007ff4c8119730 nid=7720 waiting on condition  [0x00007ff452bfe000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.12.1/Native Method)
+	- parking to wait for  <0x0000000680000898> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@21.0.12.1/LockSupport.java:269)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.12.1/AbstractQueuedSynchronizer.java:1886)
+	at java.lang.ref.ReferenceQueue.await(java.base@21.0.12.1/ReferenceQueue.java:71)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.12.1/ReferenceQueue.java:143)
+	at java.lang.ref.ReferenceQueue.remove(java.base@21.0.12.1/ReferenceQueue.java:218)
+	at jdk.internal.ref.CleanerImpl.run(java.base@21.0.12.1/CleanerImpl.java:140)
+	at java.lang.Thread.runWith(java.base@21.0.12.1/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.12.1/Thread.java:1583)
+	at jdk.internal.misc.InnocuousThread.run(java.base@21.0.12.1/InnocuousThread.java:186)
+
+"pool-1-thread-1" #19 [7722] prio=5 os_prio=0 cpu=42893.79ms elapsed=45.78s tid=0x00007ff4c824f9d0 nid=7722 runnable  [0x00007ff4529fc000]
+   java.lang.Thread.State: RUNNABLE
+	at java.util.HashMap.hash(java.base@21.0.12.1/HashMap.java:338)
+	at java.util.HashMap.merge(java.base@21.0.12.1/HashMap.java:1364)
+	at org.iotloopsim.model.EnergyLedger.charge(EnergyLedger.java:33)
+	at org.iotloopsim.model.EnergyLedger.charge(EnergyLedger.java:22)
+	at org.iotloopsim.model.Network.lambda$hop$8(Network.java:194)
+	at org.iotloopsim.model.Network$$Lambda/0x00007ff454026d88.done(Unknown Source)
+	at org.iotloopsim.model.Link.lambda$transmit$2(Link.java:154)
+	at org.iotloopsim.model.Link$$Lambda/0x00007ff454027428.run(Unknown Source)
+	at org.iotloopsim.core.Simulation.runUntilPaused(Simulation.java:143)
+	at org.iotloopsim.core.Simulation.run(Simulation.java:126)
+	at org.iotloopsim.model.IoTWorld.run(IoTWorld.java:252)
+	at org.iotloopsim.experiment.Experiment.runOne(Experiment.java:92)
+	at org.iotloopsim.experiment.Experiment.lambda$run$0(Experiment.java:123)
+	at org.iotloopsim.experiment.Experiment$$Lambda/0x00007ff454024700.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(java.base@21.0.12.1/FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.12.1/ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.12.1/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.12.1/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.12.1/Thread.java:1583)
+
+"Attach Listener" #20 [7746] daemon prio=9 os_prio=0 cpu=0.77ms elapsed=6.78s tid=0x00007ff43c000fe0 nid=7746 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"GC Thread#1" os_prio=0 cpu=1732.71ms elapsed=46.82s tid=0x00007ff440006300 nid=7721 runnable  
+
+"VM Thread" os_prio=0 cpu=47.57ms elapsed=47.09s tid=0x00007ff4c80f9610 nid=7711 runnable  
+
+"VM Periodic Task Thread" os_prio=0 cpu=68.80ms elapsed=47.09s tid=0x00007ff4c80e7ef0 nid=7710 waiting on condition  
+
+"G1 Service" os_prio=0 cpu=8.05ms elapsed=47.11s tid=0x00007ff4c80ce5c0 nid=7709 runnable  
+
+"G1 Refine#0" os_prio=0 cpu=136.87ms elapsed=47.11s tid=0x00007ff4c80cd5f0 nid=7708 runnable  
+
+"G1 Conc#0" os_prio=0 cpu=0.08ms elapsed=47.11s tid=0x00007ff4c80ae2a0 nid=7707 runnable  
+
+"G1 Main Marker" os_prio=0 cpu=0.17ms elapsed=47.11s tid=0x00007ff4c80ad2f0 nid=7706 runnable  
+
+"GC Thread#0" os_prio=0 cpu=1662.43ms elapsed=47.11s tid=0x00007ff4c809fd10 nid=7705 runnable  
+
+JNI global refs: 7, weak refs: 0
+
+=== sample 4 13:13:38
+2026-10-08 13:13:39
+Full thread dump OpenJDK 64-Bit Server VM (21.0.12.1+1-1-24.04.4-Ubuntu mixed mode, sharing):
+
+Threads class SMR info:
+_java_thread_list=0x00007ff43c002500, length=12, elements={
+0x00007ff4c8019770, 0x00007ff4c8101ed0, 0x00007ff4c8103450, 0x00007ff4c8104d20,
+0x00007ff4c8106370, 0x00007ff4c8107920, 0x00007ff4c8109470, 0x00007ff4c810ab40,
+0x00007ff4c8116870, 0x00007ff4c8119730, 0x00007ff4c824f9d0, 0x00007ff43c000fe0
+}
+
+"main" #1 [7704] prio=5 os_prio=0 cpu=1013.85ms elapsed=50.47s tid=0x00007ff4c8019770 nid=7704 waiting on condition  [0x00007ff4ce5fe000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.12.1/Native Method)
+	- parking to wait for  <0x0000000684d9d8b0> (a java.util.concurrent.FutureTask)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.12.1/LockSupport.java:221)
+	at java.util.concurrent.FutureTask.awaitDone(java.base@21.0.12.1/FutureTask.java:500)
+	at java.util.concurrent.FutureTask.get(java.base@21.0.12.1/FutureTask.java:190)
+	at org.iotloopsim.experiment.Experiment.run(Experiment.java:126)
+	at org.iotloopsim.experiment.Main.run(Main.java:73)
+	at org.iotloopsim.experiment.Main.main(Main.java:31)
+	at org.iotloopsim.bridge.Launcher.main(Launcher.java:11)
+
+"Reference Handler" #9 [7712] daemon prio=10 os_prio=0 cpu=3.27ms elapsed=50.43s tid=0x00007ff4c8101ed0 nid=7712 waiting on condition  [0x00007ff4a84fb000]
+   java.lang.Thread.State: RUNNABLE
+	at java.lang.ref.Reference.waitForReferencePendingList(java.base@21.0.12.1/Native Method)
+	at java.lang.ref.Reference.processPendingReferences(java.base@21.0.12.1/Reference.java:246)
+	at java.lang.ref.Reference$ReferenceHandler.run(java.base@21.0.12.1/Reference.java:208)
+
+"Finalizer" #10 [7713] daemon prio=8 os_prio=0 cpu=0.42ms elapsed=50.43s tid=0x00007ff4c8103450 nid=7713 in Object.wait()  [0x00007ff4a83fb000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait0(java.base@21.0.12.1/Native Method)
+	- waiting on <0x0000000680000688> (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.Object.wait(java.base@21.0.12.1/Object.java:366)
+	at java.lang.Object.wait(java.base@21.0.12.1/Object.java:339)
+	at java.lang.ref.NativeReferenceQueue.await(java.base@21.0.12.1/NativeReferenceQueue.java:48)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.12.1/ReferenceQueue.java:158)
+	at java.lang.ref.NativeReferenceQueue.remove(java.base@21.0.12.1/NativeReferenceQueue.java:89)
+	- locked <0x0000000680000688> (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.ref.Finalizer$FinalizerThread.run(java.base@21.0.12.1/Finalizer.java:173)
+
+"Signal Dispatcher" #11 [7714] daemon prio=9 os_prio=0 cpu=0.78ms elapsed=50.43s tid=0x00007ff4c8104d20 nid=7714 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Service Thread" #12 [7715] daemon prio=9 os_prio=0 cpu=1.34ms elapsed=50.43s tid=0x00007ff4c8106370 nid=7715 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Monitor Deflation Thread" #13 [7716] daemon prio=9 os_prio=0 cpu=11.64ms elapsed=50.43s tid=0x00007ff4c8107920 nid=7716 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread0" #14 [7717] daemon prio=9 os_prio=0 cpu=4977.01ms elapsed=50.43s tid=0x00007ff4c8109470 nid=7717 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"C1 CompilerThread0" #15 [7718] daemon prio=9 os_prio=0 cpu=556.04ms elapsed=50.43s tid=0x00007ff4c810ab40 nid=7718 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"Notification Thread" #16 [7719] daemon prio=9 os_prio=0 cpu=0.22ms elapsed=50.42s tid=0x00007ff4c8116870 nid=7719 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Common-Cleaner" #17 [7720] daemon prio=8 os_prio=0 cpu=0.62ms elapsed=50.42s tid=0x00007ff4c8119730 nid=7720 waiting on condition  [0x00007ff452bfe000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.12.1/Native Method)
+	- parking to wait for  <0x0000000680000898> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@21.0.12.1/LockSupport.java:269)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.12.1/AbstractQueuedSynchronizer.java:1886)
+	at java.lang.ref.ReferenceQueue.await(java.base@21.0.12.1/ReferenceQueue.java:71)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.12.1/ReferenceQueue.java:143)
+	at java.lang.ref.ReferenceQueue.remove(java.base@21.0.12.1/ReferenceQueue.java:218)
+	at jdk.internal.ref.CleanerImpl.run(java.base@21.0.12.1/CleanerImpl.java:140)
+	at java.lang.Thread.runWith(java.base@21.0.12.1/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.12.1/Thread.java:1583)
+	at jdk.internal.misc.InnocuousThread.run(java.base@21.0.12.1/InnocuousThread.java:186)
+
+"pool-1-thread-1" #19 [7722] prio=5 os_prio=0 cpu=45932.15ms elapsed=49.13s tid=0x00007ff4c824f9d0 nid=7722 runnable  [0x00007ff4529fc000]
+   java.lang.Thread.State: RUNNABLE
+	at java.util.HashMap.hash(java.base@21.0.12.1/HashMap.java:338)
+	at java.util.HashMap.computeIfAbsent(java.base@21.0.12.1/HashMap.java:1199)
+	at org.iotloopsim.core.RngStreams.stream(RngStreams.java:25)
+	at org.iotloopsim.core.Simulation.stream(Simulation.java:172)
+	at org.iotloopsim.model.Actuator.actuate(Actuator.java:34)
+	at org.iotloopsim.model.AppRuntime.lambda$sendCommand$9(AppRuntime.java:240)
+	at org.iotloopsim.model.AppRuntime$$Lambda/0x00007ff45402ed88.done(Unknown Source)
+	at org.iotloopsim.model.Network.lambda$attempt$4(Network.java:132)
+	at org.iotloopsim.model.Network$$Lambda/0x00007ff454026b60.done(Unknown Source)
+	at org.iotloopsim.model.IoTDevice.lambda$radioDown$1(IoTDevice.java:274)
+	at org.iotloopsim.model.IoTDevice$$Lambda/0x00007ff45402efb0.run(Unknown Source)
+	at org.iotloopsim.core.Simulation.runUntilPaused(Simulation.java:143)
+	at org.iotloopsim.core.Simulation.run(Simulation.java:126)
+	at org.iotloopsim.model.IoTWorld.run(IoTWorld.java:252)
+	at org.iotloopsim.experiment.Experiment.runOne(Experiment.java:92)
+	at org.iotloopsim.experiment.Experiment.lambda$run$0(Experiment.java:123)
+	at org.iotloopsim.experiment.Experiment$$Lambda/0x00007ff454024700.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(java.base@21.0.12.1/FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.12.1/ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.12.1/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.12.1/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.12.1/Thread.java:1583)
+
+"Attach Listener" #20 [7746] daemon prio=9 os_prio=0 cpu=1.07ms elapsed=10.13s tid=0x00007ff43c000fe0 nid=7746 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"GC Thread#1" os_prio=0 cpu=1915.19ms elapsed=50.18s tid=0x00007ff440006300 nid=7721 runnable  
+
+"VM Thread" os_prio=0 cpu=49.04ms elapsed=50.44s tid=0x00007ff4c80f9610 nid=7711 runnable  
+
+"VM Periodic Task Thread" os_prio=0 cpu=72.89ms elapsed=50.45s tid=0x00007ff4c80e7ef0 nid=7710 waiting on condition  
+
+"G1 Service" os_prio=0 cpu=8.89ms elapsed=50.47s tid=0x00007ff4c80ce5c0 nid=7709 runnable  
+
+"G1 Refine#0" os_prio=0 cpu=191.70ms elapsed=50.47s tid=0x00007ff4c80cd5f0 nid=7708 runnable  
+
+"G1 Conc#0" os_prio=0 cpu=0.08ms elapsed=50.47s tid=0x00007ff4c80ae2a0 nid=7707 runnable  
+
+"G1 Main Marker" os_prio=0 cpu=0.17ms elapsed=50.47s tid=0x00007ff4c80ad2f0 nid=7706 runnable  
+
+"GC Thread#0" os_prio=0 cpu=1845.26ms elapsed=50.47s tid=0x00007ff4c809fd10 nid=7705 runnable  
+
+JNI global refs: 7, weak refs: 0
+
+=== sample 5 13:13:42
+2026-10-08 13:13:42
+Full thread dump OpenJDK 64-Bit Server VM (21.0.12.1+1-1-24.04.4-Ubuntu mixed mode, sharing):
+
+Threads class SMR info:
+_java_thread_list=0x00007ff43c002500, length=12, elements={
+0x00007ff4c8019770, 0x00007ff4c8101ed0, 0x00007ff4c8103450, 0x00007ff4c8104d20,
+0x00007ff4c8106370, 0x00007ff4c8107920, 0x00007ff4c8109470, 0x00007ff4c810ab40,
+0x00007ff4c8116870, 0x00007ff4c8119730, 0x00007ff4c824f9d0, 0x00007ff43c000fe0
+}
+
+"main" #1 [7704] prio=5 os_prio=0 cpu=1013.85ms elapsed=53.87s tid=0x00007ff4c8019770 nid=7704 waiting on condition  [0x00007ff4ce5fe000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.12.1/Native Method)
+	- parking to wait for  <0x0000000684d9d8b0> (a java.util.concurrent.FutureTask)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.12.1/LockSupport.java:221)
+	at java.util.concurrent.FutureTask.awaitDone(java.base@21.0.12.1/FutureTask.java:500)
+	at java.util.concurrent.FutureTask.get(java.base@21.0.12.1/FutureTask.java:190)
+	at org.iotloopsim.experiment.Experiment.run(Experiment.java:126)
+	at org.iotloopsim.experiment.Main.run(Main.java:73)
+	at org.iotloopsim.experiment.Main.main(Main.java:31)
+	at org.iotloopsim.bridge.Launcher.main(Launcher.java:11)
+
+"Reference Handler" #9 [7712] daemon prio=10 os_prio=0 cpu=3.27ms elapsed=53.83s tid=0x00007ff4c8101ed0 nid=7712 waiting on condition  [0x00007ff4a84fb000]
+   java.lang.Thread.State: RUNNABLE
+	at java.lang.ref.Reference.waitForReferencePendingList(java.base@21.0.12.1/Native Method)
+	at java.lang.ref.Reference.processPendingReferences(java.base@21.0.12.1/Reference.java:246)
+	at java.lang.ref.Reference$ReferenceHandler.run(java.base@21.0.12.1/Reference.java:208)
+
+"Finalizer" #10 [7713] daemon prio=8 os_prio=0 cpu=0.42ms elapsed=53.83s tid=0x00007ff4c8103450 nid=7713 in Object.wait()  [0x00007ff4a83fb000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait0(java.base@21.0.12.1/Native Method)
+	- waiting on <0x0000000680000688> (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.Object.wait(java.base@21.0.12.1/Object.java:366)
+	at java.lang.Object.wait(java.base@21.0.12.1/Object.java:339)
+	at java.lang.ref.NativeReferenceQueue.await(java.base@21.0.12.1/NativeReferenceQueue.java:48)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.12.1/ReferenceQueue.java:158)
+	at java.lang.ref.NativeReferenceQueue.remove(java.base@21.0.12.1/NativeReferenceQueue.java:89)
+	- locked <0x0000000680000688> (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.ref.Finalizer$FinalizerThread.run(java.base@21.0.12.1/Finalizer.java:173)
+
+"Signal Dispatcher" #11 [7714] daemon prio=9 os_prio=0 cpu=0.78ms elapsed=53.83s tid=0x00007ff4c8104d20 nid=7714 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Service Thread" #12 [7715] daemon prio=9 os_prio=0 cpu=1.34ms elapsed=53.83s tid=0x00007ff4c8106370 nid=7715 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Monitor Deflation Thread" #13 [7716] daemon prio=9 os_prio=0 cpu=12.42ms elapsed=53.83s tid=0x00007ff4c8107920 nid=7716 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread0" #14 [7717] daemon prio=9 os_prio=0 cpu=4977.06ms elapsed=53.83s tid=0x00007ff4c8109470 nid=7717 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"C1 CompilerThread0" #15 [7718] daemon prio=9 os_prio=0 cpu=556.14ms elapsed=53.83s tid=0x00007ff4c810ab40 nid=7718 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"Notification Thread" #16 [7719] daemon prio=9 os_prio=0 cpu=0.22ms elapsed=53.81s tid=0x00007ff4c8116870 nid=7719 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Common-Cleaner" #17 [7720] daemon prio=8 os_prio=0 cpu=0.62ms elapsed=53.81s tid=0x00007ff4c8119730 nid=7720 waiting on condition  [0x00007ff452bfe000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.12.1/Native Method)
+	- parking to wait for  <0x0000000680000898> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@21.0.12.1/LockSupport.java:269)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.12.1/AbstractQueuedSynchronizer.java:1886)
+	at java.lang.ref.ReferenceQueue.await(java.base@21.0.12.1/ReferenceQueue.java:71)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.12.1/ReferenceQueue.java:143)
+	at java.lang.ref.ReferenceQueue.remove(java.base@21.0.12.1/ReferenceQueue.java:218)
+	at jdk.internal.ref.CleanerImpl.run(java.base@21.0.12.1/CleanerImpl.java:140)
+	at java.lang.Thread.runWith(java.base@21.0.12.1/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.12.1/Thread.java:1583)
+	at jdk.internal.misc.InnocuousThread.run(java.base@21.0.12.1/InnocuousThread.java:186)
+
+"pool-1-thread-1" #19 [7722] prio=5 os_prio=0 cpu=48987.14ms elapsed=52.53s tid=0x00007ff4c824f9d0 nid=7722 runnable  [0x00007ff4529fc000]
+   java.lang.Thread.State: RUNNABLE
+	at org.iotloopsim.model.AppRuntime.accepting(AppRuntime.java:53)
+	at org.iotloopsim.model.AppRuntime$Ctx.candidates(AppRuntime.java:175)
+	at org.iotloopsim.model.policy.BuiltinPolicies$RandomSelector.select(BuiltinPolicies.java:187)
+	at org.iotloopsim.model.AppRuntime.route(AppRuntime.java:160)
+	at org.iotloopsim.model.AppRuntime.onReading(AppRuntime.java:145)
+	at org.iotloopsim.model.Sensor.tick(Sensor.java:55)
+	at org.iotloopsim.model.Sensor$$Lambda/0x00007ff45402e4e8.run(Unknown Source)
+	at org.iotloopsim.core.Simulation.runUntilPaused(Simulation.java:143)
+	at org.iotloopsim.core.Simulation.run(Simulation.java:126)
+	at org.iotloopsim.model.IoTWorld.run(IoTWorld.java:252)
+	at org.iotloopsim.experiment.Experiment.runOne(Experiment.java:92)
+	at org.iotloopsim.experiment.Experiment.lambda$run$0(Experiment.java:123)
+	at org.iotloopsim.experiment.Experiment$$Lambda/0x00007ff454024700.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(java.base@21.0.12.1/FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.12.1/ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.12.1/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.12.1/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.12.1/Thread.java:1583)
+
+"Attach Listener" #20 [7746] daemon prio=9 os_prio=0 cpu=1.30ms elapsed=13.53s tid=0x00007ff43c000fe0 nid=7746 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"GC Thread#1" os_prio=0 cpu=2062.72ms elapsed=53.58s tid=0x00007ff440006300 nid=7721 runnable  
+
+"VM Thread" os_prio=0 cpu=50.35ms elapsed=53.84s tid=0x00007ff4c80f9610 nid=7711 runnable  
+
+"VM Periodic Task Thread" os_prio=0 cpu=77.20ms elapsed=53.85s tid=0x00007ff4c80e7ef0 nid=7710 waiting on condition  
+
+"G1 Service" os_prio=0 cpu=9.21ms elapsed=53.86s tid=0x00007ff4c80ce5c0 nid=7709 runnable  
+
+"G1 Refine#0" os_prio=0 cpu=236.06ms elapsed=53.86s tid=0x00007ff4c80cd5f0 nid=7708 runnable  
+
+"G1 Conc#0" os_prio=0 cpu=0.08ms elapsed=53.86s tid=0x00007ff4c80ae2a0 nid=7707 runnable  
+
+"G1 Main Marker" os_prio=0 cpu=0.17ms elapsed=53.87s tid=0x00007ff4c80ad2f0 nid=7706 runnable  
+
+"GC Thread#0" os_prio=0 cpu=1993.86ms elapsed=53.87s tid=0x00007ff4c809fd10 nid=7705 runnable  
+
+JNI global refs: 7, weak refs: 0
+
+=== sample 6 13:13:45
+2026-10-08 13:13:45
+Full thread dump OpenJDK 64-Bit Server VM (21.0.12.1+1-1-24.04.4-Ubuntu mixed mode, sharing):
+
+Threads class SMR info:
+_java_thread_list=0x00007ff43c002500, length=12, elements={
+0x00007ff4c8019770, 0x00007ff4c8101ed0, 0x00007ff4c8103450, 0x00007ff4c8104d20,
+0x00007ff4c8106370, 0x00007ff4c8107920, 0x00007ff4c8109470, 0x00007ff4c810ab40,
+0x00007ff4c8116870, 0x00007ff4c8119730, 0x00007ff4c824f9d0, 0x00007ff43c000fe0
+}
+
+"main" #1 [7704] prio=5 os_prio=0 cpu=1013.85ms elapsed=57.27s tid=0x00007ff4c8019770 nid=7704 waiting on condition  [0x00007ff4ce5fe000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.12.1/Native Method)
+	- parking to wait for  <0x0000000684d9d8b0> (a java.util.concurrent.FutureTask)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.12.1/LockSupport.java:221)
+	at java.util.concurrent.FutureTask.awaitDone(java.base@21.0.12.1/FutureTask.java:500)
+	at java.util.concurrent.FutureTask.get(java.base@21.0.12.1/FutureTask.java:190)
+	at org.iotloopsim.experiment.Experiment.run(Experiment.java:126)
+	at org.iotloopsim.experiment.Main.run(Main.java:73)
+	at org.iotloopsim.experiment.Main.main(Main.java:31)
+	at org.iotloopsim.bridge.Launcher.main(Launcher.java:11)
+
+"Reference Handler" #9 [7712] daemon prio=10 os_prio=0 cpu=3.27ms elapsed=57.23s tid=0x00007ff4c8101ed0 nid=7712 waiting on condition  [0x00007ff4a84fb000]
+   java.lang.Thread.State: RUNNABLE
+	at java.lang.ref.Reference.waitForReferencePendingList(java.base@21.0.12.1/Native Method)
+	at java.lang.ref.Reference.processPendingReferences(java.base@21.0.12.1/Reference.java:246)
+	at java.lang.ref.Reference$ReferenceHandler.run(java.base@21.0.12.1/Reference.java:208)
+
+"Finalizer" #10 [7713] daemon prio=8 os_prio=0 cpu=0.42ms elapsed=57.23s tid=0x00007ff4c8103450 nid=7713 in Object.wait()  [0x00007ff4a83fb000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait0(java.base@21.0.12.1/Native Method)
+	- waiting on <0x0000000680000688> (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.Object.wait(java.base@21.0.12.1/Object.java:366)
+	at java.lang.Object.wait(java.base@21.0.12.1/Object.java:339)
+	at java.lang.ref.NativeReferenceQueue.await(java.base@21.0.12.1/NativeReferenceQueue.java:48)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.12.1/ReferenceQueue.java:158)
+	at java.lang.ref.NativeReferenceQueue.remove(java.base@21.0.12.1/NativeReferenceQueue.java:89)
+	- locked <0x0000000680000688> (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.ref.Finalizer$FinalizerThread.run(java.base@21.0.12.1/Finalizer.java:173)
+
+"Signal Dispatcher" #11 [7714] daemon prio=9 os_prio=0 cpu=0.78ms elapsed=57.23s tid=0x00007ff4c8104d20 nid=7714 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Service Thread" #12 [7715] daemon prio=9 os_prio=0 cpu=1.34ms elapsed=57.23s tid=0x00007ff4c8106370 nid=7715 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Monitor Deflation Thread" #13 [7716] daemon prio=9 os_prio=0 cpu=12.99ms elapsed=57.23s tid=0x00007ff4c8107920 nid=7716 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread0" #14 [7717] daemon prio=9 os_prio=0 cpu=5076.63ms elapsed=57.23s tid=0x00007ff4c8109470 nid=7717 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"C1 CompilerThread0" #15 [7718] daemon prio=9 os_prio=0 cpu=570.11ms elapsed=57.23s tid=0x00007ff4c810ab40 nid=7718 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"Notification Thread" #16 [7719] daemon prio=9 os_prio=0 cpu=0.22ms elapsed=57.21s tid=0x00007ff4c8116870 nid=7719 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Common-Cleaner" #17 [7720] daemon prio=8 os_prio=0 cpu=0.62ms elapsed=57.21s tid=0x00007ff4c8119730 nid=7720 waiting on condition  [0x00007ff452bfe000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.12.1/Native Method)
+	- parking to wait for  <0x0000000680000898> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@21.0.12.1/LockSupport.java:269)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.12.1/AbstractQueuedSynchronizer.java:1886)
+	at java.lang.ref.ReferenceQueue.await(java.base@21.0.12.1/ReferenceQueue.java:71)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.12.1/ReferenceQueue.java:143)
+	at java.lang.ref.ReferenceQueue.remove(java.base@21.0.12.1/ReferenceQueue.java:218)
+	at jdk.internal.ref.CleanerImpl.run(java.base@21.0.12.1/CleanerImpl.java:140)
+	at java.lang.Thread.runWith(java.base@21.0.12.1/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.12.1/Thread.java:1583)
+	at jdk.internal.misc.InnocuousThread.run(java.base@21.0.12.1/InnocuousThread.java:186)
+
+"pool-1-thread-1" #19 [7722] prio=5 os_prio=0 cpu=52059.42ms elapsed=55.93s tid=0x00007ff4c824f9d0 nid=7722 runnable  [0x00007ff4529fc000]
+   java.lang.Thread.State: RUNNABLE
+	at org.iotloopsim.core.RngStreams.stream(RngStreams.java:25)
+	at org.iotloopsim.core.Simulation.stream(Simulation.java:172)
+	at org.iotloopsim.model.IoTDevice.radioDown(IoTDevice.java:269)
+	at org.iotloopsim.model.Network.hop(Network.java:185)
+	at org.iotloopsim.model.Network.lambda$hop$8(Network.java:201)
+	at org.iotloopsim.model.Network$$Lambda/0x00007ff454026d88.done(Unknown Source)
+	at org.iotloopsim.model.Link.lambda$transmit$2(Link.java:154)
+	at org.iotloopsim.model.Link$$Lambda/0x00007ff454027428.run(Unknown Source)
+	at org.iotloopsim.core.Simulation.runUntilPaused(Simulation.java:143)
+	at org.iotloopsim.core.Simulation.run(Simulation.java:126)
+	at org.iotloopsim.model.IoTWorld.run(IoTWorld.java:252)
+	at org.iotloopsim.experiment.Experiment.runOne(Experiment.java:92)
+	at org.iotloopsim.experiment.Experiment.lambda$run$0(Experiment.java:123)
+	at org.iotloopsim.experiment.Experiment$$Lambda/0x00007ff454024700.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(java.base@21.0.12.1/FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.12.1/ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.12.1/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.12.1/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.12.1/Thread.java:1583)
+
+"Attach Listener" #20 [7746] daemon prio=9 os_prio=0 cpu=1.52ms elapsed=16.93s tid=0x00007ff43c000fe0 nid=7746 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"GC Thread#1" os_prio=0 cpu=2207.41ms elapsed=56.98s tid=0x00007ff440006300 nid=7721 runnable  
+
+"VM Thread" os_prio=0 cpu=51.54ms elapsed=57.24s tid=0x00007ff4c80f9610 nid=7711 runnable  
+
+"VM Periodic Task Thread" os_prio=0 cpu=81.12ms elapsed=57.24s tid=0x00007ff4c80e7ef0 nid=7710 waiting on condition  
+
+"G1 Service" os_prio=0 cpu=10.02ms elapsed=57.26s tid=0x00007ff4c80ce5c0 nid=7709 runnable  
+
+"G1 Refine#0" os_prio=0 cpu=294.20ms elapsed=57.26s tid=0x00007ff4c80cd5f0 nid=7708 runnable  
+
+"G1 Conc#0" os_prio=0 cpu=0.08ms elapsed=57.26s tid=0x00007ff4c80ae2a0 nid=7707 runnable  
+
+"G1 Main Marker" os_prio=0 cpu=0.17ms elapsed=57.26s tid=0x00007ff4c80ad2f0 nid=7706 runnable  
+
+"GC Thread#0" os_prio=0 cpu=2135.36ms elapsed=57.26s tid=0x00007ff4c809fd10 nid=7705 runnable  
+
+JNI global refs: 8, weak refs: 0
+
+=== sample 7 13:13:48
+2026-10-08 13:13:49
+Full thread dump OpenJDK 64-Bit Server VM (21.0.12.1+1-1-24.04.4-Ubuntu mixed mode, sharing):
+
+Threads class SMR info:
+_java_thread_list=0x00007ff43c002500, length=12, elements={
+0x00007ff4c8019770, 0x00007ff4c8101ed0, 0x00007ff4c8103450, 0x00007ff4c8104d20,
+0x00007ff4c8106370, 0x00007ff4c8107920, 0x00007ff4c8109470, 0x00007ff4c810ab40,
+0x00007ff4c8116870, 0x00007ff4c8119730, 0x00007ff4c824f9d0, 0x00007ff43c000fe0
+}
+
+"main" #1 [7704] prio=5 os_prio=0 cpu=1013.85ms elapsed=60.54s tid=0x00007ff4c8019770 nid=7704 waiting on condition  [0x00007ff4ce5fe000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.12.1/Native Method)
+	- parking to wait for  <0x0000000684d9d8b0> (a java.util.concurrent.FutureTask)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.12.1/LockSupport.java:221)
+	at java.util.concurrent.FutureTask.awaitDone(java.base@21.0.12.1/FutureTask.java:500)
+	at java.util.concurrent.FutureTask.get(java.base@21.0.12.1/FutureTask.java:190)
+	at org.iotloopsim.experiment.Experiment.run(Experiment.java:126)
+	at org.iotloopsim.experiment.Main.run(Main.java:73)
+	at org.iotloopsim.experiment.Main.main(Main.java:31)
+	at org.iotloopsim.bridge.Launcher.main(Launcher.java:11)
+
+"Reference Handler" #9 [7712] daemon prio=10 os_prio=0 cpu=3.27ms elapsed=60.50s tid=0x00007ff4c8101ed0 nid=7712 waiting on condition  [0x00007ff4a84fb000]
+   java.lang.Thread.State: RUNNABLE
+	at java.lang.ref.Reference.waitForReferencePendingList(java.base@21.0.12.1/Native Method)
+	at java.lang.ref.Reference.processPendingReferences(java.base@21.0.12.1/Reference.java:246)
+	at java.lang.ref.Reference$ReferenceHandler.run(java.base@21.0.12.1/Reference.java:208)
+
+"Finalizer" #10 [7713] daemon prio=8 os_prio=0 cpu=0.42ms elapsed=60.50s tid=0x00007ff4c8103450 nid=7713 in Object.wait()  [0x00007ff4a83fb000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait0(java.base@21.0.12.1/Native Method)
+	- waiting on <0x0000000680000688> (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.Object.wait(java.base@21.0.12.1/Object.java:366)
+	at java.lang.Object.wait(java.base@21.0.12.1/Object.java:339)
+	at java.lang.ref.NativeReferenceQueue.await(java.base@21.0.12.1/NativeReferenceQueue.java:48)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.12.1/ReferenceQueue.java:158)
+	at java.lang.ref.NativeReferenceQueue.remove(java.base@21.0.12.1/NativeReferenceQueue.java:89)
+	- locked <0x0000000680000688> (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.ref.Finalizer$FinalizerThread.run(java.base@21.0.12.1/Finalizer.java:173)
+
+"Signal Dispatcher" #11 [7714] daemon prio=9 os_prio=0 cpu=0.78ms elapsed=60.50s tid=0x00007ff4c8104d20 nid=7714 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Service Thread" #12 [7715] daemon prio=9 os_prio=0 cpu=1.41ms elapsed=60.50s tid=0x00007ff4c8106370 nid=7715 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Monitor Deflation Thread" #13 [7716] daemon prio=9 os_prio=0 cpu=13.82ms elapsed=60.50s tid=0x00007ff4c8107920 nid=7716 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread0" #14 [7717] daemon prio=9 os_prio=0 cpu=5123.19ms elapsed=60.50s tid=0x00007ff4c8109470 nid=7717 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"C1 CompilerThread0" #15 [7718] daemon prio=9 os_prio=0 cpu=570.18ms elapsed=60.50s tid=0x00007ff4c810ab40 nid=7718 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"Notification Thread" #16 [7719] daemon prio=9 os_prio=0 cpu=0.22ms elapsed=60.48s tid=0x00007ff4c8116870 nid=7719 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Common-Cleaner" #17 [7720] daemon prio=8 os_prio=0 cpu=0.97ms elapsed=60.48s tid=0x00007ff4c8119730 nid=7720 waiting on condition  [0x00007ff452bfe000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.12.1/Native Method)
+	- parking to wait for  <0x0000000680000898> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@21.0.12.1/LockSupport.java:269)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.12.1/AbstractQueuedSynchronizer.java:1886)
+	at java.lang.ref.ReferenceQueue.await(java.base@21.0.12.1/ReferenceQueue.java:71)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.12.1/ReferenceQueue.java:143)
+	at java.lang.ref.ReferenceQueue.remove(java.base@21.0.12.1/ReferenceQueue.java:218)
+	at jdk.internal.ref.CleanerImpl.run(java.base@21.0.12.1/CleanerImpl.java:140)
+	at java.lang.Thread.runWith(java.base@21.0.12.1/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.12.1/Thread.java:1583)
+	at jdk.internal.misc.InnocuousThread.run(java.base@21.0.12.1/InnocuousThread.java:186)
+
+"pool-1-thread-1" #19 [7722] prio=5 os_prio=0 cpu=54975.11ms elapsed=59.20s tid=0x00007ff4c824f9d0 nid=7722 runnable  [0x00007ff4529fc000]
+   java.lang.Thread.State: RUNNABLE
+	at java.util.ArrayList.grow(java.base@21.0.12.1/ArrayList.java:237)
+	at java.util.ArrayList.grow(java.base@21.0.12.1/ArrayList.java:244)
+	at java.util.ArrayList.add(java.base@21.0.12.1/ArrayList.java:483)
+	at java.util.ArrayList.add(java.base@21.0.12.1/ArrayList.java:496)
+	at org.iotloopsim.model.AppRuntime.accepting(AppRuntime.java:53)
+	at org.iotloopsim.model.AppRuntime$Ctx.candidates(AppRuntime.java:175)
+	at org.iotloopsim.model.policy.BuiltinPolicies$RandomSelector.select(BuiltinPolicies.java:187)
+	at org.iotloopsim.model.AppRuntime.route(AppRuntime.java:160)
+	at org.iotloopsim.model.AppRuntime.onReading(AppRuntime.java:145)
+	at org.iotloopsim.model.Sensor.tick(Sensor.java:55)
+	at org.iotloopsim.model.Sensor$$Lambda/0x00007ff45402e4e8.run(Unknown Source)
+	at org.iotloopsim.core.Simulation.runUntilPaused(Simulation.java:143)
+	at org.iotloopsim.core.Simulation.run(Simulation.java:126)
+	at org.iotloopsim.model.IoTWorld.run(IoTWorld.java:252)
+	at org.iotloopsim.experiment.Experiment.runOne(Experiment.java:92)
+	at org.iotloopsim.experiment.Experiment.lambda$run$0(Experiment.java:123)
+	at org.iotloopsim.experiment.Experiment$$Lambda/0x00007ff454024700.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(java.base@21.0.12.1/FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.12.1/ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.12.1/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.12.1/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.12.1/Thread.java:1583)
+
+"Attach Listener" #20 [7746] daemon prio=9 os_prio=0 cpu=1.80ms elapsed=20.20s tid=0x00007ff43c000fe0 nid=7746 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"GC Thread#1" os_prio=0 cpu=2376.29ms elapsed=60.24s tid=0x00007ff440006300 nid=7721 runnable  
+
+"VM Thread" os_prio=0 cpu=53.19ms elapsed=60.51s tid=0x00007ff4c80f9610 nid=7711 runnable  
+
+"VM Periodic Task Thread" os_prio=0 cpu=85.62ms elapsed=60.52s tid=0x00007ff4c80e7ef0 nid=7710 waiting on condition  
+
+"G1 Service" os_prio=0 cpu=10.54ms elapsed=60.53s tid=0x00007ff4c80ce5c0 nid=7709 runnable  
+
+"G1 Refine#0" os_prio=0 cpu=348.02ms elapsed=60.53s tid=0x00007ff4c80cd5f0 nid=7708 runnable  
+
+"G1 Conc#0" os_prio=0 cpu=0.08ms elapsed=60.53s tid=0x00007ff4c80ae2a0 nid=7707 runnable  
+
+"G1 Main Marker" os_prio=0 cpu=0.17ms elapsed=60.53s tid=0x00007ff4c80ad2f0 nid=7706 runnable  
+
+"GC Thread#0" os_prio=0 cpu=2312.14ms elapsed=60.53s tid=0x00007ff4c809fd10 nid=7705 runnable  
+
+JNI global refs: 8, weak refs: 0
+
+=== sample 8 13:13:52
+2026-10-08 13:13:52
+Full thread dump OpenJDK 64-Bit Server VM (21.0.12.1+1-1-24.04.4-Ubuntu mixed mode, sharing):
+
+Threads class SMR info:
+_java_thread_list=0x00007ff43c002500, length=12, elements={
+0x00007ff4c8019770, 0x00007ff4c8101ed0, 0x00007ff4c8103450, 0x00007ff4c8104d20,
+0x00007ff4c8106370, 0x00007ff4c8107920, 0x00007ff4c8109470, 0x00007ff4c810ab40,
+0x00007ff4c8116870, 0x00007ff4c8119730, 0x00007ff4c824f9d0, 0x00007ff43c000fe0
+}
+
+"main" #1 [7704] prio=5 os_prio=0 cpu=1013.85ms elapsed=63.88s tid=0x00007ff4c8019770 nid=7704 waiting on condition  [0x00007ff4ce5fe000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.12.1/Native Method)
+	- parking to wait for  <0x0000000684d9d8b0> (a java.util.concurrent.FutureTask)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.12.1/LockSupport.java:221)
+	at java.util.concurrent.FutureTask.awaitDone(java.base@21.0.12.1/FutureTask.java:500)
+	at java.util.concurrent.FutureTask.get(java.base@21.0.12.1/FutureTask.java:190)
+	at org.iotloopsim.experiment.Experiment.run(Experiment.java:126)
+	at org.iotloopsim.experiment.Main.run(Main.java:73)
+	at org.iotloopsim.experiment.Main.main(Main.java:31)
+	at org.iotloopsim.bridge.Launcher.main(Launcher.java:11)
+
+"Reference Handler" #9 [7712] daemon prio=10 os_prio=0 cpu=3.27ms elapsed=63.84s tid=0x00007ff4c8101ed0 nid=7712 waiting on condition  [0x00007ff4a84fb000]
+   java.lang.Thread.State: RUNNABLE
+	at java.lang.ref.Reference.waitForReferencePendingList(java.base@21.0.12.1/Native Method)
+	at java.lang.ref.Reference.processPendingReferences(java.base@21.0.12.1/Reference.java:246)
+	at java.lang.ref.Reference$ReferenceHandler.run(java.base@21.0.12.1/Reference.java:208)
+
+"Finalizer" #10 [7713] daemon prio=8 os_prio=0 cpu=0.42ms elapsed=63.84s tid=0x00007ff4c8103450 nid=7713 in Object.wait()  [0x00007ff4a83fb000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait0(java.base@21.0.12.1/Native Method)
+	- waiting on <0x0000000680000688> (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.Object.wait(java.base@21.0.12.1/Object.java:366)
+	at java.lang.Object.wait(java.base@21.0.12.1/Object.java:339)
+	at java.lang.ref.NativeReferenceQueue.await(java.base@21.0.12.1/NativeReferenceQueue.java:48)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.12.1/ReferenceQueue.java:158)
+	at java.lang.ref.NativeReferenceQueue.remove(java.base@21.0.12.1/NativeReferenceQueue.java:89)
+	- locked <0x0000000680000688> (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.ref.Finalizer$FinalizerThread.run(java.base@21.0.12.1/Finalizer.java:173)
+
+"Signal Dispatcher" #11 [7714] daemon prio=9 os_prio=0 cpu=0.78ms elapsed=63.84s tid=0x00007ff4c8104d20 nid=7714 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Service Thread" #12 [7715] daemon prio=9 os_prio=0 cpu=1.41ms elapsed=63.84s tid=0x00007ff4c8106370 nid=7715 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Monitor Deflation Thread" #13 [7716] daemon prio=9 os_prio=0 cpu=14.66ms elapsed=63.84s tid=0x00007ff4c8107920 nid=7716 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread0" #14 [7717] daemon prio=9 os_prio=0 cpu=5123.26ms elapsed=63.84s tid=0x00007ff4c8109470 nid=7717 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"C1 CompilerThread0" #15 [7718] daemon prio=9 os_prio=0 cpu=570.24ms elapsed=63.84s tid=0x00007ff4c810ab40 nid=7718 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"Notification Thread" #16 [7719] daemon prio=9 os_prio=0 cpu=0.22ms elapsed=63.83s tid=0x00007ff4c8116870 nid=7719 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Common-Cleaner" #17 [7720] daemon prio=8 os_prio=0 cpu=0.97ms elapsed=63.83s tid=0x00007ff4c8119730 nid=7720 waiting on condition  [0x00007ff452bfe000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.12.1/Native Method)
+	- parking to wait for  <0x0000000680000898> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@21.0.12.1/LockSupport.java:269)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.12.1/AbstractQueuedSynchronizer.java:1886)
+	at java.lang.ref.ReferenceQueue.await(java.base@21.0.12.1/ReferenceQueue.java:71)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.12.1/ReferenceQueue.java:143)
+	at java.lang.ref.ReferenceQueue.remove(java.base@21.0.12.1/ReferenceQueue.java:218)
+	at jdk.internal.ref.CleanerImpl.run(java.base@21.0.12.1/CleanerImpl.java:140)
+	at java.lang.Thread.runWith(java.base@21.0.12.1/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.12.1/Thread.java:1583)
+	at jdk.internal.misc.InnocuousThread.run(java.base@21.0.12.1/InnocuousThread.java:186)
+
+"pool-1-thread-1" #19 [7722] prio=5 os_prio=0 cpu=58078.73ms elapsed=62.54s tid=0x00007ff4c824f9d0 nid=7722 runnable  [0x00007ff4529fc000]
+   java.lang.Thread.State: RUNNABLE
+	at org.iotloopsim.model.AppRuntime.accepting(AppRuntime.java:53)
+	at org.iotloopsim.model.AppRuntime$Ctx.candidates(AppRuntime.java:175)
+	at org.iotloopsim.model.policy.BuiltinPolicies$RandomSelector.select(BuiltinPolicies.java:187)
+	at org.iotloopsim.model.AppRuntime.route(AppRuntime.java:160)
+	at org.iotloopsim.model.AppRuntime.onReading(AppRuntime.java:145)
+	at org.iotloopsim.model.Sensor.tick(Sensor.java:55)
+	at org.iotloopsim.model.Sensor$$Lambda/0x00007ff45402e4e8.run(Unknown Source)
+	at org.iotloopsim.core.Simulation.runUntilPaused(Simulation.java:143)
+	at org.iotloopsim.core.Simulation.run(Simulation.java:126)
+	at org.iotloopsim.model.IoTWorld.run(IoTWorld.java:252)
+	at org.iotloopsim.experiment.Experiment.runOne(Experiment.java:92)
+	at org.iotloopsim.experiment.Experiment.lambda$run$0(Experiment.java:123)
+	at org.iotloopsim.experiment.Experiment$$Lambda/0x00007ff454024700.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(java.base@21.0.12.1/FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.12.1/ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.12.1/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.12.1/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.12.1/Thread.java:1583)
+
+"Attach Listener" #20 [7746] daemon prio=9 os_prio=0 cpu=2.09ms elapsed=23.54s tid=0x00007ff43c000fe0 nid=7746 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"GC Thread#1" os_prio=0 cpu=2531.59ms elapsed=63.59s tid=0x00007ff440006300 nid=7721 runnable  
+
+"VM Thread" os_prio=0 cpu=54.77ms elapsed=63.85s tid=0x00007ff4c80f9610 nid=7711 runnable  
+
+"VM Periodic Task Thread" os_prio=0 cpu=89.69ms elapsed=63.86s tid=0x00007ff4c80e7ef0 nid=7710 waiting on condition  
+
+"G1 Service" os_prio=0 cpu=11.99ms elapsed=63.88s tid=0x00007ff4c80ce5c0 nid=7709 runnable  
+
+"G1 Refine#0" os_prio=0 cpu=408.45ms elapsed=63.88s tid=0x00007ff4c80cd5f0 nid=7708 runnable  
+
+"G1 Conc#0" os_prio=0 cpu=0.08ms elapsed=63.88s tid=0x00007ff4c80ae2a0 nid=7707 runnable  
+
+"G1 Main Marker" os_prio=0 cpu=0.17ms elapsed=63.88s tid=0x00007ff4c80ad2f0 nid=7706 runnable  
+
+"GC Thread#0" os_prio=0 cpu=2466.08ms elapsed=63.88s tid=0x00007ff4c809fd10 nid=7705 runnable  
+
+JNI global refs: 8, weak refs: 0
+
+=== sample 9 13:13:55
+2026-10-08 13:13:55
+Full thread dump OpenJDK 64-Bit Server VM (21.0.12.1+1-1-24.04.4-Ubuntu mixed mode, sharing):
+
+Threads class SMR info:
+_java_thread_list=0x00007ff43c002500, length=12, elements={
+0x00007ff4c8019770, 0x00007ff4c8101ed0, 0x00007ff4c8103450, 0x00007ff4c8104d20,
+0x00007ff4c8106370, 0x00007ff4c8107920, 0x00007ff4c8109470, 0x00007ff4c810ab40,
+0x00007ff4c8116870, 0x00007ff4c8119730, 0x00007ff4c824f9d0, 0x00007ff43c000fe0
+}
+
+"main" #1 [7704] prio=5 os_prio=0 cpu=1013.85ms elapsed=67.29s tid=0x00007ff4c8019770 nid=7704 waiting on condition  [0x00007ff4ce5fe000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.12.1/Native Method)
+	- parking to wait for  <0x0000000684d9d8b0> (a java.util.concurrent.FutureTask)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.12.1/LockSupport.java:221)
+	at java.util.concurrent.FutureTask.awaitDone(java.base@21.0.12.1/FutureTask.java:500)
+	at java.util.concurrent.FutureTask.get(java.base@21.0.12.1/FutureTask.java:190)
+	at org.iotloopsim.experiment.Experiment.run(Experiment.java:126)
+	at org.iotloopsim.experiment.Main.run(Main.java:73)
+	at org.iotloopsim.experiment.Main.main(Main.java:31)
+	at org.iotloopsim.bridge.Launcher.main(Launcher.java:11)
+
+"Reference Handler" #9 [7712] daemon prio=10 os_prio=0 cpu=3.27ms elapsed=67.25s tid=0x00007ff4c8101ed0 nid=7712 waiting on condition  [0x00007ff4a84fb000]
+   java.lang.Thread.State: RUNNABLE
+	at java.lang.ref.Reference.waitForReferencePendingList(java.base@21.0.12.1/Native Method)
+	at java.lang.ref.Reference.processPendingReferences(java.base@21.0.12.1/Reference.java:246)
+	at java.lang.ref.Reference$ReferenceHandler.run(java.base@21.0.12.1/Reference.java:208)
+
+"Finalizer" #10 [7713] daemon prio=8 os_prio=0 cpu=0.42ms elapsed=67.25s tid=0x00007ff4c8103450 nid=7713 in Object.wait()  [0x00007ff4a83fb000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait0(java.base@21.0.12.1/Native Method)
+	- waiting on <0x0000000680000688> (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.Object.wait(java.base@21.0.12.1/Object.java:366)
+	at java.lang.Object.wait(java.base@21.0.12.1/Object.java:339)
+	at java.lang.ref.NativeReferenceQueue.await(java.base@21.0.12.1/NativeReferenceQueue.java:48)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.12.1/ReferenceQueue.java:158)
+	at java.lang.ref.NativeReferenceQueue.remove(java.base@21.0.12.1/NativeReferenceQueue.java:89)
+	- locked <0x0000000680000688> (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.ref.Finalizer$FinalizerThread.run(java.base@21.0.12.1/Finalizer.java:173)
+
+"Signal Dispatcher" #11 [7714] daemon prio=9 os_prio=0 cpu=0.78ms elapsed=67.25s tid=0x00007ff4c8104d20 nid=7714 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Service Thread" #12 [7715] daemon prio=9 os_prio=0 cpu=1.41ms elapsed=67.25s tid=0x00007ff4c8106370 nid=7715 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Monitor Deflation Thread" #13 [7716] daemon prio=9 os_prio=0 cpu=15.54ms elapsed=67.25s tid=0x00007ff4c8107920 nid=7716 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread0" #14 [7717] daemon prio=9 os_prio=0 cpu=5123.26ms elapsed=67.25s tid=0x00007ff4c8109470 nid=7717 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"C1 CompilerThread0" #15 [7718] daemon prio=9 os_prio=0 cpu=570.24ms elapsed=67.25s tid=0x00007ff4c810ab40 nid=7718 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"Notification Thread" #16 [7719] daemon prio=9 os_prio=0 cpu=0.22ms elapsed=67.23s tid=0x00007ff4c8116870 nid=7719 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Common-Cleaner" #17 [7720] daemon prio=8 os_prio=0 cpu=0.97ms elapsed=67.23s tid=0x00007ff4c8119730 nid=7720 waiting on condition  [0x00007ff452bfe000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.12.1/Native Method)
+	- parking to wait for  <0x0000000680000898> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@21.0.12.1/LockSupport.java:269)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.12.1/AbstractQueuedSynchronizer.java:1886)
+	at java.lang.ref.ReferenceQueue.await(java.base@21.0.12.1/ReferenceQueue.java:71)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.12.1/ReferenceQueue.java:143)
+	at java.lang.ref.ReferenceQueue.remove(java.base@21.0.12.1/ReferenceQueue.java:218)
+	at jdk.internal.ref.CleanerImpl.run(java.base@21.0.12.1/CleanerImpl.java:140)
+	at java.lang.Thread.runWith(java.base@21.0.12.1/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.12.1/Thread.java:1583)
+	at jdk.internal.misc.InnocuousThread.run(java.base@21.0.12.1/InnocuousThread.java:186)
+
+"pool-1-thread-1" #19 [7722] prio=5 os_prio=0 cpu=61182.09ms elapsed=65.95s tid=0x00007ff4c824f9d0 nid=7722 runnable  [0x00007ff4529fc000]
+   java.lang.Thread.State: RUNNABLE
+	at org.iotloopsim.core.MetricsRegistry.record(MetricsRegistry.java:27)
+	at org.iotloopsim.model.AppRuntime.completeLoop(AppRuntime.java:274)
+	at org.iotloopsim.model.AppRuntime.branchDone(AppRuntime.java:266)
+	at org.iotloopsim.model.AppRuntime.lambda$sendCommand$7(AppRuntime.java:240)
+	at org.iotloopsim.model.AppRuntime$$Lambda/0x00007ff45402f1d8.run(Unknown Source)
+	at org.iotloopsim.model.Actuator.lambda$actuate$0(Actuator.java:39)
+	at org.iotloopsim.model.Actuator$$Lambda/0x00007ff45402f628.run(Unknown Source)
+	at org.iotloopsim.core.Simulation.runUntilPaused(Simulation.java:143)
+	at org.iotloopsim.core.Simulation.run(Simulation.java:126)
+	at org.iotloopsim.model.IoTWorld.run(IoTWorld.java:252)
+	at org.iotloopsim.experiment.Experiment.runOne(Experiment.java:92)
+	at org.iotloopsim.experiment.Experiment.lambda$run$0(Experiment.java:123)
+	at org.iotloopsim.experiment.Experiment$$Lambda/0x00007ff454024700.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(java.base@21.0.12.1/FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.12.1/ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.12.1/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.12.1/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.12.1/Thread.java:1583)
+
+"Attach Listener" #20 [7746] daemon prio=9 os_prio=0 cpu=2.71ms elapsed=26.95s tid=0x00007ff43c000fe0 nid=7746 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"GC Thread#1" os_prio=0 cpu=2731.98ms elapsed=67.00s tid=0x00007ff440006300 nid=7721 runnable  
+
+"VM Thread" os_prio=0 cpu=56.21ms elapsed=67.26s tid=0x00007ff4c80f9610 nid=7711 runnable  
+
+"VM Periodic Task Thread" os_prio=0 cpu=93.94ms elapsed=67.27s tid=0x00007ff4c80e7ef0 nid=7710 waiting on condition  
+
+"G1 Service" os_prio=0 cpu=13.08ms elapsed=67.28s tid=0x00007ff4c80ce5c0 nid=7709 runnable  
+
+"G1 Refine#0" os_prio=0 cpu=470.78ms elapsed=67.28s tid=0x00007ff4c80cd5f0 nid=7708 runnable  
+
+"G1 Conc#0" os_prio=0 cpu=0.08ms elapsed=67.28s tid=0x00007ff4c80ae2a0 nid=7707 runnable  
+
+"G1 Main Marker" os_prio=0 cpu=0.17ms elapsed=67.28s tid=0x00007ff4c80ad2f0 nid=7706 runnable  
+
+"GC Thread#0" os_prio=0 cpu=2654.16ms elapsed=67.28s tid=0x00007ff4c809fd10 nid=7705 runnable  
+
+JNI global refs: 8, weak refs: 0
+
+=== sample 10 13:13:58
+2026-10-08 13:13:59
+Full thread dump OpenJDK 64-Bit Server VM (21.0.12.1+1-1-24.04.4-Ubuntu mixed mode, sharing):
+
+Threads class SMR info:
+_java_thread_list=0x00007ff43c002500, length=12, elements={
+0x00007ff4c8019770, 0x00007ff4c8101ed0, 0x00007ff4c8103450, 0x00007ff4c8104d20,
+0x00007ff4c8106370, 0x00007ff4c8107920, 0x00007ff4c8109470, 0x00007ff4c810ab40,
+0x00007ff4c8116870, 0x00007ff4c8119730, 0x00007ff4c824f9d0, 0x00007ff43c000fe0
+}
+
+"main" #1 [7704] prio=5 os_prio=0 cpu=1013.85ms elapsed=70.71s tid=0x00007ff4c8019770 nid=7704 waiting on condition  [0x00007ff4ce5fe000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.12.1/Native Method)
+	- parking to wait for  <0x0000000684d9d8b0> (a java.util.concurrent.FutureTask)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.12.1/LockSupport.java:221)
+	at java.util.concurrent.FutureTask.awaitDone(java.base@21.0.12.1/FutureTask.java:500)
+	at java.util.concurrent.FutureTask.get(java.base@21.0.12.1/FutureTask.java:190)
+	at org.iotloopsim.experiment.Experiment.run(Experiment.java:126)
+	at org.iotloopsim.experiment.Main.run(Main.java:73)
+	at org.iotloopsim.experiment.Main.main(Main.java:31)
+	at org.iotloopsim.bridge.Launcher.main(Launcher.java:11)
+
+"Reference Handler" #9 [7712] daemon prio=10 os_prio=0 cpu=3.27ms elapsed=70.67s tid=0x00007ff4c8101ed0 nid=7712 waiting on condition  [0x00007ff4a84fb000]
+   java.lang.Thread.State: RUNNABLE
+	at java.lang.ref.Reference.waitForReferencePendingList(java.base@21.0.12.1/Native Method)
+	at java.lang.ref.Reference.processPendingReferences(java.base@21.0.12.1/Reference.java:246)
+	at java.lang.ref.Reference$ReferenceHandler.run(java.base@21.0.12.1/Reference.java:208)
+
+"Finalizer" #10 [7713] daemon prio=8 os_prio=0 cpu=0.42ms elapsed=70.67s tid=0x00007ff4c8103450 nid=7713 in Object.wait()  [0x00007ff4a83fb000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait0(java.base@21.0.12.1/Native Method)
+	- waiting on <0x0000000680000688> (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.Object.wait(java.base@21.0.12.1/Object.java:366)
+	at java.lang.Object.wait(java.base@21.0.12.1/Object.java:339)
+	at java.lang.ref.NativeReferenceQueue.await(java.base@21.0.12.1/NativeReferenceQueue.java:48)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.12.1/ReferenceQueue.java:158)
+	at java.lang.ref.NativeReferenceQueue.remove(java.base@21.0.12.1/NativeReferenceQueue.java:89)
+	- locked <0x0000000680000688> (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.ref.Finalizer$FinalizerThread.run(java.base@21.0.12.1/Finalizer.java:173)
+
+"Signal Dispatcher" #11 [7714] daemon prio=9 os_prio=0 cpu=0.78ms elapsed=70.67s tid=0x00007ff4c8104d20 nid=7714 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Service Thread" #12 [7715] daemon prio=9 os_prio=0 cpu=1.41ms elapsed=70.67s tid=0x00007ff4c8106370 nid=7715 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Monitor Deflation Thread" #13 [7716] daemon prio=9 os_prio=0 cpu=16.42ms elapsed=70.67s tid=0x00007ff4c8107920 nid=7716 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread0" #14 [7717] daemon prio=9 os_prio=0 cpu=5123.36ms elapsed=70.67s tid=0x00007ff4c8109470 nid=7717 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"C1 CompilerThread0" #15 [7718] daemon prio=9 os_prio=0 cpu=570.31ms elapsed=70.67s tid=0x00007ff4c810ab40 nid=7718 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"Notification Thread" #16 [7719] daemon prio=9 os_prio=0 cpu=0.22ms elapsed=70.66s tid=0x00007ff4c8116870 nid=7719 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Common-Cleaner" #17 [7720] daemon prio=8 os_prio=0 cpu=0.97ms elapsed=70.66s tid=0x00007ff4c8119730 nid=7720 waiting on condition  [0x00007ff452bfe000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.12.1/Native Method)
+	- parking to wait for  <0x0000000680000898> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@21.0.12.1/LockSupport.java:269)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.12.1/AbstractQueuedSynchronizer.java:1886)
+	at java.lang.ref.ReferenceQueue.await(java.base@21.0.12.1/ReferenceQueue.java:71)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.12.1/ReferenceQueue.java:143)
+	at java.lang.ref.ReferenceQueue.remove(java.base@21.0.12.1/ReferenceQueue.java:218)
+	at jdk.internal.ref.CleanerImpl.run(java.base@21.0.12.1/CleanerImpl.java:140)
+	at java.lang.Thread.runWith(java.base@21.0.12.1/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.12.1/Thread.java:1583)
+	at jdk.internal.misc.InnocuousThread.run(java.base@21.0.12.1/InnocuousThread.java:186)
+
+"pool-1-thread-1" #19 [7722] prio=5 os_prio=0 cpu=64271.16ms elapsed=69.37s tid=0x00007ff4c824f9d0 nid=7722 runnable  [0x00007ff4529fc000]
+   java.lang.Thread.State: RUNNABLE
+	at java.util.HashMap$TreeNode.find(java.base@21.0.12.1/HashMap.java:2040)
+	at java.util.HashMap$TreeNode.getTreeNode(java.base@21.0.12.1/HashMap.java:2048)
+	at java.util.HashMap.getNode(java.base@21.0.12.1/HashMap.java:582)
+	at java.util.HashMap.containsKey(java.base@21.0.12.1/HashMap.java:602)
+	at org.iotloopsim.model.Network.route(Network.java:54)
+	at org.iotloopsim.model.Network.wired(Network.java:173)
+	at org.iotloopsim.model.Network.lambda$arriveAtGateway$6(Network.java:167)
+	at org.iotloopsim.model.Network$$Lambda/0x00007ff45402e710.run(Unknown Source)
+	at org.iotloopsim.core.Simulation.runUntilPaused(Simulation.java:143)
+	at org.iotloopsim.core.Simulation.run(Simulation.java:126)
+	at org.iotloopsim.model.IoTWorld.run(IoTWorld.java:252)
+	at org.iotloopsim.experiment.Experiment.runOne(Experiment.java:92)
+	at org.iotloopsim.experiment.Experiment.lambda$run$0(Experiment.java:123)
+	at org.iotloopsim.experiment.Experiment$$Lambda/0x00007ff454024700.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(java.base@21.0.12.1/FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.12.1/ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.12.1/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.12.1/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.12.1/Thread.java:1583)
+
+"Attach Listener" #20 [7746] daemon prio=9 os_prio=0 cpu=3.01ms elapsed=30.37s tid=0x00007ff43c000fe0 nid=7746 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"GC Thread#1" os_prio=0 cpu=2940.60ms elapsed=70.42s tid=0x00007ff440006300 nid=7721 runnable  
+
+"VM Thread" os_prio=0 cpu=57.83ms elapsed=70.68s tid=0x00007ff4c80f9610 nid=7711 runnable  
+
+"VM Periodic Task Thread" os_prio=0 cpu=98.26ms elapsed=70.69s tid=0x00007ff4c80e7ef0 nid=7710 waiting on condition  
+
+"G1 Service" os_prio=0 cpu=13.62ms elapsed=70.71s tid=0x00007ff4c80ce5c0 nid=7709 runnable  
+
+"G1 Refine#0" os_prio=0 cpu=529.55ms elapsed=70.71s tid=0x00007ff4c80cd5f0 nid=7708 runnable  
+
+"G1 Conc#0" os_prio=0 cpu=0.08ms elapsed=70.71s tid=0x00007ff4c80ae2a0 nid=7707 runnable  
+
+"G1 Main Marker" os_prio=0 cpu=0.17ms elapsed=70.71s tid=0x00007ff4c80ad2f0 nid=7706 runnable  
+
+"GC Thread#0" os_prio=0 cpu=2846.63ms elapsed=70.71s tid=0x00007ff4c809fd10 nid=7705 runnable  
+
+JNI global refs: 8, weak refs: 0
+
+=== sample 11 13:14:02
+2026-10-08 13:14:02
+Full thread dump OpenJDK 64-Bit Server VM (21.0.12.1+1-1-24.04.4-Ubuntu mixed mode, sharing):
+
+Threads class SMR info:
+_java_thread_list=0x00007ff43c002500, length=12, elements={
+0x00007ff4c8019770, 0x00007ff4c8101ed0, 0x00007ff4c8103450, 0x00007ff4c8104d20,
+0x00007ff4c8106370, 0x00007ff4c8107920, 0x00007ff4c8109470, 0x00007ff4c810ab40,
+0x00007ff4c8116870, 0x00007ff4c8119730, 0x00007ff4c824f9d0, 0x00007ff43c000fe0
+}
+
+"main" #1 [7704] prio=5 os_prio=0 cpu=1013.85ms elapsed=74.07s tid=0x00007ff4c8019770 nid=7704 waiting on condition  [0x00007ff4ce5fe000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.12.1/Native Method)
+	- parking to wait for  <0x0000000684d9d8b0> (a java.util.concurrent.FutureTask)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.12.1/LockSupport.java:221)
+	at java.util.concurrent.FutureTask.awaitDone(java.base@21.0.12.1/FutureTask.java:500)
+	at java.util.concurrent.FutureTask.get(java.base@21.0.12.1/FutureTask.java:190)
+	at org.iotloopsim.experiment.Experiment.run(Experiment.java:126)
+	at org.iotloopsim.experiment.Main.run(Main.java:73)
+	at org.iotloopsim.experiment.Main.main(Main.java:31)
+	at org.iotloopsim.bridge.Launcher.main(Launcher.java:11)
+
+"Reference Handler" #9 [7712] daemon prio=10 os_prio=0 cpu=3.27ms elapsed=74.03s tid=0x00007ff4c8101ed0 nid=7712 waiting on condition  [0x00007ff4a84fb000]
+   java.lang.Thread.State: RUNNABLE
+	at java.lang.ref.Reference.waitForReferencePendingList(java.base@21.0.12.1/Native Method)
+	at java.lang.ref.Reference.processPendingReferences(java.base@21.0.12.1/Reference.java:246)
+	at java.lang.ref.Reference$ReferenceHandler.run(java.base@21.0.12.1/Reference.java:208)
+
+"Finalizer" #10 [7713] daemon prio=8 os_prio=0 cpu=0.42ms elapsed=74.03s tid=0x00007ff4c8103450 nid=7713 in Object.wait()  [0x00007ff4a83fb000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait0(java.base@21.0.12.1/Native Method)
+	- waiting on <0x0000000680000688> (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.Object.wait(java.base@21.0.12.1/Object.java:366)
+	at java.lang.Object.wait(java.base@21.0.12.1/Object.java:339)
+	at java.lang.ref.NativeReferenceQueue.await(java.base@21.0.12.1/NativeReferenceQueue.java:48)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.12.1/ReferenceQueue.java:158)
+	at java.lang.ref.NativeReferenceQueue.remove(java.base@21.0.12.1/NativeReferenceQueue.java:89)
+	- locked <0x0000000680000688> (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.ref.Finalizer$FinalizerThread.run(java.base@21.0.12.1/Finalizer.java:173)
+
+"Signal Dispatcher" #11 [7714] daemon prio=9 os_prio=0 cpu=0.78ms elapsed=74.03s tid=0x00007ff4c8104d20 nid=7714 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Service Thread" #12 [7715] daemon prio=9 os_prio=0 cpu=1.41ms elapsed=74.03s tid=0x00007ff4c8106370 nid=7715 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Monitor Deflation Thread" #13 [7716] daemon prio=9 os_prio=0 cpu=17.29ms elapsed=74.03s tid=0x00007ff4c8107920 nid=7716 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread0" #14 [7717] daemon prio=9 os_prio=0 cpu=5123.43ms elapsed=74.03s tid=0x00007ff4c8109470 nid=7717 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"C1 CompilerThread0" #15 [7718] daemon prio=9 os_prio=0 cpu=570.37ms elapsed=74.03s tid=0x00007ff4c810ab40 nid=7718 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"Notification Thread" #16 [7719] daemon prio=9 os_prio=0 cpu=0.22ms elapsed=74.02s tid=0x00007ff4c8116870 nid=7719 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Common-Cleaner" #17 [7720] daemon prio=8 os_prio=0 cpu=0.97ms elapsed=74.02s tid=0x00007ff4c8119730 nid=7720 waiting on condition  [0x00007ff452bfe000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.12.1/Native Method)
+	- parking to wait for  <0x0000000680000898> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@21.0.12.1/LockSupport.java:269)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.12.1/AbstractQueuedSynchronizer.java:1886)
+	at java.lang.ref.ReferenceQueue.await(java.base@21.0.12.1/ReferenceQueue.java:71)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.12.1/ReferenceQueue.java:143)
+	at java.lang.ref.ReferenceQueue.remove(java.base@21.0.12.1/ReferenceQueue.java:218)
+	at jdk.internal.ref.CleanerImpl.run(java.base@21.0.12.1/CleanerImpl.java:140)
+	at java.lang.Thread.runWith(java.base@21.0.12.1/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.12.1/Thread.java:1583)
+	at jdk.internal.misc.InnocuousThread.run(java.base@21.0.12.1/InnocuousThread.java:186)
+
+"pool-1-thread-1" #19 [7722] prio=5 os_prio=0 cpu=67419.56ms elapsed=72.73s tid=0x00007ff4c824f9d0 nid=7722 runnable  [0x00007ff4529fc000]
+   java.lang.Thread.State: RUNNABLE
+	at org.iotloopsim.model.EnergyLedger.charge(EnergyLedger.java:33)
+	at org.iotloopsim.model.ComputeNode.accountPower(ComputeNode.java:85)
+	at org.iotloopsim.model.ComputeNode.coreBusy(ComputeNode.java:76)
+	at org.iotloopsim.model.ServiceInstance.lambda$serve$4(ServiceInstance.java:163)
+	at org.iotloopsim.model.ServiceInstance$$Lambda/0x00007ff45402eb60.run(Unknown Source)
+	at org.iotloopsim.core.Simulation.runUntilPaused(Simulation.java:143)
+	at org.iotloopsim.core.Simulation.run(Simulation.java:126)
+	at org.iotloopsim.model.IoTWorld.run(IoTWorld.java:252)
+	at org.iotloopsim.experiment.Experiment.runOne(Experiment.java:92)
+	at org.iotloopsim.experiment.Experiment.lambda$run$0(Experiment.java:123)
+	at org.iotloopsim.experiment.Experiment$$Lambda/0x00007ff454024700.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(java.base@21.0.12.1/FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.12.1/ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.12.1/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.12.1/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.12.1/Thread.java:1583)
+
+"Attach Listener" #20 [7746] daemon prio=9 os_prio=0 cpu=3.30ms elapsed=33.73s tid=0x00007ff43c000fe0 nid=7746 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"GC Thread#1" os_prio=0 cpu=3055.17ms elapsed=73.78s tid=0x00007ff440006300 nid=7721 runnable  
+
+"VM Thread" os_prio=0 cpu=59.30ms elapsed=74.04s tid=0x00007ff4c80f9610 nid=7711 runnable  
+
+"VM Periodic Task Thread" os_prio=0 cpu=102.27ms elapsed=74.05s tid=0x00007ff4c80e7ef0 nid=7710 waiting on condition  
+
+"G1 Service" os_prio=0 cpu=14.72ms elapsed=74.07s tid=0x00007ff4c80ce5c0 nid=7709 runnable  
+
+"G1 Refine#0" os_prio=0 cpu=573.90ms elapsed=74.07s tid=0x00007ff4c80cd5f0 nid=7708 runnable  
+
+"G1 Conc#0" os_prio=0 cpu=0.08ms elapsed=74.07s tid=0x00007ff4c80ae2a0 nid=7707 runnable  
+
+"G1 Main Marker" os_prio=0 cpu=0.17ms elapsed=74.07s tid=0x00007ff4c80ad2f0 nid=7706 runnable  
+
+"GC Thread#0" os_prio=0 cpu=2960.93ms elapsed=74.07s tid=0x00007ff4c809fd10 nid=7705 runnable  
+
+JNI global refs: 8, weak refs: 0
+
+=== sample 12 13:14:05
+2026-10-08 13:14:06
+Full thread dump OpenJDK 64-Bit Server VM (21.0.12.1+1-1-24.04.4-Ubuntu mixed mode, sharing):
+
+Threads class SMR info:
+_java_thread_list=0x00007ff43c002500, length=12, elements={
+0x00007ff4c8019770, 0x00007ff4c8101ed0, 0x00007ff4c8103450, 0x00007ff4c8104d20,
+0x00007ff4c8106370, 0x00007ff4c8107920, 0x00007ff4c8109470, 0x00007ff4c810ab40,
+0x00007ff4c8116870, 0x00007ff4c8119730, 0x00007ff4c824f9d0, 0x00007ff43c000fe0
+}
+
+"main" #1 [7704] prio=5 os_prio=0 cpu=1013.85ms elapsed=77.51s tid=0x00007ff4c8019770 nid=7704 waiting on condition  [0x00007ff4ce5fe000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.12.1/Native Method)
+	- parking to wait for  <0x0000000684d9d8b0> (a java.util.concurrent.FutureTask)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.12.1/LockSupport.java:221)
+	at java.util.concurrent.FutureTask.awaitDone(java.base@21.0.12.1/FutureTask.java:500)
+	at java.util.concurrent.FutureTask.get(java.base@21.0.12.1/FutureTask.java:190)
+	at org.iotloopsim.experiment.Experiment.run(Experiment.java:126)
+	at org.iotloopsim.experiment.Main.run(Main.java:73)
+	at org.iotloopsim.experiment.Main.main(Main.java:31)
+	at org.iotloopsim.bridge.Launcher.main(Launcher.java:11)
+
+"Reference Handler" #9 [7712] daemon prio=10 os_prio=0 cpu=3.27ms elapsed=77.47s tid=0x00007ff4c8101ed0 nid=7712 waiting on condition  [0x00007ff4a84fb000]
+   java.lang.Thread.State: RUNNABLE
+	at java.lang.ref.Reference.waitForReferencePendingList(java.base@21.0.12.1/Native Method)
+	at java.lang.ref.Reference.processPendingReferences(java.base@21.0.12.1/Reference.java:246)
+	at java.lang.ref.Reference$ReferenceHandler.run(java.base@21.0.12.1/Reference.java:208)
+
+"Finalizer" #10 [7713] daemon prio=8 os_prio=0 cpu=0.42ms elapsed=77.47s tid=0x00007ff4c8103450 nid=7713 in Object.wait()  [0x00007ff4a83fb000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait0(java.base@21.0.12.1/Native Method)
+	- waiting on <0x0000000680000688> (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.Object.wait(java.base@21.0.12.1/Object.java:366)
+	at java.lang.Object.wait(java.base@21.0.12.1/Object.java:339)
+	at java.lang.ref.NativeReferenceQueue.await(java.base@21.0.12.1/NativeReferenceQueue.java:48)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.12.1/ReferenceQueue.java:158)
+	at java.lang.ref.NativeReferenceQueue.remove(java.base@21.0.12.1/NativeReferenceQueue.java:89)
+	- locked <0x0000000680000688> (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.ref.Finalizer$FinalizerThread.run(java.base@21.0.12.1/Finalizer.java:173)
+
+"Signal Dispatcher" #11 [7714] daemon prio=9 os_prio=0 cpu=0.78ms elapsed=77.47s tid=0x00007ff4c8104d20 nid=7714 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Service Thread" #12 [7715] daemon prio=9 os_prio=0 cpu=1.41ms elapsed=77.47s tid=0x00007ff4c8106370 nid=7715 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Monitor Deflation Thread" #13 [7716] daemon prio=9 os_prio=0 cpu=18.01ms elapsed=77.47s tid=0x00007ff4c8107920 nid=7716 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread0" #14 [7717] daemon prio=9 os_prio=0 cpu=5123.46ms elapsed=77.47s tid=0x00007ff4c8109470 nid=7717 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"C1 CompilerThread0" #15 [7718] daemon prio=9 os_prio=0 cpu=570.42ms elapsed=77.47s tid=0x00007ff4c810ab40 nid=7718 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"Notification Thread" #16 [7719] daemon prio=9 os_prio=0 cpu=0.22ms elapsed=77.46s tid=0x00007ff4c8116870 nid=7719 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Common-Cleaner" #17 [7720] daemon prio=8 os_prio=0 cpu=0.97ms elapsed=77.45s tid=0x00007ff4c8119730 nid=7720 waiting on condition  [0x00007ff452bfe000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.12.1/Native Method)
+	- parking to wait for  <0x0000000680000898> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@21.0.12.1/LockSupport.java:269)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.12.1/AbstractQueuedSynchronizer.java:1886)
+	at java.lang.ref.ReferenceQueue.await(java.base@21.0.12.1/ReferenceQueue.java:71)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.12.1/ReferenceQueue.java:143)
+	at java.lang.ref.ReferenceQueue.remove(java.base@21.0.12.1/ReferenceQueue.java:218)
+	at jdk.internal.ref.CleanerImpl.run(java.base@21.0.12.1/CleanerImpl.java:140)
+	at java.lang.Thread.runWith(java.base@21.0.12.1/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.12.1/Thread.java:1583)
+	at jdk.internal.misc.InnocuousThread.run(java.base@21.0.12.1/InnocuousThread.java:186)
+
+"pool-1-thread-1" #19 [7722] prio=5 os_prio=0 cpu=70468.42ms elapsed=76.17s tid=0x00007ff4c824f9d0 nid=7722 runnable  [0x00007ff4529fc000]
+   java.lang.Thread.State: RUNNABLE
+	at org.iotloopsim.model.EnergyLedger.charge(EnergyLedger.java:33)
+	at org.iotloopsim.model.EnergyLedger.charge(EnergyLedger.java:22)
+	at org.iotloopsim.model.Network.lambda$hop$8(Network.java:194)
+	at org.iotloopsim.model.Network$$Lambda/0x00007ff454026d88.done(Unknown Source)
+	at org.iotloopsim.model.Link.lambda$transmit$2(Link.java:154)
+	at org.iotloopsim.model.Link$$Lambda/0x00007ff454027428.run(Unknown Source)
+	at org.iotloopsim.core.Simulation.runUntilPaused(Simulation.java:143)
+	at org.iotloopsim.core.Simulation.run(Simulation.java:126)
+	at org.iotloopsim.model.IoTWorld.run(IoTWorld.java:252)
+	at org.iotloopsim.experiment.Experiment.runOne(Experiment.java:92)
+	at org.iotloopsim.experiment.Experiment.lambda$run$0(Experiment.java:123)
+	at org.iotloopsim.experiment.Experiment$$Lambda/0x00007ff454024700.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(java.base@21.0.12.1/FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.12.1/ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.12.1/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.12.1/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.12.1/Thread.java:1583)
+
+"Attach Listener" #20 [7746] daemon prio=9 os_prio=0 cpu=3.55ms elapsed=37.17s tid=0x00007ff43c000fe0 nid=7746 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"GC Thread#1" os_prio=0 cpu=3135.57ms elapsed=77.22s tid=0x00007ff440006300 nid=7721 runnable  
+
+"VM Thread" os_prio=0 cpu=60.64ms elapsed=77.48s tid=0x00007ff4c80f9610 nid=7711 runnable  
+
+"VM Periodic Task Thread" os_prio=0 cpu=106.81ms elapsed=77.49s tid=0x00007ff4c80e7ef0 nid=7710 waiting on condition  
+
+"G1 Service" os_prio=0 cpu=16.33ms elapsed=77.50s tid=0x00007ff4c80ce5c0 nid=7709 runnable  
+
+"G1 Refine#0" os_prio=0 cpu=658.30ms elapsed=77.50s tid=0x00007ff4c80cd5f0 nid=7708 runnable  
+
+"G1 Conc#0" os_prio=0 cpu=0.08ms elapsed=77.50s tid=0x00007ff4c80ae2a0 nid=7707 runnable  
+
+"G1 Main Marker" os_prio=0 cpu=0.17ms elapsed=77.51s tid=0x00007ff4c80ad2f0 nid=7706 runnable  
+
+"GC Thread#0" os_prio=0 cpu=3081.68ms elapsed=77.51s tid=0x00007ff4c809fd10 nid=7705 runnable  
+
+JNI global refs: 8, weak refs: 0
+
+=== sample 13 13:14:09
+2026-10-08 13:14:09
+Full thread dump OpenJDK 64-Bit Server VM (21.0.12.1+1-1-24.04.4-Ubuntu mixed mode, sharing):
+
+Threads class SMR info:
+_java_thread_list=0x00007ff43c002500, length=12, elements={
+0x00007ff4c8019770, 0x00007ff4c8101ed0, 0x00007ff4c8103450, 0x00007ff4c8104d20,
+0x00007ff4c8106370, 0x00007ff4c8107920, 0x00007ff4c8109470, 0x00007ff4c810ab40,
+0x00007ff4c8116870, 0x00007ff4c8119730, 0x00007ff4c824f9d0, 0x00007ff43c000fe0
+}
+
+"main" #1 [7704] prio=5 os_prio=0 cpu=1013.85ms elapsed=80.91s tid=0x00007ff4c8019770 nid=7704 waiting on condition  [0x00007ff4ce5fe000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.12.1/Native Method)
+	- parking to wait for  <0x0000000684d9d8b0> (a java.util.concurrent.FutureTask)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.12.1/LockSupport.java:221)
+	at java.util.concurrent.FutureTask.awaitDone(java.base@21.0.12.1/FutureTask.java:500)
+	at java.util.concurrent.FutureTask.get(java.base@21.0.12.1/FutureTask.java:190)
+	at org.iotloopsim.experiment.Experiment.run(Experiment.java:126)
+	at org.iotloopsim.experiment.Main.run(Main.java:73)
+	at org.iotloopsim.experiment.Main.main(Main.java:31)
+	at org.iotloopsim.bridge.Launcher.main(Launcher.java:11)
+
+"Reference Handler" #9 [7712] daemon prio=10 os_prio=0 cpu=3.27ms elapsed=80.87s tid=0x00007ff4c8101ed0 nid=7712 waiting on condition  [0x00007ff4a84fb000]
+   java.lang.Thread.State: RUNNABLE
+	at java.lang.ref.Reference.waitForReferencePendingList(java.base@21.0.12.1/Native Method)
+	at java.lang.ref.Reference.processPendingReferences(java.base@21.0.12.1/Reference.java:246)
+	at java.lang.ref.Reference$ReferenceHandler.run(java.base@21.0.12.1/Reference.java:208)
+
+"Finalizer" #10 [7713] daemon prio=8 os_prio=0 cpu=0.42ms elapsed=80.87s tid=0x00007ff4c8103450 nid=7713 in Object.wait()  [0x00007ff4a83fb000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait0(java.base@21.0.12.1/Native Method)
+	- waiting on <0x0000000680000688> (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.Object.wait(java.base@21.0.12.1/Object.java:366)
+	at java.lang.Object.wait(java.base@21.0.12.1/Object.java:339)
+	at java.lang.ref.NativeReferenceQueue.await(java.base@21.0.12.1/NativeReferenceQueue.java:48)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.12.1/ReferenceQueue.java:158)
+	at java.lang.ref.NativeReferenceQueue.remove(java.base@21.0.12.1/NativeReferenceQueue.java:89)
+	- locked <0x0000000680000688> (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.ref.Finalizer$FinalizerThread.run(java.base@21.0.12.1/Finalizer.java:173)
+
+"Signal Dispatcher" #11 [7714] daemon prio=9 os_prio=0 cpu=0.78ms elapsed=80.87s tid=0x00007ff4c8104d20 nid=7714 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Service Thread" #12 [7715] daemon prio=9 os_prio=0 cpu=1.41ms elapsed=80.87s tid=0x00007ff4c8106370 nid=7715 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Monitor Deflation Thread" #13 [7716] daemon prio=9 os_prio=0 cpu=18.65ms elapsed=80.87s tid=0x00007ff4c8107920 nid=7716 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread0" #14 [7717] daemon prio=9 os_prio=0 cpu=5123.46ms elapsed=80.87s tid=0x00007ff4c8109470 nid=7717 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"C1 CompilerThread0" #15 [7718] daemon prio=9 os_prio=0 cpu=570.42ms elapsed=80.87s tid=0x00007ff4c810ab40 nid=7718 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"Notification Thread" #16 [7719] daemon prio=9 os_prio=0 cpu=0.22ms elapsed=80.86s tid=0x00007ff4c8116870 nid=7719 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Common-Cleaner" #17 [7720] daemon prio=8 os_prio=0 cpu=0.97ms elapsed=80.86s tid=0x00007ff4c8119730 nid=7720 waiting on condition  [0x00007ff452bfe000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.12.1/Native Method)
+	- parking to wait for  <0x0000000680000898> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@21.0.12.1/LockSupport.java:269)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.12.1/AbstractQueuedSynchronizer.java:1886)
+	at java.lang.ref.ReferenceQueue.await(java.base@21.0.12.1/ReferenceQueue.java:71)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.12.1/ReferenceQueue.java:143)
+	at java.lang.ref.ReferenceQueue.remove(java.base@21.0.12.1/ReferenceQueue.java:218)
+	at jdk.internal.ref.CleanerImpl.run(java.base@21.0.12.1/CleanerImpl.java:140)
+	at java.lang.Thread.runWith(java.base@21.0.12.1/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.12.1/Thread.java:1583)
+	at jdk.internal.misc.InnocuousThread.run(java.base@21.0.12.1/InnocuousThread.java:186)
+
+"pool-1-thread-1" #19 [7722] prio=5 os_prio=0 cpu=73789.28ms elapsed=79.57s tid=0x00007ff4c824f9d0 nid=7722 runnable  [0x00007ff4529fc000]
+   java.lang.Thread.State: RUNNABLE
+	at org.iotloopsim.model.Network.hop(Network.java:182)
+	at org.iotloopsim.model.Network.lambda$hop$8(Network.java:201)
+	at org.iotloopsim.model.Network$$Lambda/0x00007ff454026d88.done(Unknown Source)
+	at org.iotloopsim.model.Link.lambda$transmit$2(Link.java:154)
+	at org.iotloopsim.model.Link$$Lambda/0x00007ff454027428.run(Unknown Source)
+	at org.iotloopsim.core.Simulation.runUntilPaused(Simulation.java:143)
+	at org.iotloopsim.core.Simulation.run(Simulation.java:126)
+	at org.iotloopsim.model.IoTWorld.run(IoTWorld.java:252)
+	at org.iotloopsim.experiment.Experiment.runOne(Experiment.java:92)
+	at org.iotloopsim.experiment.Experiment.lambda$run$0(Experiment.java:123)
+	at org.iotloopsim.experiment.Experiment$$Lambda/0x00007ff454024700.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(java.base@21.0.12.1/FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.12.1/ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.12.1/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.12.1/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.12.1/Thread.java:1583)
+
+"Attach Listener" #20 [7746] daemon prio=9 os_prio=0 cpu=3.76ms elapsed=40.57s tid=0x00007ff43c000fe0 nid=7746 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"GC Thread#1" os_prio=0 cpu=3135.57ms elapsed=80.62s tid=0x00007ff440006300 nid=7721 runnable  
+
+"VM Thread" os_prio=0 cpu=61.30ms elapsed=80.88s tid=0x00007ff4c80f9610 nid=7711 runnable  
+
+"VM Periodic Task Thread" os_prio=0 cpu=111.09ms elapsed=80.89s tid=0x00007ff4c80e7ef0 nid=7710 waiting on condition  
+
+"G1 Service" os_prio=0 cpu=16.55ms elapsed=80.91s tid=0x00007ff4c80ce5c0 nid=7709 runnable  
+
+"G1 Refine#0" os_prio=0 cpu=660.17ms elapsed=80.91s tid=0x00007ff4c80cd5f0 nid=7708 runnable  
+
+"G1 Conc#0" os_prio=0 cpu=0.08ms elapsed=80.91s tid=0x00007ff4c80ae2a0 nid=7707 runnable  
+
+"G1 Main Marker" os_prio=0 cpu=0.17ms elapsed=80.91s tid=0x00007ff4c80ad2f0 nid=7706 runnable  
+
+"GC Thread#0" os_prio=0 cpu=3081.68ms elapsed=80.91s tid=0x00007ff4c809fd10 nid=7705 runnable  
+
+JNI global refs: 8, weak refs: 0
+
+=== sample 14 13:14:12
+2026-10-08 13:14:12
+Full thread dump OpenJDK 64-Bit Server VM (21.0.12.1+1-1-24.04.4-Ubuntu mixed mode, sharing):
+
+Threads class SMR info:
+_java_thread_list=0x00007ff43c002500, length=12, elements={
+0x00007ff4c8019770, 0x00007ff4c8101ed0, 0x00007ff4c8103450, 0x00007ff4c8104d20,
+0x00007ff4c8106370, 0x00007ff4c8107920, 0x00007ff4c8109470, 0x00007ff4c810ab40,
+0x00007ff4c8116870, 0x00007ff4c8119730, 0x00007ff4c824f9d0, 0x00007ff43c000fe0
+}
+
+"main" #1 [7704] prio=5 os_prio=0 cpu=1013.85ms elapsed=84.23s tid=0x00007ff4c8019770 nid=7704 waiting on condition  [0x00007ff4ce5fe000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.12.1/Native Method)
+	- parking to wait for  <0x0000000684d9d8b0> (a java.util.concurrent.FutureTask)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.12.1/LockSupport.java:221)
+	at java.util.concurrent.FutureTask.awaitDone(java.base@21.0.12.1/FutureTask.java:500)
+	at java.util.concurrent.FutureTask.get(java.base@21.0.12.1/FutureTask.java:190)
+	at org.iotloopsim.experiment.Experiment.run(Experiment.java:126)
+	at org.iotloopsim.experiment.Main.run(Main.java:73)
+	at org.iotloopsim.experiment.Main.main(Main.java:31)
+	at org.iotloopsim.bridge.Launcher.main(Launcher.java:11)
+
+"Reference Handler" #9 [7712] daemon prio=10 os_prio=0 cpu=3.27ms elapsed=84.19s tid=0x00007ff4c8101ed0 nid=7712 waiting on condition  [0x00007ff4a84fb000]
+   java.lang.Thread.State: RUNNABLE
+	at java.lang.ref.Reference.waitForReferencePendingList(java.base@21.0.12.1/Native Method)
+	at java.lang.ref.Reference.processPendingReferences(java.base@21.0.12.1/Reference.java:246)
+	at java.lang.ref.Reference$ReferenceHandler.run(java.base@21.0.12.1/Reference.java:208)
+
+"Finalizer" #10 [7713] daemon prio=8 os_prio=0 cpu=0.42ms elapsed=84.19s tid=0x00007ff4c8103450 nid=7713 in Object.wait()  [0x00007ff4a83fb000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait0(java.base@21.0.12.1/Native Method)
+	- waiting on <0x0000000680000688> (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.Object.wait(java.base@21.0.12.1/Object.java:366)
+	at java.lang.Object.wait(java.base@21.0.12.1/Object.java:339)
+	at java.lang.ref.NativeReferenceQueue.await(java.base@21.0.12.1/NativeReferenceQueue.java:48)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.12.1/ReferenceQueue.java:158)
+	at java.lang.ref.NativeReferenceQueue.remove(java.base@21.0.12.1/NativeReferenceQueue.java:89)
+	- locked <0x0000000680000688> (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.ref.Finalizer$FinalizerThread.run(java.base@21.0.12.1/Finalizer.java:173)
+
+"Signal Dispatcher" #11 [7714] daemon prio=9 os_prio=0 cpu=0.78ms elapsed=84.19s tid=0x00007ff4c8104d20 nid=7714 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Service Thread" #12 [7715] daemon prio=9 os_prio=0 cpu=1.41ms elapsed=84.19s tid=0x00007ff4c8106370 nid=7715 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Monitor Deflation Thread" #13 [7716] daemon prio=9 os_prio=0 cpu=19.53ms elapsed=84.19s tid=0x00007ff4c8107920 nid=7716 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread0" #14 [7717] daemon prio=9 os_prio=0 cpu=5123.53ms elapsed=84.19s tid=0x00007ff4c8109470 nid=7717 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"C1 CompilerThread0" #15 [7718] daemon prio=9 os_prio=0 cpu=570.50ms elapsed=84.19s tid=0x00007ff4c810ab40 nid=7718 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"Notification Thread" #16 [7719] daemon prio=9 os_prio=0 cpu=0.22ms elapsed=84.17s tid=0x00007ff4c8116870 nid=7719 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Common-Cleaner" #17 [7720] daemon prio=8 os_prio=0 cpu=0.97ms elapsed=84.17s tid=0x00007ff4c8119730 nid=7720 waiting on condition  [0x00007ff452bfe000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.12.1/Native Method)
+	- parking to wait for  <0x0000000680000898> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@21.0.12.1/LockSupport.java:269)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.12.1/AbstractQueuedSynchronizer.java:1886)
+	at java.lang.ref.ReferenceQueue.await(java.base@21.0.12.1/ReferenceQueue.java:71)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.12.1/ReferenceQueue.java:143)
+	at java.lang.ref.ReferenceQueue.remove(java.base@21.0.12.1/ReferenceQueue.java:218)
+	at jdk.internal.ref.CleanerImpl.run(java.base@21.0.12.1/CleanerImpl.java:140)
+	at java.lang.Thread.runWith(java.base@21.0.12.1/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.12.1/Thread.java:1583)
+	at jdk.internal.misc.InnocuousThread.run(java.base@21.0.12.1/InnocuousThread.java:186)
+
+"pool-1-thread-1" #19 [7722] prio=5 os_prio=0 cpu=76910.82ms elapsed=82.89s tid=0x00007ff4c824f9d0 nid=7722 runnable  [0x00007ff4529fc000]
+   java.lang.Thread.State: RUNNABLE
+	at java.util.HashMap.hash(java.base@21.0.12.1/HashMap.java:338)
+	at java.util.HashMap.merge(java.base@21.0.12.1/HashMap.java:1364)
+	at org.iotloopsim.model.EnergyLedger.charge(EnergyLedger.java:33)
+	at org.iotloopsim.model.IoTDevice.consume(IoTDevice.java:174)
+	at org.iotloopsim.model.IoTDevice.consume(IoTDevice.java:165)
+	at org.iotloopsim.model.Sensor.tick(Sensor.java:54)
+	at org.iotloopsim.model.Sensor$$Lambda/0x00007ff45402e4e8.run(Unknown Source)
+	at org.iotloopsim.core.Simulation.runUntilPaused(Simulation.java:143)
+	at org.iotloopsim.core.Simulation.run(Simulation.java:126)
+	at org.iotloopsim.model.IoTWorld.run(IoTWorld.java:252)
+	at org.iotloopsim.experiment.Experiment.runOne(Experiment.java:92)
+	at org.iotloopsim.experiment.Experiment.lambda$run$0(Experiment.java:123)
+	at org.iotloopsim.experiment.Experiment$$Lambda/0x00007ff454024700.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(java.base@21.0.12.1/FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.12.1/ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.12.1/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.12.1/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.12.1/Thread.java:1583)
+
+"Attach Listener" #20 [7746] daemon prio=9 os_prio=0 cpu=4.15ms elapsed=43.89s tid=0x00007ff43c000fe0 nid=7746 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"GC Thread#1" os_prio=0 cpu=3240.07ms elapsed=83.93s tid=0x00007ff440006300 nid=7721 runnable  
+
+"VM Thread" os_prio=0 cpu=62.75ms elapsed=84.20s tid=0x00007ff4c80f9610 nid=7711 runnable  
+
+"VM Periodic Task Thread" os_prio=0 cpu=115.40ms elapsed=84.20s tid=0x00007ff4c80e7ef0 nid=7710 waiting on condition  
+
+"G1 Service" os_prio=0 cpu=18.43ms elapsed=84.22s tid=0x00007ff4c80ce5c0 nid=7709 runnable  
+
+"G1 Refine#0" os_prio=0 cpu=724.47ms elapsed=84.22s tid=0x00007ff4c80cd5f0 nid=7708 runnable  
+
+"G1 Conc#0" os_prio=0 cpu=0.08ms elapsed=84.22s tid=0x00007ff4c80ae2a0 nid=7707 runnable  
+
+"G1 Main Marker" os_prio=0 cpu=0.17ms elapsed=84.22s tid=0x00007ff4c80ad2f0 nid=7706 runnable  
+
+"GC Thread#0" os_prio=0 cpu=3178.32ms elapsed=84.22s tid=0x00007ff4c809fd10 nid=7705 runnable  
+
+JNI global refs: 8, weak refs: 0
+
+=== sample 15 13:14:15
+2026-10-08 13:14:16
+Full thread dump OpenJDK 64-Bit Server VM (21.0.12.1+1-1-24.04.4-Ubuntu mixed mode, sharing):
+
+Threads class SMR info:
+_java_thread_list=0x00007ff43c002500, length=12, elements={
+0x00007ff4c8019770, 0x00007ff4c8101ed0, 0x00007ff4c8103450, 0x00007ff4c8104d20,
+0x00007ff4c8106370, 0x00007ff4c8107920, 0x00007ff4c8109470, 0x00007ff4c810ab40,
+0x00007ff4c8116870, 0x00007ff4c8119730, 0x00007ff4c824f9d0, 0x00007ff43c000fe0
+}
+
+"main" #1 [7704] prio=5 os_prio=0 cpu=1013.85ms elapsed=87.62s tid=0x00007ff4c8019770 nid=7704 waiting on condition  [0x00007ff4ce5fe000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.12.1/Native Method)
+	- parking to wait for  <0x0000000684d9d8b0> (a java.util.concurrent.FutureTask)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.12.1/LockSupport.java:221)
+	at java.util.concurrent.FutureTask.awaitDone(java.base@21.0.12.1/FutureTask.java:500)
+	at java.util.concurrent.FutureTask.get(java.base@21.0.12.1/FutureTask.java:190)
+	at org.iotloopsim.experiment.Experiment.run(Experiment.java:126)
+	at org.iotloopsim.experiment.Main.run(Main.java:73)
+	at org.iotloopsim.experiment.Main.main(Main.java:31)
+	at org.iotloopsim.bridge.Launcher.main(Launcher.java:11)
+
+"Reference Handler" #9 [7712] daemon prio=10 os_prio=0 cpu=3.27ms elapsed=87.58s tid=0x00007ff4c8101ed0 nid=7712 waiting on condition  [0x00007ff4a84fb000]
+   java.lang.Thread.State: RUNNABLE
+	at java.lang.ref.Reference.waitForReferencePendingList(java.base@21.0.12.1/Native Method)
+	at java.lang.ref.Reference.processPendingReferences(java.base@21.0.12.1/Reference.java:246)
+	at java.lang.ref.Reference$ReferenceHandler.run(java.base@21.0.12.1/Reference.java:208)
+
+"Finalizer" #10 [7713] daemon prio=8 os_prio=0 cpu=0.42ms elapsed=87.58s tid=0x00007ff4c8103450 nid=7713 in Object.wait()  [0x00007ff4a83fb000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait0(java.base@21.0.12.1/Native Method)
+	- waiting on <0x0000000680000688> (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.Object.wait(java.base@21.0.12.1/Object.java:366)
+	at java.lang.Object.wait(java.base@21.0.12.1/Object.java:339)
+	at java.lang.ref.NativeReferenceQueue.await(java.base@21.0.12.1/NativeReferenceQueue.java:48)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.12.1/ReferenceQueue.java:158)
+	at java.lang.ref.NativeReferenceQueue.remove(java.base@21.0.12.1/NativeReferenceQueue.java:89)
+	- locked <0x0000000680000688> (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.ref.Finalizer$FinalizerThread.run(java.base@21.0.12.1/Finalizer.java:173)
+
+"Signal Dispatcher" #11 [7714] daemon prio=9 os_prio=0 cpu=0.78ms elapsed=87.58s tid=0x00007ff4c8104d20 nid=7714 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Service Thread" #12 [7715] daemon prio=9 os_prio=0 cpu=1.41ms elapsed=87.58s tid=0x00007ff4c8106370 nid=7715 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Monitor Deflation Thread" #13 [7716] daemon prio=9 os_prio=0 cpu=20.33ms elapsed=87.58s tid=0x00007ff4c8107920 nid=7716 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread0" #14 [7717] daemon prio=9 os_prio=0 cpu=5123.57ms elapsed=87.58s tid=0x00007ff4c8109470 nid=7717 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"C1 CompilerThread0" #15 [7718] daemon prio=9 os_prio=0 cpu=570.54ms elapsed=87.58s tid=0x00007ff4c810ab40 nid=7718 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"Notification Thread" #16 [7719] daemon prio=9 os_prio=0 cpu=0.22ms elapsed=87.56s tid=0x00007ff4c8116870 nid=7719 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Common-Cleaner" #17 [7720] daemon prio=8 os_prio=0 cpu=0.97ms elapsed=87.56s tid=0x00007ff4c8119730 nid=7720 waiting on condition  [0x00007ff452bfe000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.12.1/Native Method)
+	- parking to wait for  <0x0000000680000898> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@21.0.12.1/LockSupport.java:269)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.12.1/AbstractQueuedSynchronizer.java:1886)
+	at java.lang.ref.ReferenceQueue.await(java.base@21.0.12.1/ReferenceQueue.java:71)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.12.1/ReferenceQueue.java:143)
+	at java.lang.ref.ReferenceQueue.remove(java.base@21.0.12.1/ReferenceQueue.java:218)
+	at jdk.internal.ref.CleanerImpl.run(java.base@21.0.12.1/CleanerImpl.java:140)
+	at java.lang.Thread.runWith(java.base@21.0.12.1/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.12.1/Thread.java:1583)
+	at jdk.internal.misc.InnocuousThread.run(java.base@21.0.12.1/InnocuousThread.java:186)
+
+"pool-1-thread-1" #19 [7722] prio=5 os_prio=0 cpu=80113.69ms elapsed=86.28s tid=0x00007ff4c824f9d0 nid=7722 runnable  [0x00007ff4529fc000]
+   java.lang.Thread.State: RUNNABLE
+	at java.util.HashMap.hash(java.base@21.0.12.1/HashMap.java:338)
+	at java.util.HashMap.merge(java.base@21.0.12.1/HashMap.java:1364)
+	at org.iotloopsim.model.EnergyLedger.charge(EnergyLedger.java:33)
+	at org.iotloopsim.model.EnergyLedger.charge(EnergyLedger.java:22)
+	at org.iotloopsim.model.Network.lambda$hop$8(Network.java:194)
+	at org.iotloopsim.model.Network$$Lambda/0x00007ff454026d88.done(Unknown Source)
+	at org.iotloopsim.model.Link.lambda$transmit$2(Link.java:154)
+	at org.iotloopsim.model.Link$$Lambda/0x00007ff454027428.run(Unknown Source)
+	at org.iotloopsim.core.Simulation.runUntilPaused(Simulation.java:143)
+	at org.iotloopsim.core.Simulation.run(Simulation.java:126)
+	at org.iotloopsim.model.IoTWorld.run(IoTWorld.java:252)
+	at org.iotloopsim.experiment.Experiment.runOne(Experiment.java:92)
+	at org.iotloopsim.experiment.Experiment.lambda$run$0(Experiment.java:123)
+	at org.iotloopsim.experiment.Experiment$$Lambda/0x00007ff454024700.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(java.base@21.0.12.1/FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.12.1/ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.12.1/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.12.1/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.12.1/Thread.java:1583)
+
+"Attach Listener" #20 [7746] daemon prio=9 os_prio=0 cpu=4.51ms elapsed=47.28s tid=0x00007ff43c000fe0 nid=7746 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"GC Thread#1" os_prio=0 cpu=3347.53ms elapsed=87.33s tid=0x00007ff440006300 nid=7721 runnable  
+
+"VM Thread" os_prio=0 cpu=64.19ms elapsed=87.59s tid=0x00007ff4c80f9610 nid=7711 runnable  
+
+"VM Periodic Task Thread" os_prio=0 cpu=119.69ms elapsed=87.60s tid=0x00007ff4c80e7ef0 nid=7710 waiting on condition  
+
+"G1 Service" os_prio=0 cpu=19.56ms elapsed=87.61s tid=0x00007ff4c80ce5c0 nid=7709 runnable  
+
+"G1 Refine#0" os_prio=0 cpu=779.47ms elapsed=87.61s tid=0x00007ff4c80cd5f0 nid=7708 runnable  
+
+"G1 Conc#0" os_prio=0 cpu=0.08ms elapsed=87.61s tid=0x00007ff4c80ae2a0 nid=7707 runnable  
+
+"G1 Main Marker" os_prio=0 cpu=0.17ms elapsed=87.61s tid=0x00007ff4c80ad2f0 nid=7706 runnable  
+
+"GC Thread#0" os_prio=0 cpu=3287.13ms elapsed=87.61s tid=0x00007ff4c809fd10 nid=7705 runnable  
+
+JNI global refs: 8, weak refs: 0
+
+=== sample 16 13:14:19
+2026-10-08 13:14:19
+Full thread dump OpenJDK 64-Bit Server VM (21.0.12.1+1-1-24.04.4-Ubuntu mixed mode, sharing):
+
+Threads class SMR info:
+_java_thread_list=0x00007ff43c002500, length=12, elements={
+0x00007ff4c8019770, 0x00007ff4c8101ed0, 0x00007ff4c8103450, 0x00007ff4c8104d20,
+0x00007ff4c8106370, 0x00007ff4c8107920, 0x00007ff4c8109470, 0x00007ff4c810ab40,
+0x00007ff4c8116870, 0x00007ff4c8119730, 0x00007ff4c824f9d0, 0x00007ff43c000fe0
+}
+
+"main" #1 [7704] prio=5 os_prio=0 cpu=1013.85ms elapsed=90.94s tid=0x00007ff4c8019770 nid=7704 waiting on condition  [0x00007ff4ce5fe000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.12.1/Native Method)
+	- parking to wait for  <0x0000000684d9d8b0> (a java.util.concurrent.FutureTask)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.12.1/LockSupport.java:221)
+	at java.util.concurrent.FutureTask.awaitDone(java.base@21.0.12.1/FutureTask.java:500)
+	at java.util.concurrent.FutureTask.get(java.base@21.0.12.1/FutureTask.java:190)
+	at org.iotloopsim.experiment.Experiment.run(Experiment.java:126)
+	at org.iotloopsim.experiment.Main.run(Main.java:73)
+	at org.iotloopsim.experiment.Main.main(Main.java:31)
+	at org.iotloopsim.bridge.Launcher.main(Launcher.java:11)
+
+"Reference Handler" #9 [7712] daemon prio=10 os_prio=0 cpu=3.27ms elapsed=90.91s tid=0x00007ff4c8101ed0 nid=7712 waiting on condition  [0x00007ff4a84fb000]
+   java.lang.Thread.State: RUNNABLE
+	at java.lang.ref.Reference.waitForReferencePendingList(java.base@21.0.12.1/Native Method)
+	at java.lang.ref.Reference.processPendingReferences(java.base@21.0.12.1/Reference.java:246)
+	at java.lang.ref.Reference$ReferenceHandler.run(java.base@21.0.12.1/Reference.java:208)
+
+"Finalizer" #10 [7713] daemon prio=8 os_prio=0 cpu=0.42ms elapsed=90.91s tid=0x00007ff4c8103450 nid=7713 in Object.wait()  [0x00007ff4a83fb000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait0(java.base@21.0.12.1/Native Method)
+	- waiting on <0x0000000680000688> (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.Object.wait(java.base@21.0.12.1/Object.java:366)
+	at java.lang.Object.wait(java.base@21.0.12.1/Object.java:339)
+	at java.lang.ref.NativeReferenceQueue.await(java.base@21.0.12.1/NativeReferenceQueue.java:48)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.12.1/ReferenceQueue.java:158)
+	at java.lang.ref.NativeReferenceQueue.remove(java.base@21.0.12.1/NativeReferenceQueue.java:89)
+	- locked <0x0000000680000688> (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.ref.Finalizer$FinalizerThread.run(java.base@21.0.12.1/Finalizer.java:173)
+
+"Signal Dispatcher" #11 [7714] daemon prio=9 os_prio=0 cpu=0.78ms elapsed=90.90s tid=0x00007ff4c8104d20 nid=7714 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Service Thread" #12 [7715] daemon prio=9 os_prio=0 cpu=1.41ms elapsed=90.90s tid=0x00007ff4c8106370 nid=7715 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Monitor Deflation Thread" #13 [7716] daemon prio=9 os_prio=0 cpu=21.15ms elapsed=90.90s tid=0x00007ff4c8107920 nid=7716 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread0" #14 [7717] daemon prio=9 os_prio=0 cpu=5123.57ms elapsed=90.90s tid=0x00007ff4c8109470 nid=7717 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"C1 CompilerThread0" #15 [7718] daemon prio=9 os_prio=0 cpu=570.54ms elapsed=90.90s tid=0x00007ff4c810ab40 nid=7718 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"Notification Thread" #16 [7719] daemon prio=9 os_prio=0 cpu=0.22ms elapsed=90.89s tid=0x00007ff4c8116870 nid=7719 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Common-Cleaner" #17 [7720] daemon prio=8 os_prio=0 cpu=0.97ms elapsed=90.89s tid=0x00007ff4c8119730 nid=7720 waiting on condition  [0x00007ff452bfe000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.12.1/Native Method)
+	- parking to wait for  <0x0000000680000898> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@21.0.12.1/LockSupport.java:269)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.12.1/AbstractQueuedSynchronizer.java:1886)
+	at java.lang.ref.ReferenceQueue.await(java.base@21.0.12.1/ReferenceQueue.java:71)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.12.1/ReferenceQueue.java:143)
+	at java.lang.ref.ReferenceQueue.remove(java.base@21.0.12.1/ReferenceQueue.java:218)
+	at jdk.internal.ref.CleanerImpl.run(java.base@21.0.12.1/CleanerImpl.java:140)
+	at java.lang.Thread.runWith(java.base@21.0.12.1/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.12.1/Thread.java:1583)
+	at jdk.internal.misc.InnocuousThread.run(java.base@21.0.12.1/InnocuousThread.java:186)
+
+"pool-1-thread-1" #19 [7722] prio=5 os_prio=0 cpu=83312.77ms elapsed=89.61s tid=0x00007ff4c824f9d0 nid=7722 runnable  [0x00007ff4529fc000]
+   java.lang.Thread.State: RUNNABLE
+	at org.iotloopsim.model.AppRuntime.accepting(AppRuntime.java:53)
+	at org.iotloopsim.model.AppRuntime$Ctx.candidates(AppRuntime.java:175)
+	at org.iotloopsim.model.policy.BuiltinPolicies$RandomSelector.select(BuiltinPolicies.java:188)
+	at org.iotloopsim.model.AppRuntime.route(AppRuntime.java:160)
+	at org.iotloopsim.model.AppRuntime.onReading(AppRuntime.java:145)
+	at org.iotloopsim.model.Sensor.tick(Sensor.java:55)
+	at org.iotloopsim.model.Sensor$$Lambda/0x00007ff45402e4e8.run(Unknown Source)
+	at org.iotloopsim.core.Simulation.runUntilPaused(Simulation.java:143)
+	at org.iotloopsim.core.Simulation.run(Simulation.java:126)
+	at org.iotloopsim.model.IoTWorld.run(IoTWorld.java:252)
+	at org.iotloopsim.experiment.Experiment.runOne(Experiment.java:92)
+	at org.iotloopsim.experiment.Experiment.lambda$run$0(Experiment.java:123)
+	at org.iotloopsim.experiment.Experiment$$Lambda/0x00007ff454024700.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(java.base@21.0.12.1/FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.12.1/ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.12.1/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.12.1/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.12.1/Thread.java:1583)
+
+"Attach Listener" #20 [7746] daemon prio=9 os_prio=0 cpu=4.79ms elapsed=50.60s tid=0x00007ff43c000fe0 nid=7746 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"GC Thread#1" os_prio=0 cpu=3427.80ms elapsed=90.65s tid=0x00007ff440006300 nid=7721 runnable  
+
+"VM Thread" os_prio=0 cpu=65.41ms elapsed=90.92s tid=0x00007ff4c80f9610 nid=7711 runnable  
+
+"VM Periodic Task Thread" os_prio=0 cpu=123.62ms elapsed=90.92s tid=0x00007ff4c80e7ef0 nid=7710 waiting on condition  
+
+"G1 Service" os_prio=0 cpu=20.95ms elapsed=90.94s tid=0x00007ff4c80ce5c0 nid=7709 runnable  
+
+"G1 Refine#0" os_prio=0 cpu=881.94ms elapsed=90.94s tid=0x00007ff4c80cd5f0 nid=7708 runnable  
+
+"G1 Conc#0" os_prio=0 cpu=0.08ms elapsed=90.94s tid=0x00007ff4c80ae2a0 nid=7707 runnable  
+
+"G1 Main Marker" os_prio=0 cpu=0.17ms elapsed=90.94s tid=0x00007ff4c80ad2f0 nid=7706 runnable  
+
+"GC Thread#0" os_prio=0 cpu=3367.49ms elapsed=90.94s tid=0x00007ff4c809fd10 nid=7705 runnable  
+
+JNI global refs: 8, weak refs: 0
+
+=== sample 17 13:14:22
+2026-10-08 13:14:22
+Full thread dump OpenJDK 64-Bit Server VM (21.0.12.1+1-1-24.04.4-Ubuntu mixed mode, sharing):
+
+Threads class SMR info:
+_java_thread_list=0x00007ff43c002500, length=12, elements={
+0x00007ff4c8019770, 0x00007ff4c8101ed0, 0x00007ff4c8103450, 0x00007ff4c8104d20,
+0x00007ff4c8106370, 0x00007ff4c8107920, 0x00007ff4c8109470, 0x00007ff4c810ab40,
+0x00007ff4c8116870, 0x00007ff4c8119730, 0x00007ff4c824f9d0, 0x00007ff43c000fe0
+}
+
+"main" #1 [7704] prio=5 os_prio=0 cpu=1013.85ms elapsed=94.33s tid=0x00007ff4c8019770 nid=7704 waiting on condition  [0x00007ff4ce5fe000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.12.1/Native Method)
+	- parking to wait for  <0x0000000684d9d8b0> (a java.util.concurrent.FutureTask)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.12.1/LockSupport.java:221)
+	at java.util.concurrent.FutureTask.awaitDone(java.base@21.0.12.1/FutureTask.java:500)
+	at java.util.concurrent.FutureTask.get(java.base@21.0.12.1/FutureTask.java:190)
+	at org.iotloopsim.experiment.Experiment.run(Experiment.java:126)
+	at org.iotloopsim.experiment.Main.run(Main.java:73)
+	at org.iotloopsim.experiment.Main.main(Main.java:31)
+	at org.iotloopsim.bridge.Launcher.main(Launcher.java:11)
+
+"Reference Handler" #9 [7712] daemon prio=10 os_prio=0 cpu=3.27ms elapsed=94.29s tid=0x00007ff4c8101ed0 nid=7712 waiting on condition  [0x00007ff4a84fb000]
+   java.lang.Thread.State: RUNNABLE
+	at java.lang.ref.Reference.waitForReferencePendingList(java.base@21.0.12.1/Native Method)
+	at java.lang.ref.Reference.processPendingReferences(java.base@21.0.12.1/Reference.java:246)
+	at java.lang.ref.Reference$ReferenceHandler.run(java.base@21.0.12.1/Reference.java:208)
+
+"Finalizer" #10 [7713] daemon prio=8 os_prio=0 cpu=0.42ms elapsed=94.29s tid=0x00007ff4c8103450 nid=7713 in Object.wait()  [0x00007ff4a83fb000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait0(java.base@21.0.12.1/Native Method)
+	- waiting on <0x0000000680000688> (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.Object.wait(java.base@21.0.12.1/Object.java:366)
+	at java.lang.Object.wait(java.base@21.0.12.1/Object.java:339)
+	at java.lang.ref.NativeReferenceQueue.await(java.base@21.0.12.1/NativeReferenceQueue.java:48)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.12.1/ReferenceQueue.java:158)
+	at java.lang.ref.NativeReferenceQueue.remove(java.base@21.0.12.1/NativeReferenceQueue.java:89)
+	- locked <0x0000000680000688> (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.ref.Finalizer$FinalizerThread.run(java.base@21.0.12.1/Finalizer.java:173)
+
+"Signal Dispatcher" #11 [7714] daemon prio=9 os_prio=0 cpu=0.78ms elapsed=94.29s tid=0x00007ff4c8104d20 nid=7714 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Service Thread" #12 [7715] daemon prio=9 os_prio=0 cpu=1.41ms elapsed=94.29s tid=0x00007ff4c8106370 nid=7715 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Monitor Deflation Thread" #13 [7716] daemon prio=9 os_prio=0 cpu=22.09ms elapsed=94.29s tid=0x00007ff4c8107920 nid=7716 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread0" #14 [7717] daemon prio=9 os_prio=0 cpu=5123.68ms elapsed=94.29s tid=0x00007ff4c8109470 nid=7717 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"C1 CompilerThread0" #15 [7718] daemon prio=9 os_prio=0 cpu=570.64ms elapsed=94.29s tid=0x00007ff4c810ab40 nid=7718 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"Notification Thread" #16 [7719] daemon prio=9 os_prio=0 cpu=0.22ms elapsed=94.27s tid=0x00007ff4c8116870 nid=7719 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Common-Cleaner" #17 [7720] daemon prio=8 os_prio=0 cpu=0.97ms elapsed=94.27s tid=0x00007ff4c8119730 nid=7720 waiting on condition  [0x00007ff452bfe000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.12.1/Native Method)
+	- parking to wait for  <0x0000000680000898> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@21.0.12.1/LockSupport.java:269)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.12.1/AbstractQueuedSynchronizer.java:1886)
+	at java.lang.ref.ReferenceQueue.await(java.base@21.0.12.1/ReferenceQueue.java:71)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.12.1/ReferenceQueue.java:143)
+	at java.lang.ref.ReferenceQueue.remove(java.base@21.0.12.1/ReferenceQueue.java:218)
+	at jdk.internal.ref.CleanerImpl.run(java.base@21.0.12.1/CleanerImpl.java:140)
+	at java.lang.Thread.runWith(java.base@21.0.12.1/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.12.1/Thread.java:1583)
+	at jdk.internal.misc.InnocuousThread.run(java.base@21.0.12.1/InnocuousThread.java:186)
+
+"pool-1-thread-1" #19 [7722] prio=5 os_prio=0 cpu=86459.62ms elapsed=92.99s tid=0x00007ff4c824f9d0 nid=7722 runnable  [0x00007ff4529fc000]
+   java.lang.Thread.State: RUNNABLE
+	at org.iotloopsim.model.AppRuntime.accepting(AppRuntime.java:53)
+	at org.iotloopsim.model.AppRuntime$Ctx.candidates(AppRuntime.java:175)
+	at org.iotloopsim.model.policy.BuiltinPolicies$RandomSelector.select(BuiltinPolicies.java:188)
+	at org.iotloopsim.model.AppRuntime.route(AppRuntime.java:160)
+	at org.iotloopsim.model.AppRuntime.onReading(AppRuntime.java:145)
+	at org.iotloopsim.model.Sensor.tick(Sensor.java:55)
+	at org.iotloopsim.model.Sensor$$Lambda/0x00007ff45402e4e8.run(Unknown Source)
+	at org.iotloopsim.core.Simulation.runUntilPaused(Simulation.java:143)
+	at org.iotloopsim.core.Simulation.run(Simulation.java:126)
+	at org.iotloopsim.model.IoTWorld.run(IoTWorld.java:252)
+	at org.iotloopsim.experiment.Experiment.runOne(Experiment.java:92)
+	at org.iotloopsim.experiment.Experiment.lambda$run$0(Experiment.java:123)
+	at org.iotloopsim.experiment.Experiment$$Lambda/0x00007ff454024700.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(java.base@21.0.12.1/FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.12.1/ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.12.1/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.12.1/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.12.1/Thread.java:1583)
+
+"Attach Listener" #20 [7746] daemon prio=9 os_prio=0 cpu=5.22ms elapsed=53.99s tid=0x00007ff43c000fe0 nid=7746 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"GC Thread#1" os_prio=0 cpu=3524.56ms elapsed=94.04s tid=0x00007ff440006300 nid=7721 runnable  
+
+"VM Thread" os_prio=0 cpu=66.89ms elapsed=94.30s tid=0x00007ff4c80f9610 nid=7711 runnable  
+
+"VM Periodic Task Thread" os_prio=0 cpu=128.23ms elapsed=94.31s tid=0x00007ff4c80e7ef0 nid=7710 waiting on condition  
+
+"G1 Service" os_prio=0 cpu=22.16ms elapsed=94.32s tid=0x00007ff4c80ce5c0 nid=7709 runnable  
+
+"G1 Refine#0" os_prio=0 cpu=973.24ms elapsed=94.32s tid=0x00007ff4c80cd5f0 nid=7708 runnable  
+
+"G1 Conc#0" os_prio=0 cpu=0.08ms elapsed=94.32s tid=0x00007ff4c80ae2a0 nid=7707 runnable  
+
+"G1 Main Marker" os_prio=0 cpu=0.17ms elapsed=94.32s tid=0x00007ff4c80ad2f0 nid=7706 runnable  
+
+"GC Thread#0" os_prio=0 cpu=3457.24ms elapsed=94.32s tid=0x00007ff4c809fd10 nid=7705 runnable  
+
+JNI global refs: 8, weak refs: 0
+
+=== sample 18 13:14:25
+2026-10-08 13:14:26
+Full thread dump OpenJDK 64-Bit Server VM (21.0.12.1+1-1-24.04.4-Ubuntu mixed mode, sharing):
+
+Threads class SMR info:
+_java_thread_list=0x00007ff43c002500, length=12, elements={
+0x00007ff4c8019770, 0x00007ff4c8101ed0, 0x00007ff4c8103450, 0x00007ff4c8104d20,
+0x00007ff4c8106370, 0x00007ff4c8107920, 0x00007ff4c8109470, 0x00007ff4c810ab40,
+0x00007ff4c8116870, 0x00007ff4c8119730, 0x00007ff4c824f9d0, 0x00007ff43c000fe0
+}
+
+"main" #1 [7704] prio=5 os_prio=0 cpu=1013.85ms elapsed=97.64s tid=0x00007ff4c8019770 nid=7704 waiting on condition  [0x00007ff4ce5fe000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.12.1/Native Method)
+	- parking to wait for  <0x0000000684d9d8b0> (a java.util.concurrent.FutureTask)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.12.1/LockSupport.java:221)
+	at java.util.concurrent.FutureTask.awaitDone(java.base@21.0.12.1/FutureTask.java:500)
+	at java.util.concurrent.FutureTask.get(java.base@21.0.12.1/FutureTask.java:190)
+	at org.iotloopsim.experiment.Experiment.run(Experiment.java:126)
+	at org.iotloopsim.experiment.Main.run(Main.java:73)
+	at org.iotloopsim.experiment.Main.main(Main.java:31)
+	at org.iotloopsim.bridge.Launcher.main(Launcher.java:11)
+
+"Reference Handler" #9 [7712] daemon prio=10 os_prio=0 cpu=3.27ms elapsed=97.61s tid=0x00007ff4c8101ed0 nid=7712 waiting on condition  [0x00007ff4a84fb000]
+   java.lang.Thread.State: RUNNABLE
+	at java.lang.ref.Reference.waitForReferencePendingList(java.base@21.0.12.1/Native Method)
+	at java.lang.ref.Reference.processPendingReferences(java.base@21.0.12.1/Reference.java:246)
+	at java.lang.ref.Reference$ReferenceHandler.run(java.base@21.0.12.1/Reference.java:208)
+
+"Finalizer" #10 [7713] daemon prio=8 os_prio=0 cpu=0.42ms elapsed=97.61s tid=0x00007ff4c8103450 nid=7713 in Object.wait()  [0x00007ff4a83fb000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait0(java.base@21.0.12.1/Native Method)
+	- waiting on <0x0000000680000688> (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.Object.wait(java.base@21.0.12.1/Object.java:366)
+	at java.lang.Object.wait(java.base@21.0.12.1/Object.java:339)
+	at java.lang.ref.NativeReferenceQueue.await(java.base@21.0.12.1/NativeReferenceQueue.java:48)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.12.1/ReferenceQueue.java:158)
+	at java.lang.ref.NativeReferenceQueue.remove(java.base@21.0.12.1/NativeReferenceQueue.java:89)
+	- locked <0x0000000680000688> (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.ref.Finalizer$FinalizerThread.run(java.base@21.0.12.1/Finalizer.java:173)
+
+"Signal Dispatcher" #11 [7714] daemon prio=9 os_prio=0 cpu=0.78ms elapsed=97.60s tid=0x00007ff4c8104d20 nid=7714 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Service Thread" #12 [7715] daemon prio=9 os_prio=0 cpu=1.41ms elapsed=97.60s tid=0x00007ff4c8106370 nid=7715 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Monitor Deflation Thread" #13 [7716] daemon prio=9 os_prio=0 cpu=22.93ms elapsed=97.60s tid=0x00007ff4c8107920 nid=7716 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread0" #14 [7717] daemon prio=9 os_prio=0 cpu=5123.72ms elapsed=97.60s tid=0x00007ff4c8109470 nid=7717 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"C1 CompilerThread0" #15 [7718] daemon prio=9 os_prio=0 cpu=570.67ms elapsed=97.60s tid=0x00007ff4c810ab40 nid=7718 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"Notification Thread" #16 [7719] daemon prio=9 os_prio=0 cpu=0.22ms elapsed=97.59s tid=0x00007ff4c8116870 nid=7719 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Common-Cleaner" #17 [7720] daemon prio=8 os_prio=0 cpu=0.97ms elapsed=97.59s tid=0x00007ff4c8119730 nid=7720 waiting on condition  [0x00007ff452bfe000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.12.1/Native Method)
+	- parking to wait for  <0x0000000680000898> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@21.0.12.1/LockSupport.java:269)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.12.1/AbstractQueuedSynchronizer.java:1886)
+	at java.lang.ref.ReferenceQueue.await(java.base@21.0.12.1/ReferenceQueue.java:71)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.12.1/ReferenceQueue.java:143)
+	at java.lang.ref.ReferenceQueue.remove(java.base@21.0.12.1/ReferenceQueue.java:218)
+	at jdk.internal.ref.CleanerImpl.run(java.base@21.0.12.1/CleanerImpl.java:140)
+	at java.lang.Thread.runWith(java.base@21.0.12.1/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.12.1/Thread.java:1583)
+	at jdk.internal.misc.InnocuousThread.run(java.base@21.0.12.1/InnocuousThread.java:186)
+
+"pool-1-thread-1" #19 [7722] prio=5 os_prio=0 cpu=89685.40ms elapsed=96.31s tid=0x00007ff4c824f9d0 nid=7722 runnable  [0x00007ff4529fc000]
+   java.lang.Thread.State: RUNNABLE
+	at org.iotloopsim.model.AppRuntime.accepting(AppRuntime.java:53)
+	at org.iotloopsim.model.AppRuntime$Ctx.candidates(AppRuntime.java:175)
+	at org.iotloopsim.model.policy.BuiltinPolicies$RandomSelector.select(BuiltinPolicies.java:187)
+	at org.iotloopsim.model.AppRuntime.route(AppRuntime.java:160)
+	at org.iotloopsim.model.AppRuntime.onReading(AppRuntime.java:145)
+	at org.iotloopsim.model.Sensor.tick(Sensor.java:55)
+	at org.iotloopsim.model.Sensor$$Lambda/0x00007ff45402e4e8.run(Unknown Source)
+	at org.iotloopsim.core.Simulation.runUntilPaused(Simulation.java:143)
+	at org.iotloopsim.core.Simulation.run(Simulation.java:126)
+	at org.iotloopsim.model.IoTWorld.run(IoTWorld.java:252)
+	at org.iotloopsim.experiment.Experiment.runOne(Experiment.java:92)
+	at org.iotloopsim.experiment.Experiment.lambda$run$0(Experiment.java:123)
+	at org.iotloopsim.experiment.Experiment$$Lambda/0x00007ff454024700.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(java.base@21.0.12.1/FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.12.1/ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.12.1/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.12.1/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.12.1/Thread.java:1583)
+
+"Attach Listener" #20 [7746] daemon prio=9 os_prio=0 cpu=5.50ms elapsed=57.30s tid=0x00007ff43c000fe0 nid=7746 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"GC Thread#1" os_prio=0 cpu=3524.56ms elapsed=97.35s tid=0x00007ff440006300 nid=7721 runnable  
+
+"VM Thread" os_prio=0 cpu=67.66ms elapsed=97.61s tid=0x00007ff4c80f9610 nid=7711 runnable  
+
+"VM Periodic Task Thread" os_prio=0 cpu=132.53ms elapsed=97.62s tid=0x00007ff4c80e7ef0 nid=7710 waiting on condition  
+
+"G1 Service" os_prio=0 cpu=22.37ms elapsed=97.64s tid=0x00007ff4c80ce5c0 nid=7709 runnable  
+
+"G1 Refine#0" os_prio=0 cpu=975.06ms elapsed=97.64s tid=0x00007ff4c80cd5f0 nid=7708 runnable  
+
+"G1 Conc#0" os_prio=0 cpu=0.08ms elapsed=97.64s tid=0x00007ff4c80ae2a0 nid=7707 runnable  
+
+"G1 Main Marker" os_prio=0 cpu=0.17ms elapsed=97.64s tid=0x00007ff4c80ad2f0 nid=7706 runnable  
+
+"GC Thread#0" os_prio=0 cpu=3457.24ms elapsed=97.64s tid=0x00007ff4c809fd10 nid=7705 runnable  
+
+JNI global refs: 8, weak refs: 0
+
+=== sample 19 13:14:29
+2026-10-08 13:14:29
+Full thread dump OpenJDK 64-Bit Server VM (21.0.12.1+1-1-24.04.4-Ubuntu mixed mode, sharing):
+
+Threads class SMR info:
+_java_thread_list=0x00007ff43c002500, length=12, elements={
+0x00007ff4c8019770, 0x00007ff4c8101ed0, 0x00007ff4c8103450, 0x00007ff4c8104d20,
+0x00007ff4c8106370, 0x00007ff4c8107920, 0x00007ff4c8109470, 0x00007ff4c810ab40,
+0x00007ff4c8116870, 0x00007ff4c8119730, 0x00007ff4c824f9d0, 0x00007ff43c000fe0
+}
+
+"main" #1 [7704] prio=5 os_prio=0 cpu=1013.85ms elapsed=100.96s tid=0x00007ff4c8019770 nid=7704 waiting on condition  [0x00007ff4ce5fe000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.12.1/Native Method)
+	- parking to wait for  <0x0000000684d9d8b0> (a java.util.concurrent.FutureTask)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.12.1/LockSupport.java:221)
+	at java.util.concurrent.FutureTask.awaitDone(java.base@21.0.12.1/FutureTask.java:500)
+	at java.util.concurrent.FutureTask.get(java.base@21.0.12.1/FutureTask.java:190)
+	at org.iotloopsim.experiment.Experiment.run(Experiment.java:126)
+	at org.iotloopsim.experiment.Main.run(Main.java:73)
+	at org.iotloopsim.experiment.Main.main(Main.java:31)
+	at org.iotloopsim.bridge.Launcher.main(Launcher.java:11)
+
+"Reference Handler" #9 [7712] daemon prio=10 os_prio=0 cpu=3.27ms elapsed=100.92s tid=0x00007ff4c8101ed0 nid=7712 waiting on condition  [0x00007ff4a84fb000]
+   java.lang.Thread.State: RUNNABLE
+	at java.lang.ref.Reference.waitForReferencePendingList(java.base@21.0.12.1/Native Method)
+	at java.lang.ref.Reference.processPendingReferences(java.base@21.0.12.1/Reference.java:246)
+	at java.lang.ref.Reference$ReferenceHandler.run(java.base@21.0.12.1/Reference.java:208)
+
+"Finalizer" #10 [7713] daemon prio=8 os_prio=0 cpu=0.42ms elapsed=100.92s tid=0x00007ff4c8103450 nid=7713 in Object.wait()  [0x00007ff4a83fb000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait0(java.base@21.0.12.1/Native Method)
+	- waiting on <0x0000000680000688> (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.Object.wait(java.base@21.0.12.1/Object.java:366)
+	at java.lang.Object.wait(java.base@21.0.12.1/Object.java:339)
+	at java.lang.ref.NativeReferenceQueue.await(java.base@21.0.12.1/NativeReferenceQueue.java:48)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.12.1/ReferenceQueue.java:158)
+	at java.lang.ref.NativeReferenceQueue.remove(java.base@21.0.12.1/NativeReferenceQueue.java:89)
+	- locked <0x0000000680000688> (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.ref.Finalizer$FinalizerThread.run(java.base@21.0.12.1/Finalizer.java:173)
+
+"Signal Dispatcher" #11 [7714] daemon prio=9 os_prio=0 cpu=0.78ms elapsed=100.92s tid=0x00007ff4c8104d20 nid=7714 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Service Thread" #12 [7715] daemon prio=9 os_prio=0 cpu=1.41ms elapsed=100.92s tid=0x00007ff4c8106370 nid=7715 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Monitor Deflation Thread" #13 [7716] daemon prio=9 os_prio=0 cpu=23.66ms elapsed=100.92s tid=0x00007ff4c8107920 nid=7716 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread0" #14 [7717] daemon prio=9 os_prio=0 cpu=5123.72ms elapsed=100.92s tid=0x00007ff4c8109470 nid=7717 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"C1 CompilerThread0" #15 [7718] daemon prio=9 os_prio=0 cpu=570.67ms elapsed=100.92s tid=0x00007ff4c810ab40 nid=7718 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"Notification Thread" #16 [7719] daemon prio=9 os_prio=0 cpu=0.22ms elapsed=100.90s tid=0x00007ff4c8116870 nid=7719 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Common-Cleaner" #17 [7720] daemon prio=8 os_prio=0 cpu=0.97ms elapsed=100.90s tid=0x00007ff4c8119730 nid=7720 waiting on condition  [0x00007ff452bfe000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.12.1/Native Method)
+	- parking to wait for  <0x0000000680000898> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@21.0.12.1/LockSupport.java:269)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.12.1/AbstractQueuedSynchronizer.java:1886)
+	at java.lang.ref.ReferenceQueue.await(java.base@21.0.12.1/ReferenceQueue.java:71)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.12.1/ReferenceQueue.java:143)
+	at java.lang.ref.ReferenceQueue.remove(java.base@21.0.12.1/ReferenceQueue.java:218)
+	at jdk.internal.ref.CleanerImpl.run(java.base@21.0.12.1/CleanerImpl.java:140)
+	at java.lang.Thread.runWith(java.base@21.0.12.1/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.12.1/Thread.java:1583)
+	at jdk.internal.misc.InnocuousThread.run(java.base@21.0.12.1/InnocuousThread.java:186)
+
+"pool-1-thread-1" #19 [7722] prio=5 os_prio=0 cpu=92725.88ms elapsed=99.62s tid=0x00007ff4c824f9d0 nid=7722 runnable  [0x00007ff4529fc000]
+   java.lang.Thread.State: RUNNABLE
+	at java.util.HashMap$TreeNode.find(java.base@21.0.12.1/HashMap.java:2040)
+	at java.util.HashMap$TreeNode.getTreeNode(java.base@21.0.12.1/HashMap.java:2048)
+	at java.util.HashMap.getNode(java.base@21.0.12.1/HashMap.java:582)
+	at java.util.HashMap.containsKey(java.base@21.0.12.1/HashMap.java:602)
+	at org.iotloopsim.model.Network.route(Network.java:54)
+	at org.iotloopsim.model.Network.wired(Network.java:173)
+	at org.iotloopsim.model.Network.lambda$arriveAtGateway$6(Network.java:167)
+	at org.iotloopsim.model.Network$$Lambda/0x00007ff45402e710.run(Unknown Source)
+	at org.iotloopsim.core.Simulation.runUntilPaused(Simulation.java:143)
+	at org.iotloopsim.core.Simulation.run(Simulation.java:126)
+	at org.iotloopsim.model.IoTWorld.run(IoTWorld.java:252)
+	at org.iotloopsim.experiment.Experiment.runOne(Experiment.java:92)
+	at org.iotloopsim.experiment.Experiment.lambda$run$0(Experiment.java:123)
+	at org.iotloopsim.experiment.Experiment$$Lambda/0x00007ff454024700.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(java.base@21.0.12.1/FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.12.1/ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.12.1/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.12.1/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.12.1/Thread.java:1583)
+
+"Attach Listener" #20 [7746] daemon prio=9 os_prio=0 cpu=5.78ms elapsed=60.62s tid=0x00007ff43c000fe0 nid=7746 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"GC Thread#1" os_prio=0 cpu=3649.36ms elapsed=100.66s tid=0x00007ff440006300 nid=7721 runnable  
+
+"VM Thread" os_prio=0 cpu=68.99ms elapsed=100.93s tid=0x00007ff4c80f9610 nid=7711 runnable  
+
+"VM Periodic Task Thread" os_prio=0 cpu=136.81ms elapsed=100.93s tid=0x00007ff4c80e7ef0 nid=7710 waiting on condition  
+
+"G1 Service" os_prio=0 cpu=24.02ms elapsed=100.95s tid=0x00007ff4c80ce5c0 nid=7709 runnable  
+
+"G1 Refine#0" os_prio=0 cpu=1072.14ms elapsed=100.95s tid=0x00007ff4c80cd5f0 nid=7708 runnable  
+
+"G1 Conc#0" os_prio=0 cpu=0.08ms elapsed=100.95s tid=0x00007ff4c80ae2a0 nid=7707 runnable  
+
+"G1 Main Marker" os_prio=0 cpu=0.17ms elapsed=100.95s tid=0x00007ff4c80ad2f0 nid=7706 runnable  
+
+"GC Thread#0" os_prio=0 cpu=3584.41ms elapsed=100.95s tid=0x00007ff4c809fd10 nid=7705 runnable  
+
+JNI global refs: 8, weak refs: 0
+
+=== sample 20 13:14:32
+2026-10-08 13:14:32
+Full thread dump OpenJDK 64-Bit Server VM (21.0.12.1+1-1-24.04.4-Ubuntu mixed mode, sharing):
+
+Threads class SMR info:
+_java_thread_list=0x00007ff43c002500, length=12, elements={
+0x00007ff4c8019770, 0x00007ff4c8101ed0, 0x00007ff4c8103450, 0x00007ff4c8104d20,
+0x00007ff4c8106370, 0x00007ff4c8107920, 0x00007ff4c8109470, 0x00007ff4c810ab40,
+0x00007ff4c8116870, 0x00007ff4c8119730, 0x00007ff4c824f9d0, 0x00007ff43c000fe0
+}
+
+"main" #1 [7704] prio=5 os_prio=0 cpu=1013.85ms elapsed=104.31s tid=0x00007ff4c8019770 nid=7704 waiting on condition  [0x00007ff4ce5fe000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.12.1/Native Method)
+	- parking to wait for  <0x0000000684d9d8b0> (a java.util.concurrent.FutureTask)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.12.1/LockSupport.java:221)
+	at java.util.concurrent.FutureTask.awaitDone(java.base@21.0.12.1/FutureTask.java:500)
+	at java.util.concurrent.FutureTask.get(java.base@21.0.12.1/FutureTask.java:190)
+	at org.iotloopsim.experiment.Experiment.run(Experiment.java:126)
+	at org.iotloopsim.experiment.Main.run(Main.java:73)
+	at org.iotloopsim.experiment.Main.main(Main.java:31)
+	at org.iotloopsim.bridge.Launcher.main(Launcher.java:11)
+
+"Reference Handler" #9 [7712] daemon prio=10 os_prio=0 cpu=3.27ms elapsed=104.27s tid=0x00007ff4c8101ed0 nid=7712 waiting on condition  [0x00007ff4a84fb000]
+   java.lang.Thread.State: RUNNABLE
+	at java.lang.ref.Reference.waitForReferencePendingList(java.base@21.0.12.1/Native Method)
+	at java.lang.ref.Reference.processPendingReferences(java.base@21.0.12.1/Reference.java:246)
+	at java.lang.ref.Reference$ReferenceHandler.run(java.base@21.0.12.1/Reference.java:208)
+
+"Finalizer" #10 [7713] daemon prio=8 os_prio=0 cpu=0.42ms elapsed=104.27s tid=0x00007ff4c8103450 nid=7713 in Object.wait()  [0x00007ff4a83fb000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait0(java.base@21.0.12.1/Native Method)
+	- waiting on <0x0000000680000688> (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.Object.wait(java.base@21.0.12.1/Object.java:366)
+	at java.lang.Object.wait(java.base@21.0.12.1/Object.java:339)
+	at java.lang.ref.NativeReferenceQueue.await(java.base@21.0.12.1/NativeReferenceQueue.java:48)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.12.1/ReferenceQueue.java:158)
+	at java.lang.ref.NativeReferenceQueue.remove(java.base@21.0.12.1/NativeReferenceQueue.java:89)
+	- locked <0x0000000680000688> (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.ref.Finalizer$FinalizerThread.run(java.base@21.0.12.1/Finalizer.java:173)
+
+"Signal Dispatcher" #11 [7714] daemon prio=9 os_prio=0 cpu=0.78ms elapsed=104.27s tid=0x00007ff4c8104d20 nid=7714 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Service Thread" #12 [7715] daemon prio=9 os_prio=0 cpu=1.41ms elapsed=104.27s tid=0x00007ff4c8106370 nid=7715 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Monitor Deflation Thread" #13 [7716] daemon prio=9 os_prio=0 cpu=24.42ms elapsed=104.27s tid=0x00007ff4c8107920 nid=7716 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread0" #14 [7717] daemon prio=9 os_prio=0 cpu=5139.92ms elapsed=104.27s tid=0x00007ff4c8109470 nid=7717 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"C1 CompilerThread0" #15 [7718] daemon prio=9 os_prio=0 cpu=572.23ms elapsed=104.27s tid=0x00007ff4c810ab40 nid=7718 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"Notification Thread" #16 [7719] daemon prio=9 os_prio=0 cpu=0.22ms elapsed=104.26s tid=0x00007ff4c8116870 nid=7719 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Common-Cleaner" #17 [7720] daemon prio=8 os_prio=0 cpu=0.97ms elapsed=104.25s tid=0x00007ff4c8119730 nid=7720 waiting on condition  [0x00007ff452bfe000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.12.1/Native Method)
+	- parking to wait for  <0x0000000680000898> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@21.0.12.1/LockSupport.java:269)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.12.1/AbstractQueuedSynchronizer.java:1886)
+	at java.lang.ref.ReferenceQueue.await(java.base@21.0.12.1/ReferenceQueue.java:71)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.12.1/ReferenceQueue.java:143)
+	at java.lang.ref.ReferenceQueue.remove(java.base@21.0.12.1/ReferenceQueue.java:218)
+	at jdk.internal.ref.CleanerImpl.run(java.base@21.0.12.1/CleanerImpl.java:140)
+	at java.lang.Thread.runWith(java.base@21.0.12.1/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.12.1/Thread.java:1583)
+	at jdk.internal.misc.InnocuousThread.run(java.base@21.0.12.1/InnocuousThread.java:186)
+
+"pool-1-thread-1" #19 [7722] prio=5 os_prio=0 cpu=95873.41ms elapsed=102.97s tid=0x00007ff4c824f9d0 nid=7722 runnable  [0x00007ff4529fc000]
+   java.lang.Thread.State: RUNNABLE
+	at java.util.PriorityQueue.siftUpComparable(java.base@21.0.12.1/PriorityQueue.java:651)
+	at java.util.PriorityQueue.siftUp(java.base@21.0.12.1/PriorityQueue.java:639)
+	at java.util.PriorityQueue.offer(java.base@21.0.12.1/PriorityQueue.java:330)
+	at java.util.PriorityQueue.add(java.base@21.0.12.1/PriorityQueue.java:311)
+	at org.iotloopsim.core.Simulation.scheduleAt(Simulation.java:97)
+	at org.iotloopsim.model.Link.transmit(Link.java:150)
+	at org.iotloopsim.model.Network.hop(Network.java:204)
+	at org.iotloopsim.model.Network.lambda$hop$8(Network.java:201)
+	at org.iotloopsim.model.Network$$Lambda/0x00007ff454026d88.done(Unknown Source)
+	at org.iotloopsim.model.Link.lambda$transmit$2(Link.java:154)
+	at org.iotloopsim.model.Link$$Lambda/0x00007ff454027428.run(Unknown Source)
+	at org.iotloopsim.core.Simulation.runUntilPaused(Simulation.java:143)
+	at org.iotloopsim.core.Simulation.run(Simulation.java:126)
+	at org.iotloopsim.model.IoTWorld.run(IoTWorld.java:252)
+	at org.iotloopsim.experiment.Experiment.runOne(Experiment.java:92)
+	at org.iotloopsim.experiment.Experiment.lambda$run$0(Experiment.java:123)
+	at org.iotloopsim.experiment.Experiment$$Lambda/0x00007ff454024700.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(java.base@21.0.12.1/FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@21.0.12.1/ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@21.0.12.1/ThreadPoolExecutor.java:642)
+	at java.lang.Thread.runWith(java.base@21.0.12.1/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.12.1/Thread.java:1583)
+
+"Attach Listener" #20 [7746] daemon prio=9 os_prio=0 cpu=6.06ms elapsed=63.97s tid=0x00007ff43c000fe0 nid=7746 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"GC Thread#1" os_prio=0 cpu=3740.90ms elapsed=104.02s tid=0x00007ff440006300 nid=7721 runnable  
+
+"VM Thread" os_prio=0 cpu=70.59ms elapsed=104.28s tid=0x00007ff4c80f9610 nid=7711 runnable  
+
+"VM Periodic Task Thread" os_prio=0 cpu=141.31ms elapsed=104.29s tid=0x00007ff4c80e7ef0 nid=7710 waiting on condition  
+
+"G1 Service" os_prio=0 cpu=25.77ms elapsed=104.31s tid=0x00007ff4c80ce5c0 nid=7709 runnable  
+
+"G1 Refine#0" os_prio=0 cpu=1162.84ms elapsed=104.31s tid=0x00007ff4c80cd5f0 nid=7708 runnable  
+
+"G1 Conc#0" os_prio=0 cpu=0.08ms elapsed=104.31s tid=0x00007ff4c80ae2a0 nid=7707 runnable  
+
+"G1 Main Marker" os_prio=0 cpu=0.17ms elapsed=104.31s tid=0x00007ff4c80ad2f0 nid=7706 runnable  
+
+"GC Thread#0" os_prio=0 cpu=3672.30ms elapsed=104.31s tid=0x00007ff4c809fd10 nid=7705 runnable  
+
+JNI global refs: 8, weak refs: 0
+

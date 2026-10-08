@@ -1,0 +1,79 @@
+comparison,dr,tnotif_min,payload_B,reference,reference_years,iotloopsim_years,iotloopsim_avg_current_mA,model_avg_current_mA,error_pct
+model,0,5,51,Casals Eqs.1-12 (re-implemented),0.2603,0.2603,1.05239,1.05239,-0.000
+model,0,5,1,Casals Eqs.1-12 (re-implemented),0.4571,0.4571,0.59935,0.59934,-0.001
+model,0,15,51,Casals Eqs.1-12 (re-implemented),0.7195,0.7195,0.38080,0.38080,-0.000
+model,0,15,1,Casals Eqs.1-12 (re-implemented),1.1923,1.1923,0.22978,0.22978,-0.001
+model,0,60,51,Casals Eqs.1-12 (re-implemented),2.1247,2.1247,0.12895,0.12895,0.000
+model,0,60,1,Casals Eqs.1-12 (re-implemented),3.0042,3.0043,0.09119,0.09120,0.000
+model,0,360,51,Casals Eqs.1-12 (re-implemented),4.6443,4.6442,0.05899,0.05899,-0.002
+model,0,360,1,Casals Eqs.1-12 (re-implemented),5.1988,5.1988,0.05270,0.05270,-0.000
+model,0,1440,51,Casals Eqs.1-12 (re-implemented),5.6492,5.6492,0.04850,0.04850,-0.000
+model,0,1440,1,Casals Eqs.1-12 (re-implemented),5.8385,5.8386,0.04692,0.04692,0.000
+model,1,5,51,Casals Eqs.1-12 (re-implemented),0.3877,0.3877,0.70668,0.70667,-0.001
+model,1,5,1,Casals Eqs.1-12 (re-implemented),0.5989,0.5989,0.45749,0.45749,0.000
+model,1,15,51,Casals Eqs.1-12 (re-implemented),1.0317,1.0317,0.26556,0.26556,-0.001
+model,1,15,1,Casals Eqs.1-12 (re-implemented),1.5012,1.5012,0.18250,0.18250,-0.001
+model,1,60,51,Casals Eqs.1-12 (re-implemented),2.7359,2.7359,0.10014,0.10014,-0.001
+model,1,60,1,Casals Eqs.1-12 (re-implemented),3.4517,3.4516,0.07937,0.07937,-0.001
+model,1,360,51,Casals Eqs.1-12 (re-implemented),5.0558,5.0557,0.05419,0.05419,-0.001
+model,1,360,1,Casals Eqs.1-12 (re-implemented),5.4007,5.4007,0.05073,0.05073,0.000
+model,1,1440,51,Casals Eqs.1-12 (re-implemented),5.7925,5.7924,0.04730,0.04730,-0.002
+model,1,1440,1,Casals Eqs.1-12 (re-implemented),5.9005,5.9005,0.04643,0.04643,-0.000
+model,2,5,51,Casals Eqs.1-12 (re-implemented),0.5866,0.5866,0.46705,0.46705,-0.001
+model,2,5,1,Casals Eqs.1-12 (re-implemented),0.7744,0.7744,0.35379,0.35379,-0.000
+model,2,15,51,Casals Eqs.1-12 (re-implemented),1.4755,1.4755,0.18568,0.18568,-0.000
+model,2,15,1,Casals Eqs.1-12 (re-implemented),1.8520,1.8520,0.14793,0.14793,-0.001
+model,2,60,51,Casals Eqs.1-12 (re-implemented),3.4174,3.4174,0.08017,0.08017,0.000
+model,2,60,1,Casals Eqs.1-12 (re-implemented),3.8734,3.8734,0.07073,0.07073,-0.000
+model,2,360,51,Casals Eqs.1-12 (re-implemented),5.3866,5.3866,0.05086,0.05086,-0.001
+model,2,360,1,Casals Eqs.1-12 (re-implemented),5.5585,5.5585,0.04929,0.04929,-0.001
+model,2,1440,51,Casals Eqs.1-12 (re-implemented),5.8963,5.8963,0.04647,0.04647,0.000
+model,2,1440,1,Casals Eqs.1-12 (re-implemented),5.9466,5.9466,0.04607,0.04607,-0.001
+model,3,5,115,Casals Eqs.1-12 (re-implemented),0.5965,0.5965,0.45930,0.45930,-0.001
+model,3,5,1,Casals Eqs.1-12 (re-implemented),0.8623,0.8623,0.31773,0.31772,-0.000
+model,3,15,115,Casals Eqs.1-12 (re-implemented),1.4963,1.4963,0.18310,0.18310,-0.000
+model,3,15,1,Casals Eqs.1-12 (re-implemented),2.0159,2.0159,0.13591,0.13591,-0.000
+model,3,60,115,Casals Eqs.1-12 (re-implemented),3.4451,3.4451,0.07952,0.07953,0.000
+model,3,60,1,Casals Eqs.1-12 (re-implemented),4.0452,4.0452,0.06773,0.06773,-0.000
+model,3,360,115,Casals Eqs.1-12 (re-implemented),5.3980,5.3980,0.05075,0.05075,0.000
+model,3,360,1,Casals Eqs.1-12 (re-implemented),5.6156,5.6156,0.04879,0.04879,-0.000
+model,3,1440,115,Casals Eqs.1-12 (re-implemented),5.8997,5.8996,0.04644,0.04644,-0.001
+model,3,1440,1,Casals Eqs.1-12 (re-implemented),5.9628,5.9628,0.04595,0.04595,-0.001
+model,4,5,242,Casals Eqs.1-12 (re-implemented),0.5870,0.5870,0.46676,0.46675,-0.001
+model,4,5,1,Casals Eqs.1-12 (re-implemented),0.9318,0.9318,0.29403,0.29403,-0.000
+model,4,15,242,Casals Eqs.1-12 (re-implemented),1.4763,1.4763,0.18559,0.18558,-0.001
+model,4,15,1,Casals Eqs.1-12 (re-implemented),2.1402,2.1402,0.12801,0.12801,0.000
+model,4,60,242,Casals Eqs.1-12 (re-implemented),3.4184,3.4184,0.08015,0.08015,-0.000
+model,4,60,1,Casals Eqs.1-12 (re-implemented),4.1667,4.1667,0.06575,0.06575,-0.001
+model,4,360,242,Casals Eqs.1-12 (re-implemented),5.3870,5.3871,0.05086,0.05086,0.000
+model,4,360,1,Casals Eqs.1-12 (re-implemented),5.6537,5.6537,0.04846,0.04846,-0.001
+model,4,1440,242,Casals Eqs.1-12 (re-implemented),5.8964,5.8964,0.04646,0.04646,0.000
+model,4,1440,1,Casals Eqs.1-12 (re-implemented),5.9735,5.9735,0.04586,0.04586,-0.001
+model,5,5,242,Casals Eqs.1-12 (re-implemented),0.7185,0.7185,0.38129,0.38129,-0.001
+model,5,5,1,Casals Eqs.1-12 (re-implemented),0.9661,0.9661,0.28360,0.28360,0.000
+model,5,15,242,Casals Eqs.1-12 (re-implemented),1.7440,1.7440,0.15710,0.15710,-0.000
+model,5,15,1,Casals Eqs.1-12 (re-implemented),2.2000,2.2000,0.12453,0.12453,0.000
+model,5,60,242,Casals Eqs.1-12 (re-implemented),3.7518,3.7518,0.07302,0.07302,-0.000
+model,5,60,1,Casals Eqs.1-12 (re-implemented),4.2226,4.2225,0.06488,0.06488,-0.001
+model,5,360,242,Casals Eqs.1-12 (re-implemented),5.5158,5.5158,0.04967,0.04967,0.000
+model,5,360,1,Casals Eqs.1-12 (re-implemented),5.6707,5.6707,0.04831,0.04831,0.000
+model,5,1440,242,Casals Eqs.1-12 (re-implemented),5.9343,5.9343,0.04617,0.04617,0.000
+model,5,1440,1,Casals Eqs.1-12 (re-implemented),5.9782,5.9782,0.04583,0.04583,0.000
+model,6,5,242,Casals Eqs.1-12 (re-implemented),0.8409,0.8409,0.32581,0.32581,0.000
+model,6,5,1,Casals Eqs.1-12 (re-implemented),0.9892,0.9892,0.27697,0.27697,-0.001
+model,6,15,242,Casals Eqs.1-12 (re-implemented),1.9767,1.9767,0.13860,0.13860,-0.000
+model,6,15,1,Casals Eqs.1-12 (re-implemented),2.2398,2.2398,0.12232,0.12232,-0.000
+model,6,60,242,Casals Eqs.1-12 (re-implemented),4.0054,4.0054,0.06840,0.06840,-0.000
+model,6,60,1,Casals Eqs.1-12 (re-implemented),4.2588,4.2588,0.06433,0.06433,-0.000
+model,6,360,242,Casals Eqs.1-12 (re-implemented),5.6027,5.6027,0.04890,0.04890,-0.000
+model,6,360,1,Casals Eqs.1-12 (re-implemented),5.6815,5.6815,0.04822,0.04822,0.000
+model,6,1440,242,Casals Eqs.1-12 (re-implemented),5.9592,5.9592,0.04597,0.04598,0.000
+model,6,1440,1,Casals Eqs.1-12 (re-implemented),5.9812,5.9812,0.04581,0.04581,0.000
+paper-text,0,5,51,Casals Sec.5.2 printed value,0.26,0.2603,1.05239,1.05239,0.128
+paper-text,5,5,242,Casals Sec.5.2 printed value,0.83,0.7185,0.38129,0.38129,-13.429
+paper-text,0,60,51,Casals Sec.5.2 printed value,2.13,2.1247,0.12895,0.12895,-0.251
+paper-text,5,60,242,Casals Sec.5.2 printed value,3.76,3.7518,0.07302,0.07302,-0.217
+paper-text,0,360,51,Casals Sec.5.2 printed value,4.55,4.6442,0.05899,0.05899,2.070
+paper-text,5,360,242,Casals Sec.5.2 printed value,5.52,5.5158,0.04967,0.04967,-0.076
+paper-text,6,1440,242,Casals Sec.5.2 printed value,5.96,5.9592,0.04597,0.04598,-0.014
+paper-text,0/5,5,max,I(DR0)/I(DR5) printed factor,2.76,2.7601,,,0.003

@@ -1,0 +1,17 @@
+Picked up JAVA_TOOL_OPTIONS: 
+IoTLoopSim 0.1.0 | scenario 'lorawan-ota' | 30 replications from seed 7 | 2 threads
+metric                                   mean     95% CI +/-     n
+loop.success_ratio                     0.9499      0.0004987    30
+loop.latency_ms.mean                     3339          33.27    30
+loop.latency_ms.p95                      7938          355.5    30
+loop.deadline_miss_ratio            1.241e-06      2.538e-06    30
+net.pdr                                0.9828      0.0001771    30
+energy.total_J                      1.950e+07          171.3    30
+energy.device_J                     5.747e+04          166.7    30
+carbon.total_g                           2294        0.02007    30
+cost.total                              1.703      3.716e-05    30
+availability.nodes                      1.000          0.000    30
+instance.cold_starts                    2.000          0.000    30
+update.succeeded                        194.4         0.9181    30
+update.failed                           5.567         0.9181    30
+results written to Exp Data/fgcs-paper/results/cs1-ota/sens-gwduty-1.0-all-at-once

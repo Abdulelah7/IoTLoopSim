@@ -1,0 +1,111 @@
+{
+  "tool": "SimTool",
+  "version": "0.1.0",
+  "startedAt": "2026-10-06T09:44:13.377552457Z",
+  "finishedAt": "2026-10-06T09:44:51.152617395Z",
+  "java": "21.0.12.1 (Ubuntu)",
+  "os": "Linux 6.18.44-fc-v70 amd64",
+  "gitCommit": null,
+  "scenarioFile": "Exp Data/fgcs-paper/configs/smart-city-nobackup.yaml",
+  "scenarioSha256": "c4ad8ac6a04eb4282b28ac36d44134ab6875c1921c2015dd4b402b42b6f403e8",
+  "overrides": [],
+  "resolvedScenarioSha256": "02e519583c39c5da4a222d0a0ce0876e02b6c9c5c100bc1bab8c5f40a6f0074f",
+  "baseSeed": 42,
+  "replications": 10,
+  "runs": [
+    {
+      "rep": 0,
+      "seed": 42,
+      "resultHash": "de5abd65486e8db9",
+      "wallSeconds": 11.09963246
+    },
+    {
+      "rep": 1,
+      "seed": 43,
+      "resultHash": "9d175823cdc47d56",
+      "wallSeconds": 3.630315522
+    },
+    {
+      "rep": 2,
+      "seed": 44,
+      "resultHash": "fc0ed6d3f447348c",
+      "wallSeconds": 4.620735397
+    },
+    {
+      "rep": 3,
+      "seed": 45,
+      "resultHash": "1239707160e69815",
+      "wallSeconds": 3.190765667
+    },
+    {
+      "rep": 4,
+      "seed": 46,
+      "resultHash": "5378fac824cbef78",
+      "wallSeconds": 2.756573497
+    },
+    {
+      "rep": 5,
+      "seed": 47,
+      "resultHash": "53bce6af60940c35",
+      "wallSeconds": 2.522593785
+    },
+    {
+      "rep": 6,
+      "seed": 48,
+      "resultHash": "71778de9863c5509",
+      "wallSeconds": 2.097888753
+    },
+    {
+      "rep": 7,
+      "seed": 49,
+      "resultHash": "99324a42b2ec8a36",
+      "wallSeconds": 2.587052593
+    },
+    {
+      "rep": 8,
+      "seed": 50,
+      "resultHash": "f0ac5281af350390",
+      "wallSeconds": 2.444070887
+    },
+    {
+      "rep": 9,
+      "seed": 51,
+      "resultHash": "18ae6157b483871b",
+      "wallSeconds": 2.295573497
+    }
+  ],
+  "notes": [],
+  "metricDefinitions": {
+    "loop.generated": "sensor readings that triggered an application",
+    "loop.completed": "loops whose counting branches all finished: every actuation branch (apps with an actuator) or every sink (apps without)",
+    "loop.latency_ms": "time from sensing until the last counting branch finished (control-loop latency), milliseconds",
+    "loop.success_ratio": "loop.completed / loop.generated",
+    "loop.dropped": "loops lost on a counting branch (counted once per loop, with the first cause in loop.dropped.<reason>)",
+    "app.<name>.branch_dropped": "requests lost on branches that do not count for the loop (e.g. archiving in an actuation app)",
+    "update.interrupted": "devices that were depleted, failed or retired while an OTA update was running",
+    "update.download_failed": "OTA images that never reached the device's gateway (device stays on the old firmware)",
+    "energy.category.radio-overhead_J": "measured radio profile: wake-up, preparation, receive windows and post-processing (above baseline)",
+    "loop.deadline_miss_ratio": "completed loops slower than the application deadline / loop.completed",
+    "loop.dropped.<reason>": "requests lost, by cause (radio-loss, no-coverage, node-failure, queue-full, blackhole, ...)",
+    "app.<name>.*": "the loop metrics per application; sink_* for non-actuating branches",
+    "net.pdr": "end-to-end messages delivered / sent (after protocol retransmissions)",
+    "net.retransmissions": "protocol-level retransmissions (MQTT QoS1/2, CoAP CON, TCP)",
+    "instance.cold_starts": "service instances that went through a cold start",
+    "instance.startup_s": "time from instance creation (incl. image pull) to READY, seconds",
+    "instance.wait_ms": "queueing time of requests at service instances, milliseconds",
+    "scaling.out / scaling.in": "autoscaling actions",
+    "migration.downtime_ms": "session migration time during which requests are buffered, milliseconds",
+    "update.*": "OTA firmware campaign outcomes, per-device and campaign durations",
+    "energy.<layer>_J": "energy per layer (device, gateway, network, edge, fog, cloud), joules",
+    "energy.category.<c>_J": "energy per category (radio-tx, radio-rx, sensing, actuation, baseline, compute, network, security, ota)",
+    "carbon.<layer>_g": "operational carbon, gCO2e, from energy x carbon intensity at the time of use",
+    "cost.<item>": "monetary cost: compute core-hours per tier, network transfer, energy",
+    "availability.<class>": "mean fraction of time up (devices, gateways, nodes, links)",
+    "utilization.<tier>": "mean core utilisation per tier",
+    "battery.*_remaining": "remaining battery fraction at the end (mean, min)",
+    "security.*": "attack messages, blocked packets, detections and detection time",
+    "faults.*": "injected failures (independent, correlated events and targets)",
+    "lifecycle.<kind>.<state>": "number of lifecycle transitions into each state",
+    "sim.events / sim.time_s": "events processed and simulated time"
+  }
+}

@@ -1,0 +1,34 @@
+tool,corpus_papers_mentioning,class,L1_perception,L2_network,L3_processing,L4_application,note
+iFogSim2,5,A Full IoT stack,●,◐ A/T,● E+F+C,● loop+microservices,"Sensor/Actuator classes; clustering, migration, microservices"
+MobFogSim,7,A Full IoT stack,●,◐ A/T,● F+C,● loop+migration,MobileSensor/MobileActuator; testbed-validated container migration
+YAFS,12,A Full IoT stack,●,◐ A (graph routing),● F+C,● loop+dynamic placement,sources/sinks as sensors/actuators; dynamic failures
+IoTSim-Edge,9,A Full IoT stack,●,◐ A + protocol models,● E,● MEL DAG loop,sensing+actuator nodes; CoAP/MQTT/XMPP/AMQP; battery
+IoTNetSim,2,"A Full IoT stack (outside coded corpus, verify)",●,●?,● E+F,●?,"'end-to-end IoT services and networking'; device energy, 3D mobility"
+DPWSim,4,A Full IoT stack (single standard),●,◐ DPWS only,◐,●,full stack only for DPWS web-service standard
+FogNetSim++,18,B Partial stack,● (no actuator),● P (OMNeT++),● F,◐ pub/sub,"packet-level, handover; no actuator entity"
+ECSNeT++,3,B Partial stack,● sources,● P (OMNeT++/INET),● E+C,◐ stream DAG to sink,testbed-calibrated; no actuators
+IoTSim-Osmosis,6,B Partial stack,◐ sources only,◐ SD-WAN,● E+C,◐ osmotic microelements,device-network-DC energy
+PureEdgeSim,9,B Partial stack,◐ task sources,◐ A,● E+F+C,◐ tasks,devices as sources and resources
+EdgeCloudSim,30,B Partial stack,◐ mobile devices,◐ A (WLAN/MAN/WAN),● E+C,◐ tasks,no sensors/actuators
+SatEdgeSim,3,B Partial stack,◐,◐ A,● E+C,◐ tasks,satellite edge
+FogZoneSim,1,B Partial stack,◐,○,● F+C,◐ tasks,zone-based fog
+LEAF,2,B Partial stack,◐,◐ A,● F+C,◐,energy-focused fog
+xFogSim,1,B Partial stack,◐,● P (OMNeT++),● F,◐,distributed fog
+Node-RED + FogNetSim++,1,B Partial stack (middleware co-sim),●,● P,● F,● real middleware flows,paper 041
+SimBlockLink,1,B Partial stack,◐,○,● C + blockchain,◐,live Fabric platform
+iFogSim (v1),34,(superseded by iFogSim2),●,◐ A,● F+C,●,excluded per user
+Cooja/Contiki,30,C Device + network,●,● P (802.15.4/RPL/6LoWPAN/CoAP),○,◐ firmware apps,real firmware
+ns-3,24,C Device + network,◐,● P (LoRa/NB-IoT/5G/Wi-Fi),○,○,
+OMNeT++/INET,25,C Network,◐,● P,○,○,"base of FogNetSim++, ECSNeT++"
+CupCarbon,3,C Device + network,●,"● (WSN, maps, mobility)",○,◐,no app-level IoT protocols (paper 043)
+NetSim,3,C Network,◐,● P,○,○,commercial
+TOSSIM / Castalia / QualNet / OPNET / WSNet / JiST,11,C Network,◐,● P,○,○,WSN/network
+LoRaSim / FLoRa / Simu5G,6,C Network,◐,● technology-specific,○,○,
+SimpleIoTSimulator / MAMMotH,4,C Device emulation,●,◐ protocol emulation,○,○,device/protocol emulators
+CloudSim / CloudSim Plus,43,D Processing (cloud),○,◐,● C,◐,foundation of most fog tools
+GreenCloud / iCanCloud / DISSECT-CF / CloudAnalyst / SimGrid,30,D Processing (cloud),○,◐,● C,◐,
+IOTSim / SimIoT / IoTSim-SDWAN,17,D Processing (cloud for IoT data),○,◐,● C,◐ big-data jobs,no sensor networks (paper 043)
+FogTorch / FogWorkflowSim / EdgeSimPy / EdgeAISim / RECAP,13,D Processing (placement),○,○/◐,● E/F,◐,
+EmuFog / MockFog / Mininet / Kubernetes / Docker,30,E Emulation,○,◐,● real stacks,● real apps,no sensors
+SUMO / Veins / OpenC2X,13,F Mobility coupling,○,◐ V2X,○,○,used with VEC tools
+FIT IoT-LAB / FIESTA-IoT / SmartSantander,6,G Physical testbeds,●,●,◐,●,"real hardware, not simulators"

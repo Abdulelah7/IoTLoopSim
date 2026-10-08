@@ -1,0 +1,12 @@
+build/
+dist/
+target/
+results/
+lib/
+*.class
+__pycache__/
+.idea/
+*.iml
+.DS_Store
+examples/custom-policy/out/
+examples/custom-policy/*.jar

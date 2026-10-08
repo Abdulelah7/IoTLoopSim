@@ -1,0 +1,15 @@
+{
+  "description": "Common Reference System (CRS) used to compare IoTLoopSim, YAFS and iFogSim2. Time unit ms.",
+  "sensor_link_latency_ms": 2.0,
+  "actuator_link_latency_ms": 2.0,
+  "gw_edge_latency_ms": 5.0,
+  "response_bytes": 32,
+  "experiments": {
+    "X1": {"what": "zero-load deterministic loop", "sensors": 1, "interval_ms": 1000, "payload_bytes": 500,
+           "bandwidth_bps": 1e6, "mi": 50, "mips": 1000, "horizon_s": 100},
+    "X2": {"what": "processing load sweep, Poisson arrivals", "sensors": 10, "payload_bytes": 500,
+           "bandwidth_bps": 1e8, "mi": 50, "mips": 1000, "rho": [0.2, 0.4, 0.6, 0.8], "horizon_s": 3600},
+    "X3": {"what": "link contention, Poisson arrivals", "sensors": 10, "payload_bytes": 1250,
+           "bandwidth_bps": 1e6, "gw_edge_latency_ms": 20.0, "mi": 0.001, "mips": 1000, "rho_link": [0.1, 0.2, 0.3], "horizon_s": 3600}
+  }
+}

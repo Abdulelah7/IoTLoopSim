@@ -1,0 +1,19 @@
+Picked up JAVA_TOOL_OPTIONS: 
+IoTLoopSim 0.1.0 | scenario 'smart-city' | 30 replications from seed 42 | 2 threads
+metric                                   mean     95% CI +/-     n
+loop.success_ratio                     0.9960      0.0003396    30
+loop.latency_ms.mean                    184.8          7.957    30
+loop.latency_ms.p95                     178.9          2.019    30
+loop.deadline_miss_ratio               0.2209       0.003741    30
+net.pdr                                0.9998      3.654e-05    30
+energy.total_J                      2.798e+06           3968    30
+energy.device_J                     4.410e+05          47.20    30
+carbon.total_g                          217.4         0.4960    30
+cost.total                             0.6184       0.002730    30
+availability.nodes                     0.9718       0.006123    30
+instance.cold_starts                    58.10          1.859    30
+migration.completed                      2603          61.45    30
+update.succeeded                        49.73         0.7066    30
+update.failed                           2.533         0.6410    30
+security.detections                     9.000          0.000    30
+results written to Exp Data/fgcs-paper/results/cs2-security/sens-idsp-1.0

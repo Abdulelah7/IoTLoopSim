@@ -1,0 +1,42 @@
+Picked up JAVA_TOOL_OPTIONS: 
+
+group          test                               parameters                     expected    simulated       CI95     err% verdict
+queueing       M/M/1 mean waiting time Wq         rho=0.3                          42.857       43.075      0.694     0.51 PASS
+queueing       M/M/1 mean waiting time Wq         rho=0.5                          100.00       100.63       1.33     0.63 PASS
+queueing       M/M/1 mean waiting time Wq         rho=0.7                          233.33       232.95       4.37    -0.16 PASS
+queueing       M/M/1 mean waiting time Wq         rho=0.8                          400.00       394.21       9.14    -1.45 PASS
+queueing       M/M/1 mean waiting time Wq         rho=0.9                          900.00       902.82       18.7     0.31 PASS
+queueing       M/M/4 mean waiting time (Erlang C) rho=0.5                          8.6957       8.6532      0.104    -0.49 PASS
+queueing       M/M/4 mean waiting time (Erlang C) rho=0.8                          74.554       74.650       1.04     0.13 PASS
+queueing       M/M/4 mean waiting time (Erlang C) rho=0.9                          196.94       197.25       3.94     0.16 PASS
+queueing       M/D/1 mean waiting time (P-K)      rho=0.5                          50.000       49.825      0.493    -0.35 PASS
+queueing       M/D/1 mean waiting time (P-K)      rho=0.8                          200.00       199.30       2.33    -0.35 PASS
+network        L1 link M/D/1 queueing delay       rho=0.3                         0.21429      0.21442   0.000379     0.06 PASS
+network        L1 link M/D/1 queueing delay       rho=0.6                         0.75000      0.75055    0.00152     0.07 PASS
+network        L1 link M/D/1 queueing delay       rho=0.9                          4.5000       4.4960     0.0264    -0.09 PASS
+compute        Utilisation law U = lambda*S       rho=0.6                         0.59985      0.59838    0.00220    -0.24 PASS
+energy         Node energy, linear power model    rho=0.6                      8.7988e+05   8.7871e+05   1.76e+03    -0.13 PASS
+protocol       coap-non end-to-end delivery ratio p_loss=0.1                      0.90000      0.89976   0.000787    -0.03 PASS
+protocol       coap-non end-to-end delivery ratio p_loss=0.3                      0.70000      0.69932    0.00135    -0.10 PASS
+protocol       coap-non end-to-end delivery ratio p_loss=0.5                      0.50000      0.49990    0.00150    -0.02 PASS
+protocol       coap-con end-to-end delivery ratio p_loss=0.1                      0.99999      0.99997   1.14e-05    -0.00 PASS
+protocol       coap-con end-to-end delivery ratio p_loss=0.3                      0.99757      0.99747   0.000162    -0.01 PASS
+protocol       coap-con end-to-end delivery ratio p_loss=0.5                      0.96875      0.96887   0.000433     0.01 PASS
+protocol       coap-con transmissions per message p_loss=0.3                       1.4251       1.4263    0.00222     0.08 PASS
+faults         Steady-state availability MTBF/(MTBF+MTTR) MTBF=1000,MTTR=100              0.90909      0.90904   0.000455    -0.01 PASS
+faults         Steady-state availability MTBF/(MTBF+MTTR) MTBF=3600,MTTR=600              0.85714      0.85718   0.000717     0.00 PASS
+faults         Steady-state availability MTBF/(MTBF+MTTR) MTBF=500,MTTR=5                 0.99010      0.99010   4.45e-05    -0.00 PASS
+energy         Battery lifetime, baseline only    E=100J,P=10mW                     10000        10000       0.00     0.00 PASS
+energy         Battery lifetime, LoRa sensing every 60 s E=1000J                      8.1076e+05   8.1075e+05       12.5    -0.00 PASS
+radio          LoRa time on air vs Semtech formula SF7,app=10B                      61.696       61.696       0.00     0.00 PASS
+radio          LoRa time on air vs Semtech formula SF7,app=51B                      118.02       118.02       0.00     0.00 PASS
+radio          LoRa time on air vs Semtech formula SF7,app=222B                     368.90       368.90       0.00     0.00 PASS
+radio          LoRa time on air vs Semtech formula SF9,app=51B                      390.14       390.14       0.00     0.00 PASS
+radio          LoRa time on air vs Semtech formula SF9,app=115B                     676.86       676.86       0.00     0.00 PASS
+radio          LoRa time on air vs Semtech formula SF12,app=10B                     1482.8       1482.8       0.00     0.00 PASS
+radio          LoRa time on air vs Semtech formula SF12,app=51B                     2793.5       2793.5       0.00     0.00 PASS
+radio          LoRa duty-cycle-limited throughput SF7,51B,d=1%                     2264.2       2265.0       0.00     0.04 PASS
+energy         Energy conservation (layers = categories = total) -                                0.0000       0.0000       0.00     0.00 PASS
+flow           Request conservation (in flight at end / generated) -                                0.0000   6.0206e-05   6.92e-05     0.01 PASS
+
+37/37 checks passed; written /tmp/reval/v1_analytical.csv

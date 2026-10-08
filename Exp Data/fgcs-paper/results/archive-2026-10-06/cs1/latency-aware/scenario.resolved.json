@@ -1,0 +1,500 @@
+{
+  "name": "smart-city",
+  "seed": 42,
+  "duration": "1h",
+  "deviceStart": "20s",
+  "fidelity": {
+    "links": "queue",
+    "radio": "queue"
+  },
+  "mobilitySettings": {
+    "handoverDelay": "50ms",
+    "updateInterval": "1s"
+  },
+  "security": {
+    "channel": "dtls",
+    "ids": {
+      "delay": "0.3ms",
+      "energy": 1.0E-4,
+      "detectProbability": 0.9,
+      "detectionTime": "exp(60)"
+    }
+  },
+  "carbon": {
+    "default": 450,
+    "cloud": 120
+  },
+  "cost": {
+    "coreHour": {
+      "edge": 0.02,
+      "fog": 0.03,
+      "cloud": 0.04
+    },
+    "energyPerKWh": 0.15
+  },
+  "policies": {
+    "placement": "latency-aware",
+    "selector": "nearest-least-loaded",
+    "scaling": {
+      "name": "threshold",
+      "interval": "15s",
+      "upLoad": 1.5,
+      "downLoad": 0.2,
+      "cooldown": "30s"
+    },
+    "migration": "follow-me",
+    "recovery": "replace"
+  },
+  "gateways": [
+    {
+      "name": "gw",
+      "count": 4,
+      "techs": [
+        "wifi",
+        "lte",
+        "5g",
+        "lorawan"
+      ],
+      "range": 600,
+      "positions": [
+        [
+          250,
+          500
+        ],
+        [
+          750,
+          500
+        ],
+        [
+          1250,
+          500
+        ],
+        [
+          1750,
+          500
+        ]
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "name": "edge",
+      "count": 4,
+      "tier": "edge",
+      "cores": 8,
+      "mips": 3000,
+      "ram": 16384,
+      "idlePower": 30,
+      "maxPower": 90,
+      "positions": [
+        [
+          250,
+          500
+        ],
+        [
+          750,
+          500
+        ],
+        [
+          1250,
+          500
+        ],
+        [
+          1750,
+          500
+        ]
+      ]
+    },
+    {
+      "name": "fog",
+      "tier": "fog",
+      "cores": 32,
+      "mips": 3500,
+      "ram": 65536,
+      "idlePower": 120,
+      "maxPower": 300,
+      "position": [
+        1000,
+        600
+      ]
+    },
+    {
+      "name": "cloud",
+      "tier": "cloud",
+      "cores": 128,
+      "mips": 4000,
+      "ram": 524288,
+      "idlePower": 400,
+      "maxPower": 1200,
+      "registry": true,
+      "position": [
+        1000,
+        5000
+      ]
+    }
+  ],
+  "links": [
+    {
+      "between": [
+        "gw-*",
+        "edge-*"
+      ],
+      "bandwidth": "1Gbps",
+      "latency": "1ms"
+    },
+    {
+      "between": [
+        "edge-*",
+        "fog"
+      ],
+      "bandwidth": "1Gbps",
+      "latency": "4ms"
+    },
+    {
+      "between": [
+        "gw-*",
+        "fog"
+      ],
+      "name": "backup",
+      "bandwidth": "200Mbps",
+      "latency": "8ms"
+    },
+    {
+      "between": [
+        "fog",
+        "cloud"
+      ],
+      "bandwidth": "1Gbps",
+      "latency": "30ms",
+      "joulesPerByte": 5.0E-8,
+      "costPerGB": 0.09
+    }
+  ],
+  "devices": [
+    {
+      "group": "camera",
+      "count": 40,
+      "tech": "wifi",
+      "protocol": "mqtt-qos1",
+      "nearGateways": 90,
+      "baselinePower": 2,
+      "sensors": [
+        {
+          "type": "frame",
+          "interval": "exp(2)",
+          "bytes": "20KB",
+          "energy": 0.02
+        }
+      ],
+      "actuators": [
+        {
+          "type": "signal",
+          "time": "const(50)",
+          "energy": 0.5
+        }
+      ]
+    },
+    {
+      "group": "vehicle",
+      "count": 30,
+      "tech": "5g",
+      "protocol": "coap-con",
+      "area": {
+        "x0": 0,
+        "y0": 400,
+        "x1": 2000,
+        "y1": 600
+      },
+      "baselinePower": 1,
+      "mobility": {
+        "model": "random-waypoint",
+        "area": {
+          "x0": 0,
+          "y0": 400,
+          "x1": 2000,
+          "y1": 600
+        },
+        "speed": "uniform(8, 16)",
+        "pause": "exp(20)"
+      },
+      "sensors": [
+        {
+          "type": "telemetry",
+          "interval": "exp(1)",
+          "bytes": 300,
+          "energy": 0.001
+        }
+      ],
+      "actuators": [
+        {
+          "type": "alert",
+          "time": "const(5)",
+          "energy": 0.01
+        }
+      ]
+    },
+    {
+      "group": "air",
+      "count": 100,
+      "tech": "lorawan",
+      "protocol": "coap-non",
+      "area": {
+        "x0": 0,
+        "y0": 0,
+        "x1": 2000,
+        "y1": 1000
+      },
+      "battery": {
+        "mAh": 2400,
+        "volts": 3.6
+      },
+      "baselinePower": 5.0E-5,
+      "firmware": "v1",
+      "sensors": [
+        {
+          "type": "aq",
+          "interval": "exp(300)",
+          "bytes": 24,
+          "energy": 0.02
+        }
+      ]
+    },
+    {
+      "group": "siren",
+      "count": 4,
+      "tech": "wifi",
+      "protocol": "mqtt-qos1",
+      "positions": [
+        [
+          260,
+          520
+        ],
+        [
+          760,
+          520
+        ],
+        [
+          1260,
+          520
+        ],
+        [
+          1760,
+          520
+        ]
+      ],
+      "baselinePower": 0.5,
+      "actuators": [
+        {
+          "type": "siren",
+          "time": "const(100)",
+          "energy": 1
+        }
+      ]
+    }
+  ],
+  "applications": [
+    {
+      "name": "traffic",
+      "trigger": "frame",
+      "group": "camera",
+      "actuator": "signal",
+      "deadline": "150ms",
+      "modules": [
+        {
+          "name": "detect",
+          "mi": "normal(120, 15)",
+          "out": 512,
+          "cores": 2,
+          "ram": 2048,
+          "min": 1,
+          "max": 12,
+          "image": {
+            "name": "detect:1",
+            "size": "400MB"
+          },
+          "startup": "normal(3, 0.5)",
+          "next": [
+            "decide",
+            "archive"
+          ]
+        },
+        {
+          "name": "decide",
+          "mi": 20,
+          "out": 32,
+          "actuate": true,
+          "image": {
+            "name": "decide:1",
+            "size": "60MB"
+          }
+        },
+        {
+          "name": "archive",
+          "mi": 40,
+          "tier": "cloud",
+          "min": 1,
+          "max": 2,
+          "image": {
+            "name": "archive:1",
+            "size": "150MB"
+          }
+        }
+      ]
+    },
+    {
+      "name": "collision",
+      "trigger": "telemetry",
+      "group": "vehicle",
+      "actuator": "alert",
+      "deadline": "100ms",
+      "modules": [
+        {
+          "name": "predict",
+          "mi": "normal(150, 20)",
+          "state": "256KB",
+          "cores": 1,
+          "min": 1,
+          "max": 16,
+          "image": {
+            "name": "predict:1",
+            "size": "150MB"
+          },
+          "actuate": true
+        }
+      ]
+    },
+    {
+      "name": "air-quality",
+      "trigger": "aq",
+      "group": "air",
+      "actuator": "siren",
+      "deadline": "30s",
+      "modules": [
+        {
+          "name": "aggregate",
+          "mi": 30,
+          "tier": "fog",
+          "min": 0,
+          "max": 4,
+          "keepAlive": "60s",
+          "image": {
+            "name": "aggregate:1",
+            "size": "120MB"
+          },
+          "startup": "const(0.8)",
+          "actuate": true
+        }
+      ]
+    }
+  ],
+  "lifecycle": {
+    "updates": [
+      {
+        "name": "air-fw-v2",
+        "target": {
+          "group": "air",
+          "firmware": "v1"
+        },
+        "version": "v2",
+        "size": "8KB",
+        "start": "10min",
+        "rollout": {
+          "name": "canary",
+          "canaryFraction": 0.1,
+          "batchSize": 30,
+          "interval": "2min",
+          "abortAbove": 0.25
+        },
+        "install": "uniform(5, 10)",
+        "failProb": 0.05,
+        "rollback": true,
+        "rollbackAfter": "5min"
+      }
+    ],
+    "serviceUpdates": [
+      {
+        "app": "traffic",
+        "module": "detect",
+        "image": {
+          "name": "detect:2",
+          "size": "420MB"
+        },
+        "at": "40min",
+        "pause": "10s"
+      }
+    ],
+    "decommission": [
+      {
+        "group": "air",
+        "fraction": 0.1,
+        "at": "50min"
+      }
+    ]
+  },
+  "faults": {
+    "correlated": [
+      {
+        "name": "zone-B-power-gw",
+        "target": "gateway",
+        "names": "gw-1",
+        "at": [
+          "25min"
+        ],
+        "p": 1,
+        "duration": "const(300)"
+      },
+      {
+        "name": "zone-B-power-edge",
+        "target": "node",
+        "names": "edge-1",
+        "at": [
+          "25min"
+        ],
+        "p": 1,
+        "duration": "const(300)"
+      },
+      {
+        "name": "fw-v2-bug",
+        "target": "device",
+        "firmware": "v2",
+        "every": "exp(900)",
+        "p": 0.2,
+        "duration": "const(120)"
+      }
+    ],
+    "independent": [
+      {
+        "name": "edge-crash",
+        "target": "node",
+        "tags": {
+          "tier": "edge"
+        },
+        "ttf": "exp(10800)",
+        "repair": "exp(300)"
+      }
+    ]
+  },
+  "attacks": [
+    {
+      "type": "flood",
+      "name": "dos",
+      "gateway": "gw-2",
+      "attackers": 8,
+      "tech": "wifi",
+      "target": "traffic/detect",
+      "rate": 5,
+      "bytes": "2KB",
+      "mi": 300,
+      "start": "15min",
+      "end": "30min"
+    },
+    {
+      "type": "blackhole",
+      "name": "rogue-gw",
+      "gateway": "gw-3",
+      "drop": 0.6,
+      "start": "35min",
+      "end": "50min"
+    }
+  ]
+}

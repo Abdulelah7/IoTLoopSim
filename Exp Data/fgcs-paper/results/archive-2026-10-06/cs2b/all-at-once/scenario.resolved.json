@@ -1,0 +1,239 @@
+{
+  "name": "lorawan-ota",
+  "seed": 7,
+  "duration": "1d",
+  "deviceStart": "30s",
+  "fidelity": {
+    "links": "queue",
+    "radio": "queue"
+  },
+  "security": {
+    "channel": "dtls"
+  },
+  "carbon": {
+    "default": [
+      380,
+      370,
+      360,
+      355,
+      350,
+      360,
+      390,
+      430,
+      460,
+      470,
+      460,
+      450,
+      440,
+      430,
+      430,
+      440,
+      460,
+      490,
+      500,
+      480,
+      450,
+      420,
+      400,
+      390
+    ]
+  },
+  "policies": {
+    "placement": "fog-first",
+    "recovery": "replace"
+  },
+  "gateways": [
+    {
+      "name": "lgw",
+      "count": 3,
+      "techs": [
+        "lorawan",
+        "wifi"
+      ],
+      "positions": [
+        [
+          1000,
+          1000
+        ],
+        [
+          3000,
+          1000
+        ],
+        [
+          2000,
+          2800
+        ]
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "name": "fog",
+      "tier": "fog",
+      "cores": 8,
+      "mips": 2500,
+      "ram": 16384,
+      "idlePower": 25,
+      "maxPower": 70,
+      "position": [
+        2000,
+        1500
+      ]
+    },
+    {
+      "name": "cloud",
+      "tier": "cloud",
+      "cores": 32,
+      "mips": 4000,
+      "ram": 131072,
+      "registry": true
+    }
+  ],
+  "links": [
+    {
+      "between": [
+        "lgw-*",
+        "fog"
+      ],
+      "bandwidth": "50Mbps",
+      "latency": "15ms",
+      "costPerGB": 2
+    },
+    {
+      "between": [
+        "fog",
+        "cloud"
+      ],
+      "bandwidth": "500Mbps",
+      "latency": "40ms",
+      "costPerGB": 0.09
+    }
+  ],
+  "devices": [
+    {
+      "group": "soil",
+      "count": 200,
+      "tech": "lorawan",
+      "protocol": "coap-non",
+      "area": {
+        "x0": 0,
+        "y0": 0,
+        "x1": 4000,
+        "y1": 3000
+      },
+      "battery": {
+        "mAh": 2600,
+        "volts": 3.6
+      },
+      "baselinePower": 3.0E-5,
+      "firmware": "v1",
+      "sensors": [
+        {
+          "type": "moisture",
+          "interval": "exp(600)",
+          "bytes": 16,
+          "energy": 0.05
+        }
+      ]
+    },
+    {
+      "group": "valve",
+      "count": 20,
+      "tech": "lorawan",
+      "protocol": "coap-con",
+      "area": {
+        "x0": 0,
+        "y0": 0,
+        "x1": 4000,
+        "y1": 3000
+      },
+      "battery": {
+        "mAh": 19000,
+        "volts": 3.6
+      },
+      "baselinePower": 1.0E-4,
+      "firmware": "v1",
+      "actuators": [
+        {
+          "type": "valve",
+          "time": "const(2000)",
+          "energy": 2
+        }
+      ]
+    }
+  ],
+  "applications": [
+    {
+      "name": "irrigation",
+      "trigger": "moisture",
+      "group": "soil",
+      "actuator": "valve",
+      "deadline": "60s",
+      "modules": [
+        {
+          "name": "decide",
+          "mi": 15,
+          "tier": "fog",
+          "image": {
+            "name": "irrigation:1",
+            "size": "90MB"
+          },
+          "actuate": true,
+          "next": [
+            "history"
+          ]
+        },
+        {
+          "name": "history",
+          "mi": 10,
+          "tier": "cloud",
+          "image": {
+            "name": "tsdb:1",
+            "size": "250MB"
+          }
+        }
+      ]
+    }
+  ],
+  "lifecycle": {
+    "updates": [
+      {
+        "name": "soil-v2",
+        "target": {
+          "group": "soil",
+          "firmware": "v1"
+        },
+        "version": "v2",
+        "size": "4KB",
+        "start": "2h",
+        "rollout": {
+          "name": "all-at-once"
+        },
+        "install": "uniform(10, 20)",
+        "failProb": 0.4,
+        "rollback": true,
+        "rollbackAfter": "15min"
+      }
+    ]
+  },
+  "faults": {
+    "correlated": [
+      {
+        "name": "v2-watchdog-bug",
+        "target": "device",
+        "firmware": "v2",
+        "every": "exp(7200)",
+        "p": 0.15,
+        "duration": "const(600)"
+      }
+    ],
+    "independent": [
+      {
+        "name": "gw-power",
+        "target": "gateway",
+        "ttf": "exp(43200)",
+        "repair": "exp(1800)"
+      }
+    ]
+  }
+}

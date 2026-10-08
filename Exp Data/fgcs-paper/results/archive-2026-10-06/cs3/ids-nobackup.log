@@ -1,0 +1,19 @@
+Picked up JAVA_TOOL_OPTIONS: 
+SimTool 0.1.0 | scenario 'smart-city-nobackup' | 10 replications from seed 42 | 1 threads
+metric                                   mean     95% CI +/-     n
+loop.success_ratio                     0.9814        0.01287    10
+loop.latency_ms.mean                    319.1          118.9    10
+loop.latency_ms.p95                     200.0          20.21    10
+loop.deadline_miss_ratio               0.2262       0.009133    10
+net.pdr                                0.9975       0.002250    10
+energy.total_J                      2.798e+06           9303    10
+energy.device_J                     4.404e+05          535.4    10
+carbon.total_g                          217.4          1.158    10
+cost.total                             0.6238        0.01072    10
+availability.nodes                     0.9698        0.01148    10
+instance.cold_starts                    59.90          5.174    10
+migration.completed                      2539          53.74    10
+update.succeeded                        31.60          1.693    10
+update.failed                           2.100          1.325    10
+security.detections                     8.200         0.5642    10
+results written to Exp Data/fgcs-paper/results/cs3/ids-nobackup

@@ -1,0 +1,19 @@
+Picked up JAVA_TOOL_OPTIONS: 
+SimTool 0.1.0 | scenario 'smart-city' | 10 replications from seed 42 | 2 threads
+metric                                   mean     95% CI +/-     n
+loop.success_ratio                     0.9960      0.0004972    10
+loop.latency_ms.mean                    202.3          20.99    10
+loop.latency_ms.p95                     185.8          9.366    10
+loop.deadline_miss_ratio               0.2275       0.007828    10
+net.pdr                                0.9998      8.937e-05    10
+energy.total_J                      2.800e+06           7983    10
+energy.device_J                     4.410e+05          117.9    10
+carbon.total_g                          217.5         0.9976    10
+cost.total                             0.6242        0.01066    10
+availability.nodes                     0.9698        0.01148    10
+instance.cold_starts                    59.90          5.922    10
+migration.completed                      2638          91.42    10
+update.succeeded                        31.60          1.693    10
+update.failed                           2.100          1.325    10
+security.detections                     8.200         0.5642    10
+results written to Exp Data/fgcs-paper/results/cs1/edge-first
