@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Case studies for the FGCS paper. 10 replications each, common seeds (base seed from the scenario) for all variants.
+# Case studies for the paper. 10 replications each, common seeds (base seed from the scenario) for all variants.
 set -u
 export JAVA_TOOL_OPTIONS=
 HERE="$(cd "$(dirname "$0")/.." && pwd)"

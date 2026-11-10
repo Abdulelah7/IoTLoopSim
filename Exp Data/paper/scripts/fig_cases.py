@@ -1,4 +1,4 @@
-"""Case-study figures, tables and paired statistics for the FGCS paper.
+"""Case-study figures, tables and paired statistics for the paper.
 CS1 = OTA rollout on the LoRaWAN farm (results/cs1-ota), CS2 = IDS x backup links on the smart city (results/cs2-security).
 All variants of a study share their seeds (common random numbers), so paired differences are taken per seed.
 Usage: fig_cases.py <results dir> <output dir>"""

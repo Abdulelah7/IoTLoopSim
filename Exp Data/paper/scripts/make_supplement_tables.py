@@ -1,4 +1,4 @@
-"""LaTeX rows for the supplementary material of the FGCS paper.
+"""LaTeX rows for the supplementary material of the paper.
 Usage: make_supplement_tables.py <results/validation dir> <figures dir with cases_summary.json> <output dir>
 Writes supp_v1.tex (37 analytical checks with equivalence and run settings), supp_lifecycle.tex (19 lifecycle checks),
 supp_cs1.tex and supp_cs2.tex (sensitivity and scenario-variant rows)."""

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-# Reproduces every result used in the FGCS paper from one build of IoTLoopSim.
+# Reproduces every result used in the paper from one build of IoTLoopSim.
 # Usage (from the repository root, after ./build.sh):
-#   bash "Exp Data/fgcs-paper/scripts/reproduce_all.sh" dist/iotloopsim-all-0.1.0.jar [all|validation|cases|scal|figs]
+#   bash "Exp Data/paper/scripts/reproduce_all.sh" dist/iotloopsim-all-0.1.0.jar [all|validation|cases|scal|figs]
 # Run from inside the git checkout so that every provenance.json records the commit.
 set -u
 export JAVA_TOOL_OPTIONS=

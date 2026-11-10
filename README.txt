@@ -138,9 +138,12 @@ Validation and limitations
 
 The models were checked against closed-form queueing, reliability and
 renewal results, against YAFS and iFogSim2 on a shared reference system,
-against published container-migration testbed measurements, and against a
-measured LoRaWAN energy model (Casals et al., 2017). The scripts and data
-are in validation/ and results/validation/.
+and against a measurement-derived LoRaWAN energy model (Casals et al.,
+2017). The scripts and data are in validation/ and results/validation/.
+
+A small comparison with published container-migration measurements is
+also included. It is exploratory and is not part of the validation
+reported in the paper.
 
 The simulator has not yet been calibrated on its own physical testbed.
 Packet-level co-simulation is defined as an interface (PacketLevelAdapter),

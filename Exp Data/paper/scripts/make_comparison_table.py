@@ -30,7 +30,7 @@ EVID = {"A1": "Sensor, IoTDevice: typed sensors, payloads, energy, sampling dist
         "D1": "named RNG streams, replications with CIs, provenance.json, per-run result hashes (iotloopsim-core, iotloopsim-experiment)",
         "D3": "built-in reference policies (Section 4.7) and bundled reference scenarios",
         "C10": "Gym-style bridge (iotloopsim-bridge) with a Python client",
-        "D5": "scalability study up to 50,000 devices (Exp Data/fgcs-paper/results/scalability*)"}
+        "D5": "scalability study up to 50,000 devices (Exp Data/paper/results/scalability*)"}
 rows = list(csv.DictReader(open(src)))
 # Criteria rated in the CSVs but not reported in the paper (multi-fidelity, ML/RL interface)
 EXCLUDE = {"C8", "C10"}
