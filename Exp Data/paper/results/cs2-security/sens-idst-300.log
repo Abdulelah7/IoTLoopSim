@@ -16,4 +16,4 @@ migration.completed                      2632          64.80    30
 update.succeeded                        50.87         0.8304    30
 update.failed                           2.533         0.6703    30
 security.detections                     8.400         0.2703    30
-results written to Exp Data/fgcs-paper/results/cs2-security/sens-idst-300
+results written to Exp Data/paper/results/cs2-security/sens-idst-300

@@ -24,5 +24,5 @@ D1,D1,"Reproducibility (scenario files, seeds, repeated runs)",2,yes,"named RNG 
 D2,D2,Validation against a real testbed,0,yes,compared with a published measurement-based model only; no testbed (same rule as for the other tools)
 D3,D3,Benchmarks / built-in reference policies,2,yes,built-in reference policies (Section 4.7) and bundled reference scenarios
 D4,D4,GUI + scriptable,1,yes,"scriptable (YAML, CLI, Java API); no GUI"
-D5,D5,Scalability evaluated,2,yes,"scalability study up to 50,000 devices (Exp Data/fgcs-paper/results/scalability*)"
-D6,D6,Open source & actively maintained (commit in last 12 months),0,yes,"Apache-2.0, but the repository is private until publication, so it does not meet the criterion yet"
+D5,D5,Scalability evaluated,2,yes,"scalability study up to 50,000 devices (Exp Data/paper/results/scalability*)"
+D6,D6,Open source & actively maintained (commit in last 12 months),2,yes,"Apache-2.0; public repository with a commit in the last 12 months"

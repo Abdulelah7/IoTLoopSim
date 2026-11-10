@@ -15,4 +15,4 @@ instance.cold_starts                    58.50          2.114    30
 migration.completed                      2517          44.01    30
 update.succeeded                        56.77         0.7382    30
 update.failed                           2.933         0.6788    30
-results written to Exp Data/fgcs-paper/results/cs2-security/noids-nobackup
+results written to Exp Data/paper/results/cs2-security/noids-nobackup

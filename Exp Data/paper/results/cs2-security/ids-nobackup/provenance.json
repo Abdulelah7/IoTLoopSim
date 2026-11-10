@@ -6,7 +6,7 @@
   "java": "21.0.12.1 (Ubuntu)",
   "os": "Linux 6.18.44-fc-v80 amd64",
   "gitCommit": "f58673a353b29d43db0326c57a76350df8c8df1c",
-  "scenarioFile": "Exp Data/fgcs-paper/configs/smart-city-nobackup.yaml",
+  "scenarioFile": "Exp Data/paper/configs/smart-city-nobackup.yaml",
   "scenarioSha256": "59b95ec61fd3e89afade44004567887f19c36e8577f51929d7eb957d0ead545d",
   "overrides": [],
   "resolvedScenarioSha256": "02e519583c39c5da4a222d0a0ce0876e02b6c9c5c100bc1bab8c5f40a6f0074f",

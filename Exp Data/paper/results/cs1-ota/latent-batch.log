@@ -14,4 +14,4 @@ availability.nodes                      1.000          0.000    30
 instance.cold_starts                    2.000          0.000    30
 update.succeeded                        193.5         0.8188    30
 update.failed                           6.533         0.8188    30
-results written to Exp Data/fgcs-paper/results/cs1-ota/latent-batch
+results written to Exp Data/paper/results/cs1-ota/latent-batch

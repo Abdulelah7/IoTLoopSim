@@ -16,4 +16,4 @@ migration.completed                      2618          60.65    30
 update.succeeded                        49.93         0.7527    30
 update.failed                           2.600         0.6621    30
 security.detections                     8.400         0.2703    30
-results written to Exp Data/fgcs-paper/results/cs2-security/ids-backup
+results written to Exp Data/paper/results/cs2-security/ids-backup

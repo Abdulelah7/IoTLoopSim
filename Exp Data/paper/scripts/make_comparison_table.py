@@ -8,7 +8,7 @@ actual = {"A3": (1, "flow/queue level; packet level only through an adapter inte
           "C3": (1, "operational device, network and compute energy and carbon; gateway idle/forwarding power, RAN and embodied carbon not modelled"),
           "D2": (0, "compared with a published measurement-based model only; no testbed (same rule as for the other tools)"),
           "D4": (1, "scriptable (YAML, CLI, Java API); no GUI"),
-          "D6": (0, "Apache-2.0, but the repository is private until publication, so it does not meet the criterion yet")}
+          "D6": (2, "Apache-2.0; public repository with a commit in the last 12 months")}
 # Evidence for IoTLoopSim's ratings (classes are in iotloopsim-models/src/main/java/org/iotloopsim/model unless noted)
 EVID = {"A1": "Sensor, IoTDevice: typed sensors, payloads, energy, sampling distributions",
         "A2": "Actuator; AppRuntime.actuatorFor: commands sent to the device's or nearest actuator",

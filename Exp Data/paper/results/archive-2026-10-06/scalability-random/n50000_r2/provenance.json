@@ -6,7 +6,7 @@
   "java": "21.0.12.1 (Ubuntu)",
   "os": "Linux 6.18.44-fc-v70 amd64",
   "gitCommit": null,
-  "scenarioFile": "Exp Data/fgcs-paper/configs/scal/scal-50000.yaml",
+  "scenarioFile": "Exp Data/paper/configs/scal/scal-50000.yaml",
   "scenarioSha256": "279f117d2eaa0fe1a5bf0dd1add4a0145e364bc3dee44dd2219cbfc26974580b",
   "overrides": [
     "policies.selector=random"

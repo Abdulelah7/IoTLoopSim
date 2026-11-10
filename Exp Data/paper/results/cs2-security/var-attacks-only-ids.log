@@ -16,4 +16,4 @@ migration.completed                      2511          40.22    30
 update.succeeded                        56.27         0.7716    30
 update.failed                           2.767         0.6480    30
 security.detections                     8.400         0.2703    30
-results written to Exp Data/fgcs-paper/results/cs2-security/abl-attacks-only-ids
+results written to Exp Data/paper/results/cs2-security/abl-attacks-only-ids

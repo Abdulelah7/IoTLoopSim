@@ -16,4 +16,4 @@ migration.completed                 1.066e+05          350.4    10
 update.succeeded                        31.60          1.693    10
 update.failed                           2.100          1.325    10
 security.detections                     8.200         0.5642    10
-results written to Exp Data/fgcs-paper/results/prefix-check/cloud-only
+results written to Exp Data/paper/results/prefix-check/cloud-only

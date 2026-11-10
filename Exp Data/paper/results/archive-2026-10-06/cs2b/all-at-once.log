@@ -14,4 +14,4 @@ availability.nodes                      1.000          0.000    10
 instance.cold_starts                    2.000          0.000    10
 update.succeeded                        118.8          4.263    10
 update.failed                           81.20          4.263    10
-results written to Exp Data/fgcs-paper/results/cs2b/all-at-once
+results written to Exp Data/paper/results/cs2b/all-at-once

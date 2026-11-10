@@ -14,4 +14,4 @@ availability.nodes                      1.000          0.000    30
 instance.cold_starts                    2.000          0.000    30
 update.succeeded                        168.1          6.333    30
 update.failed                           5.700         0.8035    30
-results written to Exp Data/fgcs-paper/results/cs1-ota/sens-gwduty-0.01-batch
+results written to Exp Data/paper/results/cs1-ota/sens-gwduty-0.01-batch

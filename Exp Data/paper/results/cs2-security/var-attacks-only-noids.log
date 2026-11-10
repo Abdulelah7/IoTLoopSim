@@ -15,4 +15,4 @@ instance.cold_starts                    56.50          2.068    30
 migration.completed                      2531          28.31    30
 update.succeeded                        61.53         0.7187    30
 update.failed                           3.000         0.6354    30
-results written to Exp Data/fgcs-paper/results/cs2-security/abl-attacks-only-noids
+results written to Exp Data/paper/results/cs2-security/abl-attacks-only-noids

@@ -14,4 +14,4 @@ availability.nodes                      1.000          0.000    10
 instance.cold_starts                    2.000          0.000    10
 update.succeeded                        193.4          2.267    10
 update.failed                           6.600          2.267    10
-results written to Exp Data/fgcs-paper/results/cs2/canary-norollback
+results written to Exp Data/paper/results/cs2/canary-norollback

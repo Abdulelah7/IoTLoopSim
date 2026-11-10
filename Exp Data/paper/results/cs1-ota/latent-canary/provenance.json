@@ -6,7 +6,7 @@
   "java": "21.0.12.1 (Ubuntu)",
   "os": "Linux 6.18.44-fc-v80 amd64",
   "gitCommit": "f58673a353b29d43db0326c57a76350df8c8df1c",
-  "scenarioFile": "Exp Data/fgcs-paper/configs/lorawan-ota.yaml",
+  "scenarioFile": "Exp Data/paper/configs/lorawan-ota.yaml",
   "scenarioSha256": "5a43fff87acbf7a07d71e74b4365ba669534f76d0ea1a0a5cfb6d4a80d29755a",
   "overrides": [],
   "resolvedScenarioSha256": "709f96f68be1a56cc3bb38810713f2663894ae3060985cebd3b7270c6e629a3c",

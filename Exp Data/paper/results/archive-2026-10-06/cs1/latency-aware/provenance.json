@@ -6,7 +6,7 @@
   "java": "21.0.12.1 (Ubuntu)",
   "os": "Linux 6.18.44-fc-v70 amd64",
   "gitCommit": null,
-  "scenarioFile": "Exp Data/fgcs-paper/configs/smart-city.yaml",
+  "scenarioFile": "Exp Data/paper/configs/smart-city.yaml",
   "scenarioSha256": "0c0e229e270f95e0f91893d965b4120e5dd2c46c821ad4ec73ea919adc295d37",
   "overrides": [
     "policies.placement=latency-aware"

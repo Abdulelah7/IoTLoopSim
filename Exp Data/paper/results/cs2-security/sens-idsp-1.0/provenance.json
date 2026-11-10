@@ -6,7 +6,7 @@
   "java": "21.0.12.1 (Ubuntu)",
   "os": "Linux 6.18.44-fc-v80 amd64",
   "gitCommit": "f58673a353b29d43db0326c57a76350df8c8df1c",
-  "scenarioFile": "Exp Data/fgcs-paper/configs/smart-city.yaml",
+  "scenarioFile": "Exp Data/paper/configs/smart-city.yaml",
   "scenarioSha256": "ffda6838c5e6e186f22854a5bbda104c22e342fdf103ac5cd00407273d692d7f",
   "overrides": [
     "security.ids.detectProbability=1.0"

@@ -6,7 +6,7 @@
   "java": "21.0.12.1 (Ubuntu)",
   "os": "Linux 6.18.44-fc-v70 amd64",
   "gitCommit": null,
-  "scenarioFile": "Exp Data/fgcs-paper/configs/smart-city-noids.yaml",
+  "scenarioFile": "Exp Data/paper/configs/smart-city-noids.yaml",
   "scenarioSha256": "b2d98e6a11e6ac7e5bd2a3480a7800783a9eeac7fd266f03cf55a0f86686ae40",
   "overrides": [],
   "resolvedScenarioSha256": "94a0e343d92a59ec0fa884400906a7458c0b04bfbc51de976ea1c130d17bbd45",

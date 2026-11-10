@@ -15,4 +15,4 @@ instance.cold_starts                    55.87          1.753    30
 migration.completed                      2617          53.44    30
 update.succeeded                        56.77         0.7382    30
 update.failed                           2.933         0.6788    30
-results written to Exp Data/fgcs-paper/results/cs2-security/abl-faults-only-ids
+results written to Exp Data/paper/results/cs2-security/abl-faults-only-ids

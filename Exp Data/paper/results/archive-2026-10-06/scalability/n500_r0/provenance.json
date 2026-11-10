@@ -6,7 +6,7 @@
   "java": "21.0.12.1 (Ubuntu)",
   "os": "Linux 6.18.44-fc-v70 amd64",
   "gitCommit": null,
-  "scenarioFile": "simtool/../Exp Data/fgcs-paper/configs/scal/scal-500.yaml",
+  "scenarioFile": "simtool/../Exp Data/paper/configs/scal/scal-500.yaml",
   "scenarioSha256": "64ada4203cd84e90675068c409432ae050f8d3aced2aaaea63a3a7b2c76dbfd4",
   "overrides": [],
   "resolvedScenarioSha256": "5f911e51b2ae95c3111b3d88c34dfb1e611aeba83e09e66e9929a7fd88cf2bef",
